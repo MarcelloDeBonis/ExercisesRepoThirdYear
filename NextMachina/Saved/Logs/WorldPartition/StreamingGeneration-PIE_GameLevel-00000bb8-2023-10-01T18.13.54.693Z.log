@@ -1,0 +1,188 @@
+[+] Containers:
+ |- [+] Container: /Game/Project/Scenes/GameLevel
+ |   |- [+] ActorDescs:
+ |   |   |- Guid:03920DF94EEFC9F86CC66185D32A3DA1 BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_A4AE111137DC54FB00_1240666663 Label:SM_SkySphere SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=-1638400.000 Y=-1638400.000 Z=-1638400.000), Max=(X=1638400.000 Y=1638400.000 Z=1638400.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- Guid:1D3D26F04B6DC10BEFB5B69E5CF914C8 BaseClass: NativeClass:/Script/Engine.VolumetricCloud Name:VolumetricCloud_UAID_A85E45CFE40401D200_1470381760 Label:VolumetricCloud SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- Guid:1DE8D7AC4103A2EABA11649C7FCF8ACA BaseClass: NativeClass:/Script/Engine.SkyLight Name:SkyLight_UAID_A85E45CFE40401D200_1470380759 Label:SkyLight SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- Guid:218E3B124735712D7EF272B4FB8E7FF6 BaseClass: NativeClass:/Script/Landscape.Landscape Name:Landscape_UAID_A85E45CFE404FBD100_1221515703 Label:Landscape SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=-100800.000 Y=-100800.000 Z=100.000), Max=(X=-100800.000 Y=-100800.000 Z=100.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0
+ |   |   |- Guid:2515075D46AD2D8F3C7663AD82C9BA03 BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_2CF05D7EE1722FAE01_1342047175 Label:SM_Cube6 SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=1800.000 Y=100.000 Z=0.000), Max=(X=1900.000 Y=3400.000 Z=400.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:1 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- Guid:2AEA96844EBF01CA45444697A66B510A BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_2CF05D7EE1722FAE01_1741761179 Label:SM_Cube2 SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=0.000 Y=3400.000 Z=-50.000), Max=(X=3100.000 Y=6400.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:1 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- Guid:2CE12F874AA39D020A0F4BA5739BD305 BaseClass: NativeClass:/Script/Engine.SkyAtmosphere Name:SkyAtmosphere_UAID_A85E45CFE40401D200_1470382762 Label:SkyAtmosphere SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- Guid:4E6C4A0A4CEC5C39D20EBF832000AA58 BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_2CF05D7EE1722FAE01_1342050176 Label:SM_Cube SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=1200.000 Y=100.000 Z=-50.000), Max=(X=1900.000 Y=3400.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:1 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- Guid:5368FABB47D6D9580DAECA8B0417BF92 BaseClass: NativeClass:/Script/Engine.WorldDataLayers Name:WorldDataLayers Label:WorldDataLayers-1 SpatiallyLoaded:0 Bounds:Invalid RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:1
+ |   |   |- Guid:5876E6D2489780290C7CE3A1D2F96CF8 BaseClass:/Game/Project/Managers/ScoreManager.ScoreManager_C NativeClass:/Script/Engine.Actor Name:ScoreManager_C_UAID_2CF05D7EE17227AE01_1829098774 Label:ScoreManager SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Managers FolderGuid:F2BFF32A4F972A3359E4A992A5437899
+ |   |   |- Guid:8D6FC3834D40B2F1C34AA5A14CB8F363 BaseClass:/Game/Project/Characters/Enemy_Turret.Enemy_Turret_C NativeClass:/Script/Engine.Character Name:Enemy_Turret_C_UAID_2CF05D7EE172FCAC01_1799959145 Label:Enemy_Turret SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=476.000 Y=303.320 Z=-86.680), Max=(X=920.040 Y=576.680 Z=186.680) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Characters FolderGuid:DA17389B4FEDA8779D35DE8BC32CC46A
+ |   |   |- Guid:962D6BE34E7839A2A94E65B8F6CE5D43 BaseClass: NativeClass:/Script/Engine.PlayerStart Name:PlayerStart_UAID_F02F74551BF5599B01_1153002503 Label:PlayerStart SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=1500.000 Y=300.000 Z=20.000), Max=(X=1580.000 Y=380.000 Z=204.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 HLODLayer:/Game/Project/Scenes/TestStage_HLOD0_Instancing.TestStage_HLOD0_Instancing
+ |   |   |- Guid:AAAC6B5742760A58C2206DB37E44683C BaseClass: NativeClass:/Script/Engine.DirectionalLight Name:DirectionalLight_UAID_A85E45CFE40401D200_1470382761 Label:DirectionalLight SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=-4398046511104.000 Y=-4398046511104.000 Z=-4398046511104.000), Max=(X=4398046511104.000 Y=4398046511104.000 Z=4398046511104.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- Guid:B0BFFFD64E51C985CE0AEA83BCA07306 BaseClass:/Game/Project/Characters/Enemy_Spider.Enemy_Spider_C NativeClass:/Script/Engine.Character Name:Enemy_Spider_C_UAID_2CF05D7EE172FCAC01_1796258144 Label:Enemy_Spider SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=996.000 Y=143.320 Z=53.320), Max=(X=1440.040 Y=416.680 Z=326.680) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Characters FolderGuid:DA17389B4FEDA8779D35DE8BC32CC46A
+ |   |   |- Guid:D3E830BB46A2BAF417C2CCA1CE2C58A9 BaseClass:/Game/Project/Managers/StageManager.StageManager_C NativeClass:/Script/Engine.Actor Name:StageManager_C_UAID_2CF05D7EE17227AE01_1826010773 Label:StageManager SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Managers FolderGuid:F2BFF32A4F972A3359E4A992A5437899
+ |   |   |- Guid:D3FB7383421AAEFD3DB6F8B1E415A9FE BaseClass: NativeClass:/Script/Engine.ExponentialHeightFog Name:ExponentialHeightFog_UAID_A85E45CFE40401D200_1470382763 Label:ExponentialHeightFog SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=-5600.000 Y=-50.000 Z=-6850.000), Max=(X=-5600.000 Y=-50.000 Z=-6850.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- Guid:D5DDDF6E4B544B938A54E4AAD6E308B9 BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_2CF05D7EE1722FAE01_1455416177 Label:SM_Cube7 SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=1200.000 Y=100.000 Z=0.000), Max=(X=1300.000 Y=3400.000 Z=400.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:1 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- Guid:E487236C4E7026446FFE38B30B77972A BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_2CF05D7EE1722FAE01_1489088178 Label:SM_Cube8 SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=1300.000 Y=100.000 Z=0.000), Max=(X=1800.000 Y=200.000 Z=400.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:1 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- Guid:E51E84FF4BFBA1B0C6C150B5B2A5E53C BaseClass:/Game/Project/Stage.Stage_C NativeClass:/Script/Engine.Actor Name:Stage_C_UAID_2CF05D7EE17228AE01_1115870952 Label:Stage SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=-130.000 Y=0.000 Z=30.000), Max=(X=-130.000 Y=0.000 Z=30.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- Guid:E5F8300A412F7AB63479FE87E177D844 BaseClass:/Game/Project/Managers/CombatManager.CombatManager_C NativeClass:/Script/Engine.Actor Name:CombatManager_C_UAID_2CF05D7EE17227AE01_1844123775 Label:CombatManager SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Managers FolderGuid:F2BFF32A4F972A3359E4A992A5437899
+ |   |   |- Guid:ECB1B8464CDB1913A83FDC88122D4504 BaseClass:/Game/Project/Characters/Enemy_Spider.Enemy_Spider_C NativeClass:/Script/Engine.Character Name:Enemy_Spider_C_UAID_2CF05D7EE172FCAC01_1807263146 Label:Enemy_Spider2 SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=686.000 Y=163.320 Z=-96.680), Max=(X=1130.040 Y=436.680 Z=176.680) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Characters FolderGuid:DA17389B4FEDA8779D35DE8BC32CC46A
+ |   |- [+] Clusters:
+ |   |   |- [+] [  0]
+ |   |   |   |- Guid:03920DF94EEFC9F86CC66185D32A3DA1 BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_A4AE111137DC54FB00_1240666663 Label:SM_SkySphere SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=-1638400.000 Y=-1638400.000 Z=-1638400.000), Max=(X=1638400.000 Y=1638400.000 Z=1638400.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- [+] [  1]
+ |   |   |   |- Guid:1D3D26F04B6DC10BEFB5B69E5CF914C8 BaseClass: NativeClass:/Script/Engine.VolumetricCloud Name:VolumetricCloud_UAID_A85E45CFE40401D200_1470381760 Label:VolumetricCloud SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- [+] [  2]
+ |   |   |   |- Guid:1DE8D7AC4103A2EABA11649C7FCF8ACA BaseClass: NativeClass:/Script/Engine.SkyLight Name:SkyLight_UAID_A85E45CFE40401D200_1470380759 Label:SkyLight SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- [+] [  3]
+ |   |   |   |- Guid:218E3B124735712D7EF272B4FB8E7FF6 BaseClass: NativeClass:/Script/Landscape.Landscape Name:Landscape_UAID_A85E45CFE404FBD100_1221515703 Label:Landscape SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=-100800.000 Y=-100800.000 Z=100.000), Max=(X=-100800.000 Y=-100800.000 Z=100.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0
+ |   |   |- [+] [  4]
+ |   |   |   |- Guid:2515075D46AD2D8F3C7663AD82C9BA03 BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_2CF05D7EE1722FAE01_1342047175 Label:SM_Cube6 SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=1800.000 Y=100.000 Z=0.000), Max=(X=1900.000 Y=3400.000 Z=400.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:1 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- [+] [  5]
+ |   |   |   |- Guid:2AEA96844EBF01CA45444697A66B510A BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_2CF05D7EE1722FAE01_1741761179 Label:SM_Cube2 SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=0.000 Y=3400.000 Z=-50.000), Max=(X=3100.000 Y=6400.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:1 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- [+] [  6]
+ |   |   |   |- Guid:2CE12F874AA39D020A0F4BA5739BD305 BaseClass: NativeClass:/Script/Engine.SkyAtmosphere Name:SkyAtmosphere_UAID_A85E45CFE40401D200_1470382762 Label:SkyAtmosphere SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- [+] [  7]
+ |   |   |   |- Guid:4E6C4A0A4CEC5C39D20EBF832000AA58 BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_2CF05D7EE1722FAE01_1342050176 Label:SM_Cube SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=1200.000 Y=100.000 Z=-50.000), Max=(X=1900.000 Y=3400.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:1 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- [+] [  8]
+ |   |   |   |- Guid:5368FABB47D6D9580DAECA8B0417BF92 BaseClass: NativeClass:/Script/Engine.WorldDataLayers Name:WorldDataLayers Label:WorldDataLayers-1 SpatiallyLoaded:0 Bounds:Invalid RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:1
+ |   |   |- [+] [  9]
+ |   |   |   |- Guid:5876E6D2489780290C7CE3A1D2F96CF8 BaseClass:/Game/Project/Managers/ScoreManager.ScoreManager_C NativeClass:/Script/Engine.Actor Name:ScoreManager_C_UAID_2CF05D7EE17227AE01_1829098774 Label:ScoreManager SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Managers FolderGuid:F2BFF32A4F972A3359E4A992A5437899
+ |   |   |- [+] [ 10]
+ |   |   |   |- Guid:8D6FC3834D40B2F1C34AA5A14CB8F363 BaseClass:/Game/Project/Characters/Enemy_Turret.Enemy_Turret_C NativeClass:/Script/Engine.Character Name:Enemy_Turret_C_UAID_2CF05D7EE172FCAC01_1799959145 Label:Enemy_Turret SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=476.000 Y=303.320 Z=-86.680), Max=(X=920.040 Y=576.680 Z=186.680) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Characters FolderGuid:DA17389B4FEDA8779D35DE8BC32CC46A
+ |   |   |- [+] [ 11]
+ |   |   |   |- Guid:962D6BE34E7839A2A94E65B8F6CE5D43 BaseClass: NativeClass:/Script/Engine.PlayerStart Name:PlayerStart_UAID_F02F74551BF5599B01_1153002503 Label:PlayerStart SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=1500.000 Y=300.000 Z=20.000), Max=(X=1580.000 Y=380.000 Z=204.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 HLODLayer:/Game/Project/Scenes/TestStage_HLOD0_Instancing.TestStage_HLOD0_Instancing
+ |   |   |- [+] [ 12]
+ |   |   |   |- Guid:AAAC6B5742760A58C2206DB37E44683C BaseClass: NativeClass:/Script/Engine.DirectionalLight Name:DirectionalLight_UAID_A85E45CFE40401D200_1470382761 Label:DirectionalLight SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=-4398046511104.000 Y=-4398046511104.000 Z=-4398046511104.000), Max=(X=4398046511104.000 Y=4398046511104.000 Z=4398046511104.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- [+] [ 13]
+ |   |   |   |- Guid:B0BFFFD64E51C985CE0AEA83BCA07306 BaseClass:/Game/Project/Characters/Enemy_Spider.Enemy_Spider_C NativeClass:/Script/Engine.Character Name:Enemy_Spider_C_UAID_2CF05D7EE172FCAC01_1796258144 Label:Enemy_Spider SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=996.000 Y=143.320 Z=53.320), Max=(X=1440.040 Y=416.680 Z=326.680) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Characters FolderGuid:DA17389B4FEDA8779D35DE8BC32CC46A
+ |   |   |   |- Guid:D3E830BB46A2BAF417C2CCA1CE2C58A9 BaseClass:/Game/Project/Managers/StageManager.StageManager_C NativeClass:/Script/Engine.Actor Name:StageManager_C_UAID_2CF05D7EE17227AE01_1826010773 Label:StageManager SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Managers FolderGuid:F2BFF32A4F972A3359E4A992A5437899
+ |   |   |   |- Guid:E51E84FF4BFBA1B0C6C150B5B2A5E53C BaseClass:/Game/Project/Stage.Stage_C NativeClass:/Script/Engine.Actor Name:Stage_C_UAID_2CF05D7EE17228AE01_1115870952 Label:Stage SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=-130.000 Y=0.000 Z=30.000), Max=(X=-130.000 Y=0.000 Z=30.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- [+] [ 14]
+ |   |   |   |- Guid:D3FB7383421AAEFD3DB6F8B1E415A9FE BaseClass: NativeClass:/Script/Engine.ExponentialHeightFog Name:ExponentialHeightFog_UAID_A85E45CFE40401D200_1470382763 Label:ExponentialHeightFog SpatiallyLoaded:0 Bounds:IsValid=true, Min=(X=-5600.000 Y=-50.000 Z=-6850.000), Max=(X=-5600.000 Y=-50.000 Z=-6850.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Lighting FolderGuid:B7E9BD5B45A652654791988DEF54CCEB
+ |   |   |- [+] [ 15]
+ |   |   |   |- Guid:D5DDDF6E4B544B938A54E4AAD6E308B9 BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_2CF05D7EE1722FAE01_1455416177 Label:SM_Cube7 SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=1200.000 Y=100.000 Z=0.000), Max=(X=1300.000 Y=3400.000 Z=400.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:1 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- [+] [ 16]
+ |   |   |   |- Guid:E487236C4E7026446FFE38B30B77972A BaseClass: NativeClass:/Script/Engine.StaticMeshActor Name:StaticMeshActor_UAID_2CF05D7EE1722FAE01_1489088178 Label:SM_Cube8 SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=1300.000 Y=100.000 Z=0.000), Max=(X=1800.000 Y=200.000 Z=400.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:1 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Stages/Stage1 FolderGuid:90B8BF064A78956658DD699260E6A3AB
+ |   |   |- [+] [ 17]
+ |   |   |   |- Guid:E5F8300A412F7AB63479FE87E177D844 BaseClass:/Game/Project/Managers/CombatManager.CombatManager_C NativeClass:/Script/Engine.Actor Name:CombatManager_C_UAID_2CF05D7EE17227AE01_1844123775 Label:CombatManager SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=0.000 Y=0.000 Z=0.000), Max=(X=0.000 Y=0.000 Z=0.000) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Managers FolderGuid:F2BFF32A4F972A3359E4A992A5437899
+ |   |   |- [+] [ 18]
+ |   |   |   |- Guid:ECB1B8464CDB1913A83FDC88122D4504 BaseClass:/Game/Project/Characters/Enemy_Spider.Enemy_Spider_C NativeClass:/Script/Engine.Character Name:Enemy_Spider_C_UAID_2CF05D7EE172FCAC01_1807263146 Label:Enemy_Spider2 SpatiallyLoaded:1 Bounds:IsValid=true, Min=(X=686.000 Y=163.320 Z=-96.680), Max=(X=1130.040 Y=436.680 Z=176.680) RuntimeGrid:None EditorOnly:0 RuntimeOnly:0 HLODRelevant:0 ListedInSceneOutliner:1 IsMainWorldOnly:0 FolderPath:Characters FolderGuid:DA17389B4FEDA8779D35DE8BC32CC46A
+ |- ContainerInstances:
+ |- [+] MainContainer:
+ |   |-        ID: 00000000000000000000000000000000
+ |   |-  ParentID: 00000000000000000000000000000000
+ |   |-    Bounds: IsValid=true, Min=(X=-130.000 Y=0.000 Z=-96.680), Max=(X=3100.000 Y=6400.000 Z=400.000)
+ |   |- Transform: 0.000000,0.000000,0.000000|0.000000,0.000000,-0.000000|1.000000,1.000000,1.000000
+ |   |- Container: /Game/Project/Scenes/GameLevel
+----------------------------------------------------------------------------------------------------------------
+GameLevel - Persistent Level
+----------------------------------------------------------------------------------------------------------------
+[+] Content of GameLevel Persistent Level
+ |- Always loaded Actor Count: 27 
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.AbstractNavData-Default
+ |- Actor Package: /Game/Project/Scenes/GameLevel
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.Brush_0
+ |- Actor Package: /Game/Project/Scenes/GameLevel
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.CombatManager_C_UAID_2CF05D7EE17227AE01_1844123775
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/1/7Q/53RD2WPWI42EJZS1ZZH0GF
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.DefaultPhysicsVolume_0
+ |- Actor Package: /Game/Project/Scenes/GameLevel
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.DirectionalLight_UAID_A85E45CFE40401D200_1470382761
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/B/8U/1HPBTXAC0WK50YWKJK5TB4
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.Enemy_Spider_C_UAID_2CF05D7EE172FCAC01_1796258144
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/B/VF/5J4QPR10JBK3ZTVM8ED7H7
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.Enemy_Spider_C_UAID_2CF05D7EE172FCAC01_1807263146
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/A/RD/KFIVO4ONIPA7UBYBEBO6UB
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.Enemy_Turret_C_UAID_2CF05D7EE172FCAC01_1799959145
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/D/GG/VWGMFTLJA93PQ02HPD864Z
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.ExponentialHeightFog_UAID_A85E45CFE40401D200_1470382763
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/A/SJ/SNZXLZIUBMQLNNW0WK55TD
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.GameplayDebuggerPlayerManager_0
+ |- Actor Package: /Game/Project/Scenes/GameLevel
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.Landscape_UAID_A85E45CFE404FBD100_1221515703
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/3/OB/CWN4AHRN7DZT4HJ1EOKNWU
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.PlayerStart_UAID_F02F74551BF5599B01_1153002503
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/E/J9/8UP960VEI8VYJNG8XW8Y10
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.ScoreManager_C_UAID_2CF05D7EE17227AE01_1829098774
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/8/I5/H4SMU6CKU1AIZLA6O38Y6O
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.SkyAtmosphere_UAID_A85E45CFE40401D200_1470382762
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/B/N1/3LPNROVHR9HF8YDPVEOD5B
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.SkyLight_UAID_A85E45CFE40401D200_1470380759
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/1/NT/F62GXOTGG3P87IAZF9QA8X
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.Stage_C_UAID_2CF05D7EE17228AE01_1115870952
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/E/64/8N0M5I8K30HB6VXEEJPBEO
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StageManager_C_UAID_2CF05D7EE17227AE01_1826010773
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/D/4H/9RF1B942YQUTAKUNQ1LB54
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_2CF05D7EE1722FAE01_1342047175
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/B/1H/H4SDMO4192NZZ9Q3IZBY4V
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_2CF05D7EE1722FAE01_1342050176
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/7/VR/AW3MOQQB8JTG8RPJEBGEV2
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_2CF05D7EE1722FAE01_1455416177
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/2/3U/A9HZISHQXCZXKF0M02MFVG
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_2CF05D7EE1722FAE01_1489088178
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/6/KS/IKP107Z5XR1D6G0FF3L06O
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_2CF05D7EE1722FAE01_1741761179
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/B/8Y/QGRX34OUNTDLW5PC7HUKHL
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_A4AE111137DC54FB00_1240666663
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/3/T2/E5FI4TJVM9KR404TAPQ7IA
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.VolumetricCloud_UAID_A85E45CFE40401D200_1470381760
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/A/MD/F5D5EY2PZP18RE3J0FTSI3
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.WorldDataLayers
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/A/3H/1M6J1RCDT44MD09HXQZKTT
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.WorldPartitionMiniMap_UAID_3497F631D5890DD300_1296925927
+ |- Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/D/35/67FQGMLIIPFCN5X1OLBUNA
+ |- Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.WorldSettings
+ |- Actor Package: /Game/Project/Scenes/GameLevel
+
+----------------------------------------------------------------------------------------------------------------
+GameLevel - Runtime Spatial Hash - Streaming Grid - MainGrid
+----------------------------------------------------------------------------------------------------------------
+            Origin: X=0.000 Y=0.000 Z=0.000
+         Cell Size: 25600
+      World Bounds: IsValid=true, Min=(X=-130.000 Y=0.000 Z=-96.680), Max=(X=3100.000 Y=6400.000 Z=400.000)
+     Loading Range: 76800.00
+Block Slow Loading: No
+ ClientOnlyVisible: No
+            Origin: X=0.000 Y=0.000 Z=0.000
+
+[+] Grid Levels: 2
+ |- Level  0: Cell Count    1 | Cell Size   25600 | Actor Count   12 (100.0%)
+ |- Level  1: Cell Count    0 | Cell Size   51200 | Actor Count    0 (0.0%)
+
+[+] Content of Grid Level 0
+ |- [+] Content of Cell GameLevel_MainGrid_L0_X0_Y0 (19Y2GIBBBW35TQLQ7ELTRE5TV)
+ |   |- Actor Count: 12
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_2CF05D7EE1722FAE01_1342047175
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/B/1H/H4SDMO4192NZZ9Q3IZBY4V
+ |   |- Actor Instance Guid: 2515075D46AD2D8F3C7663AD82C9BA03
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_2CF05D7EE1722FAE01_1741761179
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/B/8Y/QGRX34OUNTDLW5PC7HUKHL
+ |   |- Actor Instance Guid: 2AEA96844EBF01CA45444697A66B510A
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_2CF05D7EE1722FAE01_1342050176
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/7/VR/AW3MOQQB8JTG8RPJEBGEV2
+ |   |- Actor Instance Guid: 4E6C4A0A4CEC5C39D20EBF832000AA58
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.ScoreManager_C_UAID_2CF05D7EE17227AE01_1829098774
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/8/I5/H4SMU6CKU1AIZLA6O38Y6O
+ |   |- Actor Instance Guid: 5876E6D2489780290C7CE3A1D2F96CF8
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.Enemy_Turret_C_UAID_2CF05D7EE172FCAC01_1799959145
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/D/GG/VWGMFTLJA93PQ02HPD864Z
+ |   |- Actor Instance Guid: 8D6FC3834D40B2F1C34AA5A14CB8F363
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.Enemy_Spider_C_UAID_2CF05D7EE172FCAC01_1796258144
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/B/VF/5J4QPR10JBK3ZTVM8ED7H7
+ |   |- Actor Instance Guid: B0BFFFD64E51C985CE0AEA83BCA07306
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StageManager_C_UAID_2CF05D7EE17227AE01_1826010773
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/D/4H/9RF1B942YQUTAKUNQ1LB54
+ |   |- Actor Instance Guid: D3E830BB46A2BAF417C2CCA1CE2C58A9
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_2CF05D7EE1722FAE01_1455416177
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/2/3U/A9HZISHQXCZXKF0M02MFVG
+ |   |- Actor Instance Guid: D5DDDF6E4B544B938A54E4AAD6E308B9
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.StaticMeshActor_UAID_2CF05D7EE1722FAE01_1489088178
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/6/KS/IKP107Z5XR1D6G0FF3L06O
+ |   |- Actor Instance Guid: E487236C4E7026446FFE38B30B77972A
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.Stage_C_UAID_2CF05D7EE17228AE01_1115870952
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/E/64/8N0M5I8K30HB6VXEEJPBEO
+ |   |- Actor Instance Guid: E51E84FF4BFBA1B0C6C150B5B2A5E53C
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.CombatManager_C_UAID_2CF05D7EE17227AE01_1844123775
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/1/7Q/53RD2WPWI42EJZS1ZZH0GF
+ |   |- Actor Instance Guid: E5F8300A412F7AB63479FE87E177D844
+ |   |-          Actor Path: /Game/Project/Scenes/GameLevel.GameLevel:PersistentLevel.Enemy_Spider_C_UAID_2CF05D7EE172FCAC01_1807263146
+ |   |-       Actor Package: /Game/__ExternalActors__/Project/Scenes/GameLevel/A/RD/KFIVO4ONIPA7UBYBEBO6UB
+ |   |- Actor Instance Guid: ECB1B8464CDB1913A83FDC88122D4504
+[+] Content of Grid Level 1
+
