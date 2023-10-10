@@ -34,19 +34,19 @@ bool GameManager::makeMove(GameBoard& gameBoard) {
     char move = _getch(); // Read a single key press without waiting for Enter
 
     switch (move) {
-        case 'W': // Move up
+        case 'w': // Move up
             if (currentRow > 1) currentRow--;
             break;
-        case 'S': // Move down
+        case 's': // Move down
             if (currentRow < 3) currentRow++;
             break;
-        case 'D': // Move right
+        case 'd': // Move right
             if (currentCol < 3) currentCol++;
             break;
-        case 'A': // Move left
+        case 'a': // Move left
             if (currentCol > 1) currentCol--;
             break;
-        case 'E': // Make the move
+        case 'e': // Make the move
             if (gameBoard.getCell(currentRow - 1, currentCol - 1) == ' ') {
                 gameBoard.setCell(currentRow - 1, currentCol - 1, currentPlayer.getSymbol());
                 return true;
