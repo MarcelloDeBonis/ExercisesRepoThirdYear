@@ -3,6 +3,7 @@
 #include <conio.h> // for _getch()
 #include <cstdlib>
 #include <ctime>
+#include <sstream>
 
 Game::Game(int width, int height) : snake(nullptr), gameOver(false) {
     srand(time(0));  // Initialize random seed
@@ -53,12 +54,12 @@ void Game::Run()
         }
 
         gameOver = snake->CheckCollision();
-
-        system("cls");  // Clear the screen (Windows specific)
+        
+        system("cls");
         
         screen->Draw(*snake, *fruit);
         
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
     
     std::cout << "Game Over! Your score: " << snake->length - 1 << std::endl;
