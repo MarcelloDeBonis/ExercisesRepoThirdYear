@@ -101,22 +101,22 @@ public:
 
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 5};
-    std::cout << "Find equals: " << find(arr, 5, 3, equals) << std::endl;
-    std::cout << "Find greater_than: " << find(arr, 5, 3, greater_than) << std::endl;
-    std::cout << "Find less_than: " << find(arr, 5, 3, less_than) << std::endl;
+    char arr[] = {'1','2', '3', '4', '5'};
+    std::cout << "Find equals: " << find(arr, 5, '3', equals) << std::endl;
+    std::cout << "Find greater_than: " << find(arr, 5, '3', greater_than) << std::endl;
+    std::cout << "Find less_than: " << find(arr, 5, '3', less_than) << std::endl;
     
-    MyVector<int> vec;
+    MyVector<char> vec;
 
     // Test add function
-    vec.add(1);
-    vec.add(2);
-    vec.add(3);
-    vec.add(4);
+    vec.add('1');
+    vec.add('2');
+    vec.add('3');
+    vec.add('4');
     std::cout << "After adding elements, vector size: " << vec.size() << std::endl;  // Should print 4
 
     // Test find function with element present
-    int* found = vec.find(3);
+    char* found = vec.find('3');
     if (found) {
         std::cout << "Element 3 found: " << *found << std::endl;  // Should print 3
     } else {
@@ -124,7 +124,7 @@ int main()
     }
 
     // Test find function with element not present
-    int* notFound = vec.find(5);
+    char* notFound = vec.find('5');
     if (notFound) {
         std::cout << "Element 5 found: " << *notFound << std::endl;
     } else {
@@ -132,12 +132,12 @@ int main()
     }
 
     // Test remove by index
-    vec.remove(1);
+    vec.remove('1');
     std::cout << "After removing element at index 1, vector size: " << vec.size() << std::endl;  // Should print 3
     std::cout << "Checking if element 2 is still present: " << (vec.find(2) ? "Yes" : "No") << std::endl;  // Should print Yes
 
     // Test remove by value
-    vec.remove(4);  // Remove the element with value 4
+    vec.remove('4');  // Remove the element with value 4
     std::cout << "After removing element with value 4, vector size: " << vec.size() << std::endl;  // Should print 2
     std::cout << "Checking if element 4 is still present: " << (vec.find(4) ? "Yes" : "No") << std::endl;  // Should print No
 
