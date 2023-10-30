@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "PlayerPawnExercise",
+			"Path": "..\\Source\\PlayerPawnExercise.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "PlayerPawnExerciseEditor",
+			"Path": "..\\Source\\PlayerPawnExerciseEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
