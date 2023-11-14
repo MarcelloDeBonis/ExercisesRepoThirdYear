@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "GridPrototype",
+			"Path": "..\\Source\\GridPrototype.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "GridPrototypeEditor",
+			"Path": "..\\Source\\GridPrototypeEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

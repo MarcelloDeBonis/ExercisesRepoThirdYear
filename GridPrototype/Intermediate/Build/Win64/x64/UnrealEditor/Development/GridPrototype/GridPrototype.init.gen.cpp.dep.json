@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\gridprototype\\intermediate\\build\\win64\\unrealeditor\\inc\\gridprototype\\uht\\gridprototype.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\gridprototype\\intermediate\\build\\win64\\x64\\gridprototypeeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\gridprototype\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\gridprototype\\definitions.gridprototype.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
