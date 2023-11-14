@@ -32,7 +32,7 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
-
+	USkeletalMeshComponent* MyMeshComponent;
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Player")
@@ -41,5 +41,6 @@ public:
 	UFUNCTION(BlueprintCallable, Exec , Category="Player")
 	void Kill();
 
+	void AddMovementInput (FVector Direction, float Value, bool bForce) override;
 };
 
