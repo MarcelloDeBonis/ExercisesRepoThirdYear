@@ -1,7 +1,6 @@
 ﻿
 #include "Amypawn.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "Engine.h"
 
 Amypawn::Amypawn()
 {
