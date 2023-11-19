@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\Marce\\OneDrive\\Desktop\\Work\\ExercisesRepoThirdYear\\UnrealSnake\\Source\\UnrealSnake\\UnrealSnake.Build.cs",
+		"C:\\Users\\Marce\\OneDrive\\Desktop\\Work\\ExercisesRepoThirdYear\\UnrealSnake\\Source\\UnrealSnake.Target.cs",
+		"C:\\Users\\Marce\\OneDrive\\Desktop\\Work\\ExercisesRepoThirdYear\\UnrealSnake\\Source\\UnrealSnakeEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}
