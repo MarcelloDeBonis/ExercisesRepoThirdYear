@@ -1,15 +1,13 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
 
-#include "SnakeGameMode.h"
 #include "UnrealSnake/Public/GridElements/BodySnake.h"
+#include "SnakeGameMode.h"
 #include "UnrealSnake/Public/Tile.h"
-
-class ASnakeGameMode;
 
 ABodySnake::ABodySnake()
 {
-	InitCubeComponent();
 	PrimaryActorTick.bCanEverTick = true;
+	InitCubeComponent();
 }
 
 void ABodySnake::Initialize(ATile* tile)
@@ -30,7 +28,6 @@ void ABodySnake::CollideWithSnake()
 void ABodySnake::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 void ABodySnake::InitCubeMaterial()

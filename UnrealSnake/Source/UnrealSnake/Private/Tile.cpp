@@ -3,8 +3,6 @@
 
 #include "UnrealSnake/Public/Tile.h"
 
-#include "GridElements/Fruit.h"
-#include "GridElements/BodySnake.h"
 #include "GridElements/Wall.h"
 
 ATile::ATile()
@@ -29,10 +27,10 @@ std::tuple<bool,ATile*>ATile::GetTile(Direction Direction)
 {
 	switch (Direction)
 	{
-		case Frontward:
-			if(ForwardTile!=nullptr)
+		case Up:
+			if(UpTile!=nullptr)
 			{
-				return std::tuple<bool,ATile*>(true, ForwardTile);
+				return std::tuple<bool,ATile*>(true, UpTile);
 			}
 			else
 			{
@@ -62,10 +60,10 @@ std::tuple<bool,ATile*>ATile::GetTile(Direction Direction)
 			}
 		break;
 		
-		case Back:
-			if(BackTile!=nullptr)
+		case Down:
+			if(DownTile!=nullptr)
 			{
-				return std::tuple<bool,ATile*>(true, BackTile);
+				return std::tuple<bool,ATile*>(true, DownTile);
 			}
 			else
 			{
@@ -122,7 +120,7 @@ ATile* ATile::PerformRaycasts(float RayLength, const FVector& Dir)
 
 bool ATile::IsABorderTile()
 {
-	if(ForwardTile != nullptr && RightTile != nullptr && LeftTile != nullptr && BackTile != nullptr)
+	if(UpTile != nullptr && RightTile != nullptr && LeftTile != nullptr && DownTile != nullptr)
 	{
 		return false;
 	}
@@ -138,18 +136,11 @@ void ATile::BeginPlay()
 void ATile::InitTile(float RayLength)
 {
 	SearchNearTile(RayLength);
-
+	
 	if(IsABorderTile() && GetWorld() && Element==nullptr)
 	{
 		ArriveNewElement(SpawnWallHere());
 	}
-}
-
-AGridElement* ATile::SpawnWallHere()
-{
-	AWall* NewWall = GetWorld()->SpawnActor<AWall>(AWall::StaticClass());
-	NewWall->Initialize(this);
-	return NewWall;
 }
 
 void ATile::SpawnTileCube()
@@ -175,31 +166,42 @@ void ATile::SpawnTileCube()
 
 }
 
-AGridElement* ATile::SpawnSnakeBodyHere()
+ABodySnake* ATile::SpawnSnakeBodyHere()
 {
 	ABodySnake* NewSnakePart = GetWorld()->SpawnActor<ABodySnake>(ABodySnake::StaticClass());
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, NewSnakePart->GetName());
+	}
 	NewSnakePart->Initialize(this);
 	return NewSnakePart;
 }
 
-AGridElement* ATile::SpawnFruitHere()
+AFruit* ATile::SpawnFruitHere()
 {
 	AFruit* NewFruit = GetWorld()->SpawnActor<AFruit>(AFruit::StaticClass());
 	NewFruit->Initialize(this);
 	return NewFruit;
 }
 
+AGridElement* ATile::SpawnWallHere()
+{
+	AWall* NewWall = GetWorld()->SpawnActor<AWall>(AWall::StaticClass());
+	NewWall->Initialize(this);
+	return NewWall;
+}
+
 void ATile::SearchNearTile(float RayLength)
 {
-	ForwardTile = nullptr;
+	UpTile = nullptr;
 	RightTile = nullptr;
 	LeftTile = nullptr;
-	BackTile = nullptr;
+	DownTile = nullptr;
 
-	ForwardTile = PerformRaycasts(RayLength, GetActorForwardVector());
+	UpTile = PerformRaycasts(RayLength, GetActorForwardVector());
 	RightTile = PerformRaycasts(RayLength, GetActorRightVector());
 	LeftTile = PerformRaycasts(RayLength, -GetActorRightVector());
-	BackTile = PerformRaycasts(RayLength, -GetActorForwardVector());
+	DownTile = PerformRaycasts(RayLength, -GetActorForwardVector());
 }
 
 void ATile::Tick(float DeltaSeconds)

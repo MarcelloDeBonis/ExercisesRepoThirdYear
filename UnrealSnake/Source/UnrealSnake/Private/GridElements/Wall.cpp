@@ -1,16 +1,13 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "UnrealSnake/Public/GridElements/Wall.h"
 #include "SnakeGameMode.h"
 #include "UnrealSnake/Public/Tile.h"
 
-class ASnakeGameMode;
-
 AWall::AWall()
 {
-	InitCubeComponent();
 	PrimaryActorTick.bCanEverTick = true;
+	InitCubeComponent();
 }
 
 void AWall::BeginPlay()

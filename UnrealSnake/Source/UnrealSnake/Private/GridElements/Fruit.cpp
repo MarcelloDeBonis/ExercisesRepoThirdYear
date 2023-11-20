@@ -1,13 +1,12 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "UnrealSnake/Public/GridElements/Fruit.h"
 #include "UnrealSnake/Public/Tile.h"
 
 AFruit::AFruit()
 {
-	InitCubeComponent();
 	PrimaryActorTick.bCanEverTick = true;
+	InitCubeComponent();
 }
 
 void AFruit::BeginPlay()

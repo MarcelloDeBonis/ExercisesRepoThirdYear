@@ -3,9 +3,9 @@
 UENUM()
 enum Direction
 {
-	Frontward UMETA(DisplayName = "Frontward"),
+	Up UMETA(DisplayName = "Up"),
 	Right UMETA(DisplayName= "Right"),
 	Left UMETA(DisplayName= "Left"),
-	Back UMETA(DisplayName= "Back"),
+	Down UMETA(DisplayName= "Down"),
 };
 

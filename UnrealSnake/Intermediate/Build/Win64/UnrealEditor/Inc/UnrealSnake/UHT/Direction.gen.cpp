@@ -34,22 +34,22 @@ void EmptyLinkFunctionForGeneratedCodeDirection() {}
 		static const UECodeGen_Private::FEnumParams EnumParams;
 	};
 	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_UnrealSnake_Direction_Statics::Enumerators[] = {
-		{ "Frontward", (int64)Frontward },
+		{ "Up", (int64)Up },
 		{ "Right", (int64)Right },
 		{ "Left", (int64)Left },
-		{ "Back", (int64)Back },
+		{ "Down", (int64)Down },
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_UnrealSnake_Direction_Statics::Enum_MetaDataParams[] = {
-		{ "Back.DisplayName", "Back" },
-		{ "Back.Name", "Back" },
-		{ "Frontward.DisplayName", "Frontward" },
-		{ "Frontward.Name", "Frontward" },
+		{ "Down.DisplayName", "Down" },
+		{ "Down.Name", "Down" },
 		{ "Left.DisplayName", "Left" },
 		{ "Left.Name", "Left" },
 		{ "ModuleRelativePath", "Public/Enums/Direction.h" },
 		{ "Right.DisplayName", "Right" },
 		{ "Right.Name", "Right" },
+		{ "Up.DisplayName", "Up" },
+		{ "Up.Name", "Up" },
 	};
 #endif
 	const UECodeGen_Private::FEnumParams Z_Construct_UEnum_UnrealSnake_Direction_Statics::EnumParams = {
@@ -77,9 +77,9 @@ void EmptyLinkFunctionForGeneratedCodeDirection() {}
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 	};
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Enums_Direction_h_Statics::EnumInfo[] = {
-		{ Direction_StaticEnum, TEXT("Direction"), &Z_Registration_Info_UEnum_Direction, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2860781077U) },
+		{ Direction_StaticEnum, TEXT("Direction"), &Z_Registration_Info_UEnum_Direction, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1532417472U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Enums_Direction_h_3152433050(TEXT("/Script/UnrealSnake"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Enums_Direction_h_3851557867(TEXT("/Script/UnrealSnake"),
 		nullptr, 0,
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Enums_Direction_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Enums_Direction_h_Statics::EnumInfo));

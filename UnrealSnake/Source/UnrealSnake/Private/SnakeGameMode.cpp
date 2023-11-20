@@ -2,23 +2,21 @@
 
 #include "SnakeGameMode.h"
 
+#include "SnakePawn.h"
+#include "SnakePlayerController.h"
 
-
-// Sets default values
 ASnakeGameMode::ASnakeGameMode()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	DefaultPawnClass = ASnakePawn::StaticClass();
+	PlayerControllerClass = ASnakePlayerController::StaticClass();
 }
 
-// Called when the game starts or when spawned
 void ASnakeGameMode::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
-// Called every frame
 void ASnakeGameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -26,6 +24,7 @@ void ASnakeGameMode::Tick(float DeltaTime)
 
 void ASnakeGameMode::NewGame()
 {
+
 }
 
 void ASnakeGameMode::Lost()
@@ -43,7 +42,7 @@ void ASnakeGameMode::QuitGame()
 
 bool ASnakeGameMode::NewBestScore()
 {
-	return points> bestScore;
+	return points > bestScore;
 }
 
 void ASnakeGameMode::SetNewBestScore()

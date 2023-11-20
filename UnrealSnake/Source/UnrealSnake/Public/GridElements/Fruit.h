@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GridElement.h"
-#include "../Tile.h"
 #include "Fruit.generated.h"
 
 UCLASS()

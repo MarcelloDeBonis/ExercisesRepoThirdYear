@@ -20,8 +20,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define FOREACH_ENUM_DIRECTION(op) \
-	op(Frontward) \
+	op(Up) \
 	op(Right) \
 	op(Left) \
-	op(Back) 
+	op(Down) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

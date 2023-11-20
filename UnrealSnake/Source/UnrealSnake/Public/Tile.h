@@ -6,30 +6,29 @@
 #include "GridElements/GridElement.h"
 #include "Enums/Direction.h"
 #include "GameFramework/Actor.h"
+#include "GridElements/Fruit.h"
+#include "GridElements/BodySnake.h"
 #include "Tile.generated.h"
 
 UCLASS()
 class UNREALSNAKE_API ATile : public AActor
 {
 	GENERATED_BODY()
-
 public:
-	// Sets default values for this actor's properties
 	ATile();
-	AGridElement* Element;
+	AGridElement* Element = nullptr;
 	std::tuple<bool,ATile*> GetTile(Direction Direction);
 	void ArriveNewElement(AGridElement* NewElement);
 	virtual void Tick(float DeltaSeconds) override;
-	UFUNCTION(BlueprintCallable, Category = "MyCategory")
 	void InitTile(float RayLength);
-	AGridElement* SpawnSnakeBodyHere();
-	AGridElement* SpawnFruitHere();
+	ABodySnake* SpawnSnakeBodyHere();
+	AFruit* SpawnFruitHere();
 private:
 	FVector ElementPosition();
-	ATile* ForwardTile;
+	ATile* UpTile;
 	ATile* RightTile;
 	ATile* LeftTile;
-	ATile* BackTile;
+	ATile* DownTile;
 	void ElementDisappear();
 	ATile* PerformRaycasts(float RayLength, const FVector& Dir);
 	bool IsABorderTile();
@@ -37,7 +36,6 @@ private:
 	AGridElement* SpawnWallHere();
 	void SpawnTileCube();
 protected:
-	
 	UStaticMeshComponent* CubeComponent;
 	virtual void BeginPlay() override;
 };

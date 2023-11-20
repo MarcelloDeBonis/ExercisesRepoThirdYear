@@ -11,6 +11,7 @@
     <None Include="..\..\Source\UnrealSnakeEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +38,93 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\UnrealSnake\UnrealSnake.h">
       <Filter>Source\UnrealSnake</Filter>
+    </ClInclude>
+    <Filter Include="Source\UnrealSnake\Private">
+      <UniqueIdentifier>{3BDB0666-8CD7-3C84-986F-B41020290B8D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\SnakeGameMode.cpp">
+      <Filter>Source\UnrealSnake\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\SnakePawn.cpp">
+      <Filter>Source\UnrealSnake\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\SnakePlayerController.cpp">
+      <Filter>Source\UnrealSnake\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\Tile.cpp">
+      <Filter>Source\UnrealSnake\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\UnrealSnake\Private\GridElements">
+      <UniqueIdentifier>{4E2DCAAE-2279-38BE-A399-054BDBDCB798}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\GridElements\BodySnake.cpp">
+      <Filter>Source\UnrealSnake\Private\GridElements</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\GridElements\Fruit.cpp">
+      <Filter>Source\UnrealSnake\Private\GridElements</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\GridElements\GridElement.cpp">
+      <Filter>Source\UnrealSnake\Private\GridElements</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\GridElements\HeadSnake.cpp">
+      <Filter>Source\UnrealSnake\Private\GridElements</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\GridElements\Wall.cpp">
+      <Filter>Source\UnrealSnake\Private\GridElements</Filter>
+    </ClCompile>
+    <Filter Include="Source\UnrealSnake\Private\Singletons">
+      <UniqueIdentifier>{E222D1D0-B10B-32F7-B962-BB240AC724A6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\Singletons\Map.cpp">
+      <Filter>Source\UnrealSnake\Private\Singletons</Filter>
+    </ClCompile>
+    <Filter Include="Source\UnrealSnake\Public">
+      <UniqueIdentifier>{97475E10-7551-371F-9803-F74CC116600D}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\SnakeGameMode.h">
+      <Filter>Source\UnrealSnake\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\SnakePawn.h">
+      <Filter>Source\UnrealSnake\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\SnakePlayerController.h">
+      <Filter>Source\UnrealSnake\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\Tile.h">
+      <Filter>Source\UnrealSnake\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\UnrealSnake\Public\Enums">
+      <UniqueIdentifier>{1EB74D72-B3D6-3A8C-BC59-CCEE2B84A31D}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\Enums\Direction.h">
+      <Filter>Source\UnrealSnake\Public\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\Enums\GridElementType.h">
+      <Filter>Source\UnrealSnake\Public\Enums</Filter>
+    </ClInclude>
+    <Filter Include="Source\UnrealSnake\Public\GridElements">
+      <UniqueIdentifier>{5FA3B41F-6254-398C-9896-4E3D99E1BA61}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\GridElements\BodySnake.h">
+      <Filter>Source\UnrealSnake\Public\GridElements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\GridElements\Fruit.h">
+      <Filter>Source\UnrealSnake\Public\GridElements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\GridElements\GridElement.h">
+      <Filter>Source\UnrealSnake\Public\GridElements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\GridElements\HeadSnake.h">
+      <Filter>Source\UnrealSnake\Public\GridElements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\GridElements\Wall.h">
+      <Filter>Source\UnrealSnake\Public\GridElements</Filter>
+    </ClInclude>
+    <Filter Include="Source\UnrealSnake\Public\Singletons">
+      <UniqueIdentifier>{95C201F1-6C78-3C1B-AC5C-CD19748B96D8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\Singletons\Map.h">
+      <Filter>Source\UnrealSnake\Public\Singletons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

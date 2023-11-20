@@ -14,56 +14,8 @@ void EmptyLinkFunctionForGeneratedCodeTile() {}
 	UNREALSNAKE_API UClass* Z_Construct_UClass_ATile_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_UnrealSnake();
 // End Cross Module References
-	DEFINE_FUNCTION(ATile::execInitTile)
-	{
-		P_GET_PROPERTY(FFloatProperty,Z_Param_RayLength);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->InitTile(Z_Param_RayLength);
-		P_NATIVE_END;
-	}
 	void ATile::StaticRegisterNativesATile()
 	{
-		UClass* Class = ATile::StaticClass();
-		static const FNameNativePtrPair Funcs[] = {
-			{ "InitTile", &ATile::execInitTile },
-		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_ATile_InitTile_Statics
-	{
-		struct Tile_eventInitTile_Parms
-		{
-			float RayLength;
-		};
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_RayLength;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ATile_InitTile_Statics::NewProp_RayLength = { "RayLength", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Tile_eventInitTile_Parms, RayLength), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATile_InitTile_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATile_InitTile_Statics::NewProp_RayLength,
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATile_InitTile_Statics::Function_MetaDataParams[] = {
-		{ "Category", "MyCategory" },
-		{ "ModuleRelativePath", "Public/Tile.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATile_InitTile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATile, nullptr, "InitTile", nullptr, nullptr, Z_Construct_UFunction_ATile_InitTile_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATile_InitTile_Statics::PropPointers), sizeof(Z_Construct_UFunction_ATile_InitTile_Statics::Tile_eventInitTile_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ATile_InitTile_Statics::Function_MetaDataParams), Z_Construct_UFunction_ATile_InitTile_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ATile_InitTile_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_ATile_InitTile_Statics::Tile_eventInitTile_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_ATile_InitTile()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ATile_InitTile_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ATile);
 	UClass* Z_Construct_UClass_ATile_NoRegister()
@@ -73,7 +25,6 @@ void EmptyLinkFunctionForGeneratedCodeTile() {}
 	struct Z_Construct_UClass_ATile_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
-		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -85,10 +36,6 @@ void EmptyLinkFunctionForGeneratedCodeTile() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_UnrealSnake,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ATile_Statics::DependentSingletons) < 16);
-	const FClassFunctionLinkInfo Z_Construct_UClass_ATile_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ATile_InitTile, "InitTile" }, // 3367063269
-	};
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ATile_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATile_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "Tile.h" },
@@ -103,11 +50,11 @@ void EmptyLinkFunctionForGeneratedCodeTile() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		FuncInfo,
+		nullptr,
 		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		UE_ARRAY_COUNT(FuncInfo),
+		0,
 		0,
 		0,
 		0x009000A4u,
@@ -132,9 +79,9 @@ void EmptyLinkFunctionForGeneratedCodeTile() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Tile_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATile, ATile::StaticClass, TEXT("ATile"), &Z_Registration_Info_UClass_ATile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATile), 3992089512U) },
+		{ Z_Construct_UClass_ATile, ATile::StaticClass, TEXT("ATile"), &Z_Registration_Info_UClass_ATile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATile), 1478946854U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Tile_h_1963844660(TEXT("/Script/UnrealSnake"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Tile_h_4137496376(TEXT("/Script/UnrealSnake"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Tile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Tile_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
