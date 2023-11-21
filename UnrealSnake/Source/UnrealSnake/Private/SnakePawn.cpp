@@ -22,6 +22,10 @@ void ASnakePawn::MoveToNextTile()
 	{
 		MoveBody();
 	}
+	else
+	{
+		AddBodyPart();
+	}
 	BodyGained = false;
 }
 
@@ -34,10 +38,13 @@ void ASnakePawn::MoveHead()
 
 void ASnakePawn::MoveBody()
 {
-	LastTileHead->ArriveNewElement(BodyList[BodyList.Num() - 1]);
+	LastTileHead->ElementDisappear();
 	ABodySnake* NewFirstBodyPart = BodyList[BodyList.Num() - 1];
+	ATile* TileToBeClean = AMap::GetInstance<AMap>()->GetTileElement(NewFirstBodyPart);
+	LastTileHead->ArriveNewElement(BodyList[BodyList.Num() - 1]);
 	BodyList.RemoveAt(BodyList.Num() - 1);
 	BodyList.Insert(NewFirstBodyPart,0);
+	TileToBeClean->ElementDisappear();
 }
 
 void ASnakePawn::Tick(float DeltaTime)
@@ -65,10 +72,9 @@ void ASnakePawn::StopMove()
 	GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
 }
 
-void ASnakePawn::AddBodyPart(ABodySnake* NewBodyPart)
+void ASnakePawn::AddBodyPart()
 {
-	BodyList.Insert(NewBodyPart,0);
-	BodyGained = true;
+	BodyList.Insert(LastTileHead->SpawnSnakeBodyHere(),0);
 }
 
 void ASnakePawn::SetStartDirection()
@@ -98,6 +104,6 @@ void ASnakePawn::SetStartDirection()
 
 void ASnakePawn::GainBody()
 {
-	AddBodyPart(LastTileHead->SpawnSnakeBodyHere());
+	BodyGained = true;
 }
 

@@ -28,7 +28,7 @@ void ASnakeGameMode::NewGame()
 {
 	AMap::GetInstance<AMap>()->SetSnakeStartPosition();
 	Cast<ASnakePawn>(GetWorld()->GetFirstPlayerController()->GetPawn())->SetStartDirection();
-	Cast<ASnakePawn>(GetWorld()->GetFirstPlayerController()->GetPawn())->StartMove(1);
+	Cast<ASnakePawn>(GetWorld()->GetFirstPlayerController()->GetPawn())->StartMove(0.3);
 	AFruitSpawner::GetInstance<AFruitSpawner>()->SpawnFruit();
 }
 

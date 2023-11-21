@@ -37,6 +37,7 @@ void AFruit::CollideWithSnake()
 	Cast<ASnakePawn>(GetWorld()->GetFirstPlayerController()->GetPawn())->GainBody();
 	AMap::GetInstance<AMap>()->GetTileElement(this)->ElementDisappear();
 	AFruitSpawner::GetInstance<AFruitSpawner>()->SpawnFruit();
+	Destroy();
 }
 
 void AFruit::Tick(float DeltaTime)

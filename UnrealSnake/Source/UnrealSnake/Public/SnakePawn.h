@@ -20,11 +20,11 @@ public:
 	Direction GetDirection();
 	void StartMove(float Interval);
 	void StopMove();
-	void AddBodyPart(ABodySnake* NewBodyPart);
+	void AddBodyPart();
+	void GainBody();
 	TArray<ABodySnake*> BodyList;
 	AHeadSnake* Head;
 	void SetStartDirection();
-	void GainBody();
 protected:
 	virtual void BeginPlay() override;
 private:

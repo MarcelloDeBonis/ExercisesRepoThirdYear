@@ -42,7 +42,6 @@ void AMap::SetSnakeStartPosition()
 	{
 		Pawn->BodyList.Add(BodyPartTile->SpawnSnakeBodyHere());
 	}
-	
 }
 
 TArray<ATile*> AMap::GetFreeTiles()

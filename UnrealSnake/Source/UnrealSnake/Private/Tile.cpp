@@ -80,11 +80,12 @@ void ATile::ArriveNewElement(AGridElement* NewElement)
 	{
 		Element = NewElement;
 		Element->SetActorLocation(ElementPosition());
-		AMap::GetInstance<AMap>()->GetTileElement(NewElement)->ElementDisappear();
 	}
 	else
 	{
-		Element->CollideWithSnake();			
+		Element->CollideWithSnake();
+		Element = NewElement;
+		Element->SetActorLocation(ElementPosition());
 	}
 }
 
