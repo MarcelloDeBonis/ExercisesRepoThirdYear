@@ -10,10 +10,9 @@
 #include "SnakePawn.generated.h"
 
 UCLASS()
-class UNREALSNAKE_API ASnakePawn : public ADefaultPawn
+class UNREALSNAKE_API ASnakePawn : public APawn
 {
 	GENERATED_BODY()
-
 public:
 	ASnakePawn();
 	virtual void Tick(float DeltaTime) override;
@@ -24,6 +23,8 @@ public:
 	void AddBodyPart(ABodySnake* NewBodyPart);
 	TArray<ABodySnake*> BodyList;
 	AHeadSnake* Head;
+	void SetStartDirection();
+	void GainBody();
 protected:
 	virtual void BeginPlay() override;
 private:
@@ -31,4 +32,7 @@ private:
 	void MoveToNextTile();
 	bool BodyGained;
 	FTimerHandle TimerHandle;
+	ATile* LastTileHead;
+	void MoveHead();
+	void MoveBody();
 };

@@ -21,8 +21,11 @@ public:
 	UFUNCTION(BlueprintCallable,Category="Custom")
 	void NewTile(ATile* NewTile);
 	ATile* GetTileElement(AGridElement* Element);
+	void SetSnakeStartPosition();
+	TArray<ATile*> GetFreeTiles();
 protected:
 	virtual void BeginPlay() override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 private:
 	TArray<ATile*> TileMap;
 	UFUNCTION(BlueprintCallable)

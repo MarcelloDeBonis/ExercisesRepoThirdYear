@@ -18,11 +18,7 @@ void ABodySnake::Initialize(ATile* tile)
 
 void ABodySnake::CollideWithSnake()
 {
-	ASnakeGameMode* MyGameMode = Cast<ASnakeGameMode>(GetWorld()->GetAuthGameMode());
-	if (MyGameMode)
-	{
-		MyGameMode->Lost();
-	}
+	Cast<ASnakeGameMode>(GetWorld()->GetAuthGameMode())->Lost();
 }
 
 void ABodySnake::BeginPlay()

@@ -17,19 +17,19 @@ class UNREALSNAKE_API ATile : public AActor
 public:
 	ATile();
 	AGridElement* Element = nullptr;
-	std::tuple<bool,ATile*> GetTile(Direction Direction);
+	ATile* GetTile(Direction Direction);
 	void ArriveNewElement(AGridElement* NewElement);
 	virtual void Tick(float DeltaSeconds) override;
 	void InitTile(float RayLength);
 	ABodySnake* SpawnSnakeBodyHere();
 	AFruit* SpawnFruitHere();
-private:
-	FVector ElementPosition();
 	ATile* UpTile;
 	ATile* RightTile;
 	ATile* LeftTile;
 	ATile* DownTile;
 	void ElementDisappear();
+private:
+	FVector ElementPosition();
 	ATile* PerformRaycasts(float RayLength, const FVector& Dir);
 	bool IsABorderTile();
 	void SearchNearTile(float RayLength);

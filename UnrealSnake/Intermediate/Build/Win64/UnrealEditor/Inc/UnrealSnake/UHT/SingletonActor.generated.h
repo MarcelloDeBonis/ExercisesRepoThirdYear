@@ -36,7 +36,8 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ASingletonActor); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASingletonActor); \
-	DEFINE_ABSTRACT_DEFAULT_CONSTRUCTOR_CALL(ASingletonActor)
+	DEFINE_ABSTRACT_DEFAULT_CONSTRUCTOR_CALL(ASingletonActor) \
+	NO_API virtual ~ASingletonActor();
 
 
 #define FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Singletons_SingletonActor_h_9_PROLOG

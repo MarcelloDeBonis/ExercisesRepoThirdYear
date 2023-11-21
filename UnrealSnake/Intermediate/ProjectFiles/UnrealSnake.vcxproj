@@ -115,12 +115,14 @@
     <None Include="..\..\Config\DefaultGame.ini" />
     <None Include="..\..\Config\DefaultInput.ini" />
     <None Include="..\..\Source\UnrealSnake\UnrealSnake.Build.cs" />
+    <ClCompile Include="..\..\Source\UnrealSnake\Private\Singletons\FruitSpawner.cpp" />
     <ClCompile Include="..\..\Source\UnrealSnake\Private\Singletons\SingletonActor.cpp" />
     <ClCompile Include="..\..\Source\UnrealSnake\UnrealSnake.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealSnake\Public\Singletons\FruitSpawner.h" />
     <ClInclude Include="..\..\Source\UnrealSnake\Public\Singletons\SingletonActor.h" />
     <ClInclude Include="..\..\Source\UnrealSnake\UnrealSnake.h" />
     <ClCompile Include="..\..\Source\UnrealSnake\Private\SnakeGameMode.cpp">

@@ -2,6 +2,7 @@
 
 #include "SnakePawn.h"
 #include "TimerManager.h"
+#include "Singletons/Map.h"
 
 ASnakePawn::ASnakePawn()
 {
@@ -15,12 +16,28 @@ void ASnakePawn::BeginPlay()
 
 void ASnakePawn::MoveToNextTile()
 {
-
+	MoveHead();
 	
-	if(BodyGained)
+	if(!BodyGained)
 	{
-		//last element doesn't become the first
+		MoveBody();
 	}
+	BodyGained = false;
+}
+
+void ASnakePawn::MoveHead()
+{
+	LastTileHead = AMap::GetInstance<AMap>()->GetTileElement(Head);
+	ATile* NextTileHead = (LastTileHead->GetTile(_Direction));
+	NextTileHead->ArriveNewElement(Head);
+}
+
+void ASnakePawn::MoveBody()
+{
+	LastTileHead->ArriveNewElement(BodyList[BodyList.Num() - 1]);
+	ABodySnake* NewFirstBodyPart = BodyList[BodyList.Num() - 1];
+	BodyList.RemoveAt(BodyList.Num() - 1);
+	BodyList.Insert(NewFirstBodyPart,0);
 }
 
 void ASnakePawn::Tick(float DeltaTime)
@@ -54,5 +71,33 @@ void ASnakePawn::AddBodyPart(ABodySnake* NewBodyPart)
 	BodyGained = true;
 }
 
+void ASnakePawn::SetStartDirection()
+{
+	ATile* TileStartBody = AMap::GetInstance<AMap>()->GetTileElement(BodyList[0]);
 
+	if(TileStartBody->UpTile->Element == Head)
+	{
+		_Direction=Up;
+	}
+
+	if(TileStartBody->RightTile->Element == Head)
+	{
+		_Direction=Right;
+	}
+
+	if(TileStartBody->DownTile->Element == Head)
+	{
+		_Direction=Down;
+	}
+
+	if(TileStartBody->LeftTile->Element == Head)
+	{
+		_Direction=Left;
+	}
+}
+
+void ASnakePawn::GainBody()
+{
+	AddBodyPart(LastTileHead->SpawnSnakeBodyHere());
+}
 

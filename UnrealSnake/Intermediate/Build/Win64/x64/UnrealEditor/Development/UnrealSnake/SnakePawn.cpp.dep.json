@@ -17,7 +17,15 @@
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealsnake\\uht\\bodysnake.generated.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\source\\unrealsnake\\public\\gridelements\\headsnake.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealsnake\\uht\\headsnake.generated.h",
-            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealsnake\\uht\\snakepawn.generated.h"
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealsnake\\uht\\snakepawn.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\source\\unrealsnake\\public\\singletons\\map.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\source\\unrealsnake\\public\\singletons\\singletonactor.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealsnake\\uht\\singletonactor.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\source\\unrealsnake\\public\\tile.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\source\\unrealsnake\\public\\gridelements\\fruit.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealsnake\\uht\\fruit.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealsnake\\uht\\tile.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealsnake\\uht\\map.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

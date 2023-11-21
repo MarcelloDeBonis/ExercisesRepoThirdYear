@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeUnrealSnake_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x08261CD1,
-				0xAE15AB24,
+				0x76015AA0,
+				0x9169F75E,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_UnrealSnake.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_UnrealSnake.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_UnrealSnake(Z_Construct_UPackage__Script_UnrealSnake, TEXT("/Script/UnrealSnake"), Z_Registration_Info_UPackage__Script_UnrealSnake, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x08261CD1, 0xAE15AB24));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_UnrealSnake(Z_Construct_UPackage__Script_UnrealSnake, TEXT("/Script/UnrealSnake"), Z_Registration_Info_UPackage__Script_UnrealSnake, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x76015AA0, 0x9169F75E));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

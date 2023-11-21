@@ -15,9 +15,11 @@ public:
 	// Sets default values for this actor's properties
 	ASnakeGameMode();
 	virtual void Tick(float DeltaTime) override;
+	UFUNCTION(BlueprintCallable,Category="Custom")
 	void NewGame();
 	void Lost();
 	void QuitGame();
+	void Win();
 private:
 	bool NewBestScore();
 	void SetNewBestScore();

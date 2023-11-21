@@ -4,6 +4,8 @@
 
 #include "SnakePawn.h"
 #include "SnakePlayerController.h"
+#include "Singletons/FruitSpawner.h"
+#include "Singletons/Map.h"
 
 ASnakeGameMode::ASnakeGameMode()
 {
@@ -24,11 +26,16 @@ void ASnakeGameMode::Tick(float DeltaTime)
 
 void ASnakeGameMode::NewGame()
 {
-
+	AMap::GetInstance<AMap>()->SetSnakeStartPosition();
+	Cast<ASnakePawn>(GetWorld()->GetFirstPlayerController()->GetPawn())->SetStartDirection();
+	Cast<ASnakePawn>(GetWorld()->GetFirstPlayerController()->GetPawn())->StartMove(1);
+	AFruitSpawner::GetInstance<AFruitSpawner>()->SpawnFruit();
 }
 
 void ASnakeGameMode::Lost()
 {
+	Cast<ASnakePawn>(GetWorld()->GetFirstPlayerController()->GetPawn())->StopMove();
+	
 	if(NewBestScore())
 	{
 		SetNewBestScore();
@@ -62,3 +69,7 @@ void ASnakeGameMode::ResetCurrentScore()
 {
 }
 
+void ASnakeGameMode::Win()
+{
+	
+}

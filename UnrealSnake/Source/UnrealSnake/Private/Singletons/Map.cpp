@@ -6,23 +6,33 @@
 AMap::AMap()
 {
 	PrimaryActorTick.bCanEverTick = true;
-	SetSingleInstance();
 }
 
 void AMap::BeginPlay()
 {
 	Super::BeginPlay();
+	SetSingleInstance(this);
 }
+
+void AMap::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	Super::EndPlay(EndPlayReason);
+	RemoveSingleInstance<ThisClass>();
+}
+
 
 void AMap::InitTiles()
 {
-	ASnakePawn* Pawn = Cast<ASnakePawn>(GetWorld()->GetFirstPlayerController()->GetPawn());
-	
 	for (auto tile : TileMap)
 	{
 		tile->InitTile(350);
 	}
+}
 
+void AMap::SetSnakeStartPosition()
+{
+	ASnakePawn* Pawn = Cast<ASnakePawn>(GetWorld()->GetFirstPlayerController()->GetPawn());
+	
 	AHeadSnake* Head = GetWorld()->SpawnActor<AHeadSnake>(AHeadSnake::StaticClass());
 	Pawn->Head = Head;
 	
@@ -33,6 +43,19 @@ void AMap::InitTiles()
 		Pawn->BodyList.Add(BodyPartTile->SpawnSnakeBodyHere());
 	}
 	
+}
+
+TArray<ATile*> AMap::GetFreeTiles()
+{
+	TArray<ATile*> FreeTiles;
+	for (auto tile : TileMap)
+	{
+		if(tile->Element==nullptr)
+		{
+			FreeTiles.Add(tile);
+		}
+	}
+	return FreeTiles;
 }
 
 void AMap::NewTile(ATile* NewTile)

@@ -3,26 +3,8 @@
 
 #include "Singletons/SingletonActor.h"
 
-ASingletonActor* ASingletonActor::Instance = nullptr;
-
 ASingletonActor::ASingletonActor()
 {
 	
-}
-
-void ASingletonActor::SetSingleInstance()
-{
-	if (!Instance)
-	{
-		Instance = this;
-	}
-}
-
-ASingletonActor::~ASingletonActor()
-{
-	if (Instance == this)
-	{
-		Instance = nullptr;
-	}
 }
 

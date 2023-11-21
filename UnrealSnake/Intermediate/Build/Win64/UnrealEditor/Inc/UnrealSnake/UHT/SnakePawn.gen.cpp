@@ -9,7 +9,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSnakePawn() {}
 // Cross Module References
-	ENGINE_API UClass* Z_Construct_UClass_ADefaultPawn();
+	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UNREALSNAKE_API UClass* Z_Construct_UClass_ASnakePawn();
 	UNREALSNAKE_API UClass* Z_Construct_UClass_ASnakePawn_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_UnrealSnake();
@@ -32,7 +32,7 @@ void EmptyLinkFunctionForGeneratedCodeSnakePawn() {}
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_ASnakePawn_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_ADefaultPawn,
+		(UObject* (*)())Z_Construct_UClass_APawn,
 		(UObject* (*)())Z_Construct_UPackage__Script_UnrealSnake,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASnakePawn_Statics::DependentSingletons) < 16);
@@ -80,9 +80,9 @@ void EmptyLinkFunctionForGeneratedCodeSnakePawn() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_SnakePawn_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASnakePawn, ASnakePawn::StaticClass, TEXT("ASnakePawn"), &Z_Registration_Info_UClass_ASnakePawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASnakePawn), 1521369635U) },
+		{ Z_Construct_UClass_ASnakePawn, ASnakePawn::StaticClass, TEXT("ASnakePawn"), &Z_Registration_Info_UClass_ASnakePawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASnakePawn), 941642213U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_SnakePawn_h_2738377035(TEXT("/Script/UnrealSnake"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_SnakePawn_h_3485420389(TEXT("/Script/UnrealSnake"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_SnakePawn_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_SnakePawn_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

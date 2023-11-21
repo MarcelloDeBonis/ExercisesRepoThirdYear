@@ -24,7 +24,7 @@ private: \
 	static void StaticRegisterNativesASnakePawn(); \
 	friend struct Z_Construct_UClass_ASnakePawn_Statics; \
 public: \
-	DECLARE_CLASS(ASnakePawn, ADefaultPawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/UnrealSnake"), NO_API) \
+	DECLARE_CLASS(ASnakePawn, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/UnrealSnake"), NO_API) \
 	DECLARE_SERIALIZER(ASnakePawn)
 
 

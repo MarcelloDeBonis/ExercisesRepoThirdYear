@@ -13,15 +13,37 @@ class UNREALSNAKE_API ASingletonActor : public AActor
 
 protected:
 	ASingletonActor();
-	static ASingletonActor* Instance;
-	void SetSingleInstance();
+	template<class T>
+	static T* Instance;
+	template<class T>
+	void SetSingleInstance(T* _Instance);
 public:
-	
-	virtual ~ASingletonActor();
 
-	template<typename T>
+	template<class T>
 	static T* GetInstance()
 	{
-		return Cast<T>(Instance);
+		return Instance<T>;
 	}
+
+	template<class T>
+	void RemoveSingleInstance();
 };
+
+
+template<class T>
+T* ASingletonActor::Instance = nullptr;
+
+template<class T>
+void ASingletonActor::SetSingleInstance(T* _Instance)
+{
+	if (!Instance<T>)
+	{
+		Instance<T> = _Instance;
+	}
+}
+
+template<class T>
+void ASingletonActor::RemoveSingleInstance()
+{
+	Instance<T> = nullptr;
+}

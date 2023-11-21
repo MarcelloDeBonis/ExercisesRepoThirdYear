@@ -73,6 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeSingletonActor() {}
 		return ASingletonActor::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASingletonActor);
+	ASingletonActor::~ASingletonActor() {}
 	struct Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_UnrealSnake_Source_UnrealSnake_Public_Singletons_SingletonActor_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];

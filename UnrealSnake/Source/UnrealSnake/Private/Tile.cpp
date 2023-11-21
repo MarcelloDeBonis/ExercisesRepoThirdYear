@@ -2,8 +2,8 @@
 
 
 #include "UnrealSnake/Public/Tile.h"
-
 #include "GridElements/Wall.h"
+#include "Singletons/Map.h"
 
 ATile::ATile()
 {
@@ -23,55 +23,55 @@ FVector ATile::ElementPosition()
 	return FVector::ZeroVector;
 }
 
-std::tuple<bool,ATile*>ATile::GetTile(Direction Direction)
+ATile* ATile::GetTile(Direction Direction)
 {
 	switch (Direction)
 	{
 		case Up:
 			if(UpTile!=nullptr)
 			{
-				return std::tuple<bool,ATile*>(true, UpTile);
+				return UpTile;
 			}
 			else
 			{
-				return std::tuple<bool,ATile*>(true, nullptr);
+				return nullptr;
 			}
 		break;
 		
 		case Right:
 			if(RightTile!=nullptr)
 			{
-				return std::tuple<bool,ATile*>(true, RightTile);
+				return RightTile;
 			}
 			else
 			{
-				return std::tuple<bool,ATile*>(true, nullptr);
+				return nullptr;
 			}
 		break;
 		
 		case Left:
 			if(LeftTile!=nullptr)
 			{
-				return std::tuple<bool,ATile*>(true, LeftTile);
+				return LeftTile;
 			}
 			else
 			{
-				return std::tuple<bool,ATile*>(true, nullptr);
+				return nullptr;
 			}
 		break;
 		
 		case Down:
 			if(DownTile!=nullptr)
 			{
-				return std::tuple<bool,ATile*>(true, DownTile);
+				return DownTile;
 			}
 			else
 			{
-				return std::tuple<bool,ATile*>(true, nullptr);
+				return nullptr;
 			}
 		break;
 	}
-	return std::tuple<bool,ATile*>(false, nullptr);
+	return nullptr;
 }
 
 void ATile::ArriveNewElement(AGridElement* NewElement)
@@ -80,6 +80,7 @@ void ATile::ArriveNewElement(AGridElement* NewElement)
 	{
 		Element = NewElement;
 		Element->SetActorLocation(ElementPosition());
+		AMap::GetInstance<AMap>()->GetTileElement(NewElement)->ElementDisappear();
 	}
 	else
 	{
@@ -169,10 +170,6 @@ void ATile::SpawnTileCube()
 ABodySnake* ATile::SpawnSnakeBodyHere()
 {
 	ABodySnake* NewSnakePart = GetWorld()->SpawnActor<ABodySnake>(ABodySnake::StaticClass());
-	if (GEngine)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, NewSnakePart->GetName());
-	}
 	NewSnakePart->Initialize(this);
 	return NewSnakePart;
 }
