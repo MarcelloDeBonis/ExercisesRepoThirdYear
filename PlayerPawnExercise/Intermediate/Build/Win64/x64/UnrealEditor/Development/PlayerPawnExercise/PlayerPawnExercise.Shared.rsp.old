@@ -1,5 +1,6 @@
 /I "."
 /I "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\PlayerPawnExercise\Source\PlayerPawnExercise\Private"
+/I "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\PlayerPawnExercise\Intermediate\Build\Win64\UnrealEditor\Inc\PlayerPawnExercise\UHT"
 /I "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\PlayerPawnExercise\Source"
 /I "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\PlayerPawnExercise\Source\PlayerPawnExercise\Public"
 /I "Runtime\Core\Public"

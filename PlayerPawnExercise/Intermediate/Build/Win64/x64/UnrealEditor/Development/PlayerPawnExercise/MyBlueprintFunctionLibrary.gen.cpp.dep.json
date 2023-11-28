@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\unrealeditor\\inc\\playerpawnexercise\\uht\\myblueprintfunctionlibrary.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\x64\\playerpawnexerciseeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\playerpawnexercise\\definitions.playerpawnexercise.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\source\\playerpawnexercise\\other\\myblueprintfunctionlibrary.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\unrealeditor\\inc\\playerpawnexercise\\uht\\myblueprintfunctionlibrary.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

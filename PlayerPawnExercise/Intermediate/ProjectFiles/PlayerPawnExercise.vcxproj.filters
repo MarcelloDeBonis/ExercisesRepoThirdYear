@@ -36,13 +36,37 @@
     <Filter Include="Source\PlayerPawnExercise\Private">
       <UniqueIdentifier>{C2660A3B-E120-3672-8C49-9BA82B07A4FB}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PlayerPawnExercise\Private\AMyController.cpp">
+      <Filter>Source\PlayerPawnExercise\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\PlayerPawnExercise\Private\Amypawn.cpp">
+      <Filter>Source\PlayerPawnExercise\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\PlayerPawnExercise\Private\MyGameMode.cpp">
+      <Filter>Source\PlayerPawnExercise\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\PlayerPawnExercise\Private\PlayerPawnExercise.cpp">
+      <Filter>Source\PlayerPawnExercise\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\PlayerPawnExercise\Private\UMySaveGame.cpp">
       <Filter>Source\PlayerPawnExercise\Private</Filter>
     </ClCompile>
     <Filter Include="Source\PlayerPawnExercise\Public">
       <UniqueIdentifier>{93B48BA7-02E3-39E4-A7FB-E5ECE6190D3E}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\PlayerPawnExercise\Public\AMyController.h">
+      <Filter>Source\PlayerPawnExercise\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\PlayerPawnExercise\Public\Amypawn.h">
+      <Filter>Source\PlayerPawnExercise\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\PlayerPawnExercise\Public\MyGameMode.h">
+      <Filter>Source\PlayerPawnExercise\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\PlayerPawnExercise\Public\PlayerPawnExercise.h">
+      <Filter>Source\PlayerPawnExercise\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\PlayerPawnExercise\Public\UMySaveGame.h">
       <Filter>Source\PlayerPawnExercise\Public</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,0 +1,27 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\unrealeditor\\inc\\playerpawnexercise\\uht\\customgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\x64\\playerpawnexerciseeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\playerpawnexercise\\definitions.playerpawnexercise.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\source\\playerpawnexercise\\other\\customgamemode.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\source\\playerpawnexercise\\other\\playerpawn.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\source\\playerpawnexercise\\public\\playersavegame.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\savegame.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\savegame.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\unrealeditor\\inc\\playerpawnexercise\\uht\\playersavegame.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\unrealeditor\\inc\\playerpawnexercise\\uht\\playerpawn.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\source\\playerpawnexercise\\other\\myplayercontroller.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\unrealeditor\\inc\\playerpawnexercise\\uht\\myplayercontroller.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\playerpawnexercise\\intermediate\\build\\win64\\unrealeditor\\inc\\playerpawnexercise\\uht\\customgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

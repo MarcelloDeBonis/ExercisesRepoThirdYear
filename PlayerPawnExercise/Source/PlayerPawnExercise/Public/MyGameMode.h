@@ -25,6 +25,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Game")
 	void LoadGame();
 
+	void RestartPlayer(AController* PlayerController);
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

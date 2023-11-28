@@ -1,9 +1,27 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Kismet/GameplayStatics.h"
 #include "MyGameMode.h"
+#include "Kismet/GameplayStatics.h"
 #include "Amypawn.h"
 #include "UMySaveGame.h"
+
+AMyGameMode::AMyGameMode()
+{
+	
+}
+
+
+void AMyGameMode::BeginPlay()
+{
+	Super::BeginPlay();
+	LoadGame();
+}
+
+void AMyGameMode::RestartPlayer(AController* PlayerController)
+{
+	Super::RestartPlayer(PlayerController);
+	SaveGame();
+}
 
 void AMyGameMode::SaveGame()
 {
