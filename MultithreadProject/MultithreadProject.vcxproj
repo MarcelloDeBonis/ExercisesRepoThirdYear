@@ -155,10 +155,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="MultithreadProject.cpp" />
-    <ClCompile Include="Private\Philosopher.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Public\Philosopher.h" />
+    <Folder Include="Private" />
+    <Folder Include="Public" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
