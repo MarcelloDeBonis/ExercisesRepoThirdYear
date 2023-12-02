@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\source\\unrealsnake\\private\\singletons\\singletonactor.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\x64\\unrealsnakeeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealsnake\\definitions.unrealsnake.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\source\\unrealsnake\\public\\singletons\\singletonactor.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\unrealsnake\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealsnake\\uht\\singletonactor.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
