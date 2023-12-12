@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "RPGTest2",
+			"Path": "..\\Source\\RPGTest2.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "RPGTest2Editor",
+			"Path": "..\\Source\\RPGTest2Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
