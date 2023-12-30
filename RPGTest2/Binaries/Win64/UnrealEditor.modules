@@ -1,8 +1,0 @@
-{
-	"BuildId": "27405482",
-	"Modules": 
-	{
-		"CharacterModule": "UnrealEditor-CharacterModule.dll",
-		"RPGTest2": "UnrealEditor-RPGTest2.dll"
-	}
-}
