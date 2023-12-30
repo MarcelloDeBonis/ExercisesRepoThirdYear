@@ -1,0 +1,12 @@
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Character\RPGCharacter.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Character\RPGEnemy.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Character\RPGPlayer.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Components\ExpComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Components\HealthComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Components\InventoryComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Components\AttackComponents\AttackComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Components\AttackComponents\MeleeAttackComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Components\AttackComponents\RangedAttackComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Components\Attacks\Arrow.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Components\Attacks\Weapon.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest2\Source\CharacterModule\Public\Components\Attacks\Sword.h

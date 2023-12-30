@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest2\\source\\charactermodule\\private\\components\\attackcomponents\\meleeattackcomponent.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest2\\intermediate\\build\\win64\\x64\\rpgtest2editor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest2\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\charactermodule\\definitions.charactermodule.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest2\\source\\charactermodule\\public\\components\\attackcomponents\\meleeattackcomponent.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest2\\source\\charactermodule\\public\\components\\attackcomponents\\attackcomponent.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest2\\intermediate\\build\\win64\\unrealeditor\\inc\\charactermodule\\uht\\attackcomponent.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest2\\intermediate\\build\\win64\\unrealeditor\\inc\\charactermodule\\uht\\meleeattackcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -7,7 +7,7 @@
 #include "Sword.generated.h"
 
 UCLASS()
-class CHARACTERMODULE_API ASword : public AAWeapon
+class CHARACTERMODULE_API ASword : public AWeapon
 {
 	GENERATED_BODY()
 
