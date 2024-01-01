@@ -1,0 +1,27 @@
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Character\RPGPlayer.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Character\RPGCharacter.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Components\ExpComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Enums\ETeam.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Components\HealthComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Components\InventoryComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\Brain\EnemyBrain.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\Brain\Tasks\EnemyAttackTask.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\Brain\EnemyTask.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Components\AttackComponents\RangedAttackComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\ControllerState\States\AttackingState.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\Brain\Tasks\EnemyMoveToTask.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\WeaponStates\WeaponState.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\ControllerState\States\MovingState.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\WeaponStates\States\DeactivatedWeapon.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Weapon\Weapon.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Components\FollowerComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Components\AttackComponents\AttackComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Components\AttackComponents\MeleeAttackComponent.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Character\RPGEnemy.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\LevelSystem\LevelInfo.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Weapon\Sword.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\Weapon\Arrow.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\Brain\Tasks\EnemySearchTask.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\ControllerState\CharacterState.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\ControllerState\States\IdleState.h
+C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public\State Machines\WeaponStates\States\ActivatedWeapon.h

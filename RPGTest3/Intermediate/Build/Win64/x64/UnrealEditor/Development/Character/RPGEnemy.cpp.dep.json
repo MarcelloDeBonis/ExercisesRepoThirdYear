@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\private\\character\\rpgenemy.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\x64\\rpgtest3editor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\character\\definitions.character.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\character\\rpgenemy.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\character\\rpgcharacter.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\components\\healthcomponent.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\healthcomponent.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\state machines\\controllerstate\\characterstate.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\characterstate.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\rpgcharacter.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\rpgenemy.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
