@@ -10,22 +10,13 @@ ARPGCharacter::ARPGCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
-void ARPGCharacter::InitComponents()
-{
-	InitHealthComponent();
-}
-
-void ARPGCharacter::ChangeState(UCharacterState* NewState)
-{
-	if(CurrentState!=nullptr)
-	{
-		
-	}
-
-	
-}
 
 void ARPGCharacter::InitHealthComponent()
 {
 	HealthComponent = CreateDefaultSubobject<UHealthComponent>("HealthComponent");
+}
+
+void ARPGCharacter::InitComponents()
+{
+	InitHealthComponent();
 }

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Character/Public/State Machines/WeaponStates/WeaponState.h"
+#include "Character/Public/StateMachines/WeaponStates/WeaponState.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWeaponState() {}
 // Cross Module References
@@ -70,7 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponState() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWeaponState_OnEnter_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/State Machines/WeaponStates/WeaponState.h" },
+		{ "ModuleRelativePath", "Public/StateMachines/WeaponStates/WeaponState.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWeaponState_OnEnter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWeaponState, nullptr, "OnEnter", nullptr, nullptr, Z_Construct_UFunction_UWeaponState_OnEnter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponState_OnEnter_Statics::PropPointers), sizeof(WeaponState_eventOnEnter_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponState_OnEnter_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWeaponState_OnEnter_Statics::Function_MetaDataParams) };
@@ -94,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponState() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWeaponState_OnExit_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/State Machines/WeaponStates/WeaponState.h" },
+		{ "ModuleRelativePath", "Public/StateMachines/WeaponStates/WeaponState.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWeaponState_OnExit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWeaponState, nullptr, "OnExit", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponState_OnExit_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWeaponState_OnExit_Statics::Function_MetaDataParams) };
@@ -133,8 +133,8 @@ void EmptyLinkFunctionForGeneratedCodeWeaponState() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponState_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UWeaponState_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UWeaponState_OnEnter, "OnEnter" }, // 3007875907
-		{ &Z_Construct_UFunction_UWeaponState_OnExit, "OnExit" }, // 1409469538
+		{ &Z_Construct_UFunction_UWeaponState_OnEnter, "OnEnter" }, // 780751179
+		{ &Z_Construct_UFunction_UWeaponState_OnExit, "OnExit" }, // 2690422056
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponState_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -142,13 +142,13 @@ void EmptyLinkFunctionForGeneratedCodeWeaponState() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "State Machines/WeaponStates/WeaponState.h" },
-		{ "ModuleRelativePath", "Public/State Machines/WeaponStates/WeaponState.h" },
+		{ "IncludePath", "StateMachines/WeaponStates/WeaponState.h" },
+		{ "ModuleRelativePath", "Public/StateMachines/WeaponStates/WeaponState.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWeaponState_Statics::NewProp_Weapon_MetaData[] = {
-		{ "ModuleRelativePath", "Public/State Machines/WeaponStates/WeaponState.h" },
+		{ "ModuleRelativePath", "Public/StateMachines/WeaponStates/WeaponState.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWeaponState_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWeaponState, Weapon), Z_Construct_UClass_AWeapon_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponState_Statics::NewProp_Weapon_MetaData), Z_Construct_UClass_UWeaponState_Statics::NewProp_Weapon_MetaData) };
@@ -189,15 +189,15 @@ void EmptyLinkFunctionForGeneratedCodeWeaponState() {}
 	UWeaponState::UWeaponState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UWeaponState);
 	UWeaponState::~UWeaponState() {}
-	struct Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_State_Machines_WeaponStates_WeaponState_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_StateMachines_WeaponStates_WeaponState_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_State_Machines_WeaponStates_WeaponState_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UWeaponState, UWeaponState::StaticClass, TEXT("UWeaponState"), &Z_Registration_Info_UClass_UWeaponState, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWeaponState), 3916667514U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_StateMachines_WeaponStates_WeaponState_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UWeaponState, UWeaponState::StaticClass, TEXT("UWeaponState"), &Z_Registration_Info_UClass_UWeaponState, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWeaponState), 822889498U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_State_Machines_WeaponStates_WeaponState_h_4294633143(TEXT("/Script/Character"),
-		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_State_Machines_WeaponStates_WeaponState_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_State_Machines_WeaponStates_WeaponState_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_StateMachines_WeaponStates_WeaponState_h_3957003414(TEXT("/Script/Character"),
+		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_StateMachines_WeaponStates_WeaponState_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_StateMachines_WeaponStates_WeaponState_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

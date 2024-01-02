@@ -3,12 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Character/RPGCharacter.h"
-#include "Components/BoxComponent.h"
 #include "Components/FollowerComponent.h"
 #include "Enums/ETeam.h"
 #include "GameFramework/Actor.h"
-#include "State Machines/WeaponStates/WeaponState.h"
+#include "StateMachines/WeaponStates/WeaponState.h"
 #include "Weapon.generated.h"
 
 UCLASS(Abstract)

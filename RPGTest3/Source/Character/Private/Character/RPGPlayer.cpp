@@ -3,30 +3,59 @@
 
 #include "Character/RPGPlayer.h"
 
+#include "DataTable/DataTableInfo.h"
 
-// Sets default values
+
 ARPGPlayer::ARPGPlayer()
 {
-	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 }
 
-// Called when the game starts or when spawned
-void ARPGPlayer::BeginPlay()
+void ARPGPlayer::InitExpComponent()
 {
-	Super::BeginPlay();
+	ExpComponent = CreateDefaultSubobject<UExpComponent>("ExpComponent");
+}
+
+void ARPGPlayer::InitInventoryComponent()
+{
+	InventoryComponent = CreateDefaultSubobject<UInventoryComponent>("InventoryComponent");
+}
+
+void ARPGPlayer::InitMeleeAttackComponent()
+{
+	MeleeAttackComponent = CreateDefaultSubobject<UMeleeAttackComponent>("MeleeAttackComponent");
+}
+
+void ARPGPlayer::InitComponents()
+{
+	Super::InitComponents();
 	
+	InitExpComponent();
+	InitInventoryComponent();
+	InitMeleeAttackComponent();
 }
 
-// Called every frame
-void ARPGPlayer::Tick(float DeltaTime)
+
+
+void ARPGPlayer::UpdateNewLevel(int Level, FLevelInfo Info)
 {
-	Super::Tick(DeltaTime);
+	const int Life = Info.Life;
+	const int Damage = Info.Damage;
+	const int Exp = Info.Exp;
+	
+	HealthComponent->SetMaxLife(Life);
+	MeleeAttackComponent->SetDamage(Damage);
+	ExpComponent->OnUpdateLevel(Level, Exp);
 }
 
-// Called to bind functionality to input
-void ARPGPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void ARPGPlayer::UpdateNewLevel(int Level)
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	const FString LevelName = "Level" + FString::FromInt(Level);
+	FLevelInfo LevelInfo = UDataTableInfo::GetStructByRowName<FLevelInfo>("/Content/DT/LevelInfoDT.uasset", LevelName);
+
+	UpdateNewLevel(Level, FLevelInfo());
 }
+
+
+
 

@@ -2,8 +2,10 @@
 
 
 #include "Weapon/Weapon.h"
-#include "State Machines/WeaponStates/States/ActivatedWeapon.h"
-#include "State Machines/WeaponStates/States/DeactivatedWeapon.h"
+
+#include "Character/RPGCharacter.h"
+#include "StateMachines/WeaponStates/States/ActivatedWeapon.h"
+#include "StateMachines/WeaponStates/States/DeactivatedWeapon.h"
 
 void AWeapon::ActiveWeapon(float TimeActivation)
 {

@@ -3,13 +3,16 @@
 
 #include "Components/ExpComponent.h"
 
+#include "Character/RPGPlayer.h"
+
 UExpComponent::UExpComponent()
 {
 	PrimaryComponentTick.bCanEverTick = true;
 }
 
-void UExpComponent::OnUpdateLevel(int ExpToObtain)
+void UExpComponent::OnUpdateLevel(int NewLevel, int ExpToObtain)
 {
+	CurrentLevel = NewLevel;
 	CurrentExp = 0;
 	MaxExp = ExpToObtain;
 	OnExpUpdated.Broadcast(CurrentExp, MaxExp);
@@ -23,7 +26,7 @@ void UExpComponent::GainExp(int NewExp)
 	
 	if(LevelUp())
 	{
-		OnLevelChanged.Broadcast(CurrentLevel);
+		Cast<ARPGPlayer>(GetOwner())->UpdateNewLevel(CurrentLevel+1);
 	}
 	
 }

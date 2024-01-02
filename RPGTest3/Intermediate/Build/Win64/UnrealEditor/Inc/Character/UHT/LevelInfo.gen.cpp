@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Character/Public/LevelSystem/LevelInfo.h"
+#include "Character/Public/DataTable/LevelInfo.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeLevelInfo() {}
 // Cross Module References
@@ -53,7 +53,7 @@ template<> CHARACTER_API UScriptStruct* StaticStruct<FLevelInfo>()
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLevelInfo_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Public/LevelSystem/LevelInfo.h" },
+		{ "ModuleRelativePath", "Public/DataTable/LevelInfo.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FLevelInfo_Statics::NewStructOps()
@@ -64,7 +64,7 @@ template<> CHARACTER_API UScriptStruct* StaticStruct<FLevelInfo>()
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Life_MetaData[] = {
 		{ "Category", "LevelInfo" },
 		{ "DisplayName", "Life" },
-		{ "ModuleRelativePath", "Public/LevelSystem/LevelInfo.h" },
+		{ "ModuleRelativePath", "Public/DataTable/LevelInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Life = { "Life", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FLevelInfo, Life), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Life_MetaData), Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Life_MetaData) };
@@ -72,7 +72,7 @@ template<> CHARACTER_API UScriptStruct* StaticStruct<FLevelInfo>()
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Damage_MetaData[] = {
 		{ "Category", "LevelInfo" },
 		{ "DisplayName", "Damage" },
-		{ "ModuleRelativePath", "Public/LevelSystem/LevelInfo.h" },
+		{ "ModuleRelativePath", "Public/DataTable/LevelInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FLevelInfo, Damage), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Damage_MetaData), Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Damage_MetaData) };
@@ -80,7 +80,7 @@ template<> CHARACTER_API UScriptStruct* StaticStruct<FLevelInfo>()
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Exp_MetaData[] = {
 		{ "Category", "LevelInfo" },
 		{ "DisplayName", "Exp" },
-		{ "ModuleRelativePath", "Public/LevelSystem/LevelInfo.h" },
+		{ "ModuleRelativePath", "Public/DataTable/LevelInfo.h" },
 	};
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Exp = { "Exp", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FLevelInfo, Exp), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Exp_MetaData), Z_Construct_UScriptStruct_FLevelInfo_Statics::NewProp_Exp_MetaData) };
@@ -111,15 +111,15 @@ template<> CHARACTER_API UScriptStruct* StaticStruct<FLevelInfo>()
 		}
 		return Z_Registration_Info_UScriptStruct_LevelInfo.InnerSingleton;
 	}
-	struct Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_LevelSystem_LevelInfo_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_DataTable_LevelInfo_h_Statics
 	{
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
 	};
-	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_LevelSystem_LevelInfo_h_Statics::ScriptStructInfo[] = {
-		{ FLevelInfo::StaticStruct, Z_Construct_UScriptStruct_FLevelInfo_Statics::NewStructOps, TEXT("LevelInfo"), &Z_Registration_Info_UScriptStruct_LevelInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FLevelInfo), 2795126743U) },
+	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_DataTable_LevelInfo_h_Statics::ScriptStructInfo[] = {
+		{ FLevelInfo::StaticStruct, Z_Construct_UScriptStruct_FLevelInfo_Statics::NewStructOps, TEXT("LevelInfo"), &Z_Registration_Info_UScriptStruct_LevelInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FLevelInfo), 2711650594U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_LevelSystem_LevelInfo_h_4191466278(TEXT("/Script/Character"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_DataTable_LevelInfo_h_2947672107(TEXT("/Script/Character"),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_LevelSystem_LevelInfo_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_LevelSystem_LevelInfo_h_Statics::ScriptStructInfo),
+		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_DataTable_LevelInfo_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_DataTable_LevelInfo_h_Statics::ScriptStructInfo),
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

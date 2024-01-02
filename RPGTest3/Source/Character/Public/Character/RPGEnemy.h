@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "RPGCharacter.h"
+#include "Components/AttackComponents/AttackComponent.h"
+#include "Controllers/RPGBrainController.h"
 #include "RPGEnemy.generated.h"
 
 UCLASS()
@@ -15,11 +17,14 @@ public:
 	// Sets default values for this pawn's properties
 	ARPGEnemy();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	UPROPERTY()
+	UAttackComponent* AttackComponent = nullptr;
 
-public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	void InitAttackComponent(UAttackComponent* Component);
+	void InitDamage(int Damage);
+	void InitHealth(int Health);
+private:
+
+	UPROPERTY()
+	ARPGBrainController* Brain = nullptr;
 };

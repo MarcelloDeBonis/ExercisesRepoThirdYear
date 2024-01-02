@@ -4,10 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "LevelSystem/LevelInfo.h"
 #include "ExpComponent.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnLevelChanged, int, NewLevel);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnExpUpdated, int, MaxExp, int , CurrentExp);
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
@@ -18,11 +16,8 @@ class CHARACTER_API UExpComponent : public UActorComponent
 public:
 	
 	UExpComponent();
-	void OnUpdateLevel(int ExpToObtain);
+	void OnUpdateLevel(int NewLevel, int ExpToObtain);
 	void GainExp(int NewExp);
-
-	UPROPERTY(BlueprintAssignable, Category = "Delegates")
-	FOnLevelChanged OnLevelChanged;
 
 	UPROPERTY(BlueprintAssignable, Category = "Delegates")
 	FOnExpUpdated OnExpUpdated;

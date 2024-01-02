@@ -12,6 +12,9 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayer() {}
 	CHARACTER_API UClass* Z_Construct_UClass_ARPGCharacter();
 	CHARACTER_API UClass* Z_Construct_UClass_ARPGPlayer();
 	CHARACTER_API UClass* Z_Construct_UClass_ARPGPlayer_NoRegister();
+	CHARACTER_API UClass* Z_Construct_UClass_UExpComponent_NoRegister();
+	CHARACTER_API UClass* Z_Construct_UClass_UInventoryComponent_NoRegister();
+	CHARACTER_API UClass* Z_Construct_UClass_UMeleeAttackComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Character();
 // End Cross Module References
 	void ARPGPlayer::StaticRegisterNativesARPGPlayer()
@@ -28,6 +31,19 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayer() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ExpComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ExpComponent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_InventoryComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_InventoryComponent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_MeleeAttackComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_MeleeAttackComponent;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -43,6 +59,32 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayer() {}
 		{ "ModuleRelativePath", "Public/Character/RPGPlayer.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPlayer_Statics::NewProp_ExpComponent_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Character/RPGPlayer.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPlayer_Statics::NewProp_ExpComponent = { "ExpComponent", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARPGPlayer, ExpComponent), Z_Construct_UClass_UExpComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayer_Statics::NewProp_ExpComponent_MetaData), Z_Construct_UClass_ARPGPlayer_Statics::NewProp_ExpComponent_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPlayer_Statics::NewProp_InventoryComponent_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Character/RPGPlayer.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPlayer_Statics::NewProp_InventoryComponent = { "InventoryComponent", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARPGPlayer, InventoryComponent), Z_Construct_UClass_UInventoryComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayer_Statics::NewProp_InventoryComponent_MetaData), Z_Construct_UClass_ARPGPlayer_Statics::NewProp_InventoryComponent_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPlayer_Statics::NewProp_MeleeAttackComponent_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Character/RPGPlayer.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPlayer_Statics::NewProp_MeleeAttackComponent = { "MeleeAttackComponent", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARPGPlayer, MeleeAttackComponent), Z_Construct_UClass_UMeleeAttackComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayer_Statics::NewProp_MeleeAttackComponent_MetaData), Z_Construct_UClass_ARPGPlayer_Statics::NewProp_MeleeAttackComponent_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARPGPlayer_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPlayer_Statics::NewProp_ExpComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPlayer_Statics::NewProp_InventoryComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPlayer_Statics::NewProp_MeleeAttackComponent,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ARPGPlayer_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ARPGPlayer>::IsAbstract,
 	};
@@ -52,15 +94,16 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayer() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ARPGPlayer_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayer_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayer_Statics::Class_MetaDataParams), Z_Construct_UClass_ARPGPlayer_Statics::Class_MetaDataParams)
 	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayer_Statics::PropPointers) < 2048);
 	UClass* Z_Construct_UClass_ARPGPlayer()
 	{
 		if (!Z_Registration_Info_UClass_ARPGPlayer.OuterSingleton)
@@ -80,9 +123,9 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayer() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Character_RPGPlayer_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ARPGPlayer, ARPGPlayer::StaticClass, TEXT("ARPGPlayer"), &Z_Registration_Info_UClass_ARPGPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGPlayer), 3236432497U) },
+		{ Z_Construct_UClass_ARPGPlayer, ARPGPlayer::StaticClass, TEXT("ARPGPlayer"), &Z_Registration_Info_UClass_ARPGPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGPlayer), 3954807567U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Character_RPGPlayer_h_3301032203(TEXT("/Script/Character"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Character_RPGPlayer_h_1321171764(TEXT("/Script/Character"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Character_RPGPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Character_RPGPlayer_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

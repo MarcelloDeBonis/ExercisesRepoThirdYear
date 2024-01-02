@@ -3,24 +3,25 @@
 
 #include "Character/RPGEnemy.h"
 
-
-// Sets default values
 ARPGEnemy::ARPGEnemy()
 {
-	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 }
 
-// Called when the game starts or when spawned
-void ARPGEnemy::BeginPlay()
+void ARPGEnemy::InitAttackComponent(UAttackComponent* Component)
 {
-	Super::BeginPlay();
-	
+	AttackComponent = Component;
 }
 
-// Called every frame
-void ARPGEnemy::Tick(float DeltaTime)
+void ARPGEnemy::InitDamage(int Damage)
 {
-	Super::Tick(DeltaTime);
+	AttackComponent->SetDamage(Damage);
 }
+
+void ARPGEnemy::InitHealth(int Health)
+{
+	HealthComponent->SetMaxLife(Health);
+}
+
+
 

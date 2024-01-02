@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/HealthComponent.h"
+#include "Enums/ETeam.h"
 #include "GameFramework/Actor.h"
-#include "State Machines/ControllerState/CharacterState.h"
 #include "RPGCharacter.generated.h"
 
 UCLASS(Abstract)
@@ -20,12 +20,7 @@ public:
 	
 protected:
 	
-	virtual void InitComponents();
-	void ChangeState(UCharacterState* NewState);
-	
-	UCharacterState* CurrentState = nullptr;
-
-private:
-
+	ETeam Team = ETeam::None;
 	void InitHealthComponent();
+	virtual void InitComponents();
 };

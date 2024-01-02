@@ -6,7 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "InventoryComponent.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FHealPotionNumberUpdated, int, Number)
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FHealPotionNumberUpdated, int, Number);
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class CHARACTER_API UInventoryComponent : public UActorComponent
