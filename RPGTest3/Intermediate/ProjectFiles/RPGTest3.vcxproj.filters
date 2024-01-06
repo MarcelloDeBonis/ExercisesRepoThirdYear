@@ -11,6 +11,7 @@
     <None Include="..\..\Source\RPGTest3Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -26,6 +27,273 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Source\Character">
+      <UniqueIdentifier>{DBCD7419-C3BC-3AFE-AD8D-BD0F6B22656C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Character\Character.Build.cs">
+      <Filter>Source\Character</Filter>
+    </None>
+    <Filter Include="Source\Character\Private">
+      <UniqueIdentifier>{BB6E4A43-DD41-3EC5-8BE0-02D76191D975}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\Character.cpp">
+      <Filter>Source\Character\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\Character">
+      <UniqueIdentifier>{D620227E-CDCE-33AA-A0C5-A8EE063CBC6F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\Character\RPGCharacter.cpp">
+      <Filter>Source\Character\Private\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Character\RPGEnemy.cpp">
+      <Filter>Source\Character\Private\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Character\RPGPlayer.cpp">
+      <Filter>Source\Character\Private\Character</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\Components">
+      <UniqueIdentifier>{2C14277E-F462-3260-9AD7-535DE558FF64}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\Components\ExpComponent.cpp">
+      <Filter>Source\Character\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Components\FollowerComponent.cpp">
+      <Filter>Source\Character\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Components\HealthComponent.cpp">
+      <Filter>Source\Character\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Components\InventoryComponent.cpp">
+      <Filter>Source\Character\Private\Components</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\Components\AttackComponents">
+      <UniqueIdentifier>{057AA5D2-249E-33EF-A7B7-E708DCA12439}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\Components\AttackComponents\AttackComponent.cpp">
+      <Filter>Source\Character\Private\Components\AttackComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Components\AttackComponents\MeleeAttackComponent.cpp">
+      <Filter>Source\Character\Private\Components\AttackComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Components\AttackComponents\RangedAttackComponent.cpp">
+      <Filter>Source\Character\Private\Components\AttackComponents</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\Controllers">
+      <UniqueIdentifier>{33BAE9AF-A76D-3A3E-89EF-0AD69B67849A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\Controllers\RPGBrainController.cpp">
+      <Filter>Source\Character\Private\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Controllers\RPGPlayerController.cpp">
+      <Filter>Source\Character\Private\Controllers</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\DataTable">
+      <UniqueIdentifier>{0C86A2F0-1FD4-3594-9D8A-5EE275281921}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\DataTable\DataTableInfo.cpp">
+      <Filter>Source\Character\Private\DataTable</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\StateMachines">
+      <UniqueIdentifier>{4F79AA93-DE3E-3E8D-BD44-D04F49C779A1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Character\Private\StateMachines\Brain">
+      <UniqueIdentifier>{152C9131-67AD-31DE-A82B-1F8487095BD6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\Brain\EnemyTask.cpp">
+      <Filter>Source\Character\Private\StateMachines\Brain</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\StateMachines\Brain\Tasks">
+      <UniqueIdentifier>{CAC2B4D6-3712-328A-980E-C9626FA7C946}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\Brain\Tasks\EnemyAttackTask.cpp">
+      <Filter>Source\Character\Private\StateMachines\Brain\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\Brain\Tasks\EnemyMoveToTask.cpp">
+      <Filter>Source\Character\Private\StateMachines\Brain\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\Brain\Tasks\EnemySearchTask.cpp">
+      <Filter>Source\Character\Private\StateMachines\Brain\Tasks</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\StateMachines\ControllerState">
+      <UniqueIdentifier>{0F224B00-DFFD-3F65-99B1-38CC64B7615C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\ControllerState\CharacterState.cpp">
+      <Filter>Source\Character\Private\StateMachines\ControllerState</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\StateMachines\ControllerState\States">
+      <UniqueIdentifier>{FF34F490-17C9-3B79-A475-F927F8F4F729}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\ControllerState\States\AttackingState.cpp">
+      <Filter>Source\Character\Private\StateMachines\ControllerState\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\ControllerState\States\IdleState.cpp">
+      <Filter>Source\Character\Private\StateMachines\ControllerState\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\ControllerState\States\MovingState.cpp">
+      <Filter>Source\Character\Private\StateMachines\ControllerState\States</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\StateMachines\WeaponStates">
+      <UniqueIdentifier>{3430B530-138F-37F6-8DF9-7CF50B8F81EC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\WeaponStates\WeaponState.cpp">
+      <Filter>Source\Character\Private\StateMachines\WeaponStates</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\StateMachines\WeaponStates\States">
+      <UniqueIdentifier>{1B368019-0C0F-30FA-B7F8-6D0263F41A9B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\WeaponStates\States\ActivatedWeapon.cpp">
+      <Filter>Source\Character\Private\StateMachines\WeaponStates\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\WeaponStates\States\DeactivatedWeapon.cpp">
+      <Filter>Source\Character\Private\StateMachines\WeaponStates\States</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Private\Weapon">
+      <UniqueIdentifier>{DF49ECEA-92E4-3424-A6F2-91396A306E84}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Character\Private\Weapon\Arrow.cpp">
+      <Filter>Source\Character\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Weapon\Sword.cpp">
+      <Filter>Source\Character\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Weapon\Weapon.cpp">
+      <Filter>Source\Character\Private\Weapon</Filter>
+    </ClCompile>
+    <Filter Include="Source\Character\Public">
+      <UniqueIdentifier>{8272AB55-30A2-3F71-866A-E7B26FC160C6}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\Character.h">
+      <Filter>Source\Character\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\Character">
+      <UniqueIdentifier>{52480B34-46A4-33C0-9AE7-13AC91912F47}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\Character\RPGCharacter.h">
+      <Filter>Source\Character\Public\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Character\RPGEnemy.h">
+      <Filter>Source\Character\Public\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Character\RPGPlayer.h">
+      <Filter>Source\Character\Public\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\Components">
+      <UniqueIdentifier>{0B4F0EEE-DDA6-309A-A7BC-C6B6ADB2361B}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\Components\ExpComponent.h">
+      <Filter>Source\Character\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Components\FollowerComponent.h">
+      <Filter>Source\Character\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Components\HealthComponent.h">
+      <Filter>Source\Character\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Components\InventoryComponent.h">
+      <Filter>Source\Character\Public\Components</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\Components\AttackComponents">
+      <UniqueIdentifier>{813D2471-9E36-3866-963F-EC6452050BA5}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\Components\AttackComponents\AttackComponent.h">
+      <Filter>Source\Character\Public\Components\AttackComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Components\AttackComponents\MeleeAttackComponent.h">
+      <Filter>Source\Character\Public\Components\AttackComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Components\AttackComponents\RangedAttackComponent.h">
+      <Filter>Source\Character\Public\Components\AttackComponents</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\Controllers">
+      <UniqueIdentifier>{889EDDAB-07FE-36CF-98E7-06F773D9ADFA}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\Controllers\RPGBrainController.h">
+      <Filter>Source\Character\Public\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Controllers\RPGPlayerController.h">
+      <Filter>Source\Character\Public\Controllers</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\DataTable">
+      <UniqueIdentifier>{EF515F9B-3BB6-3A99-B316-5A0CE06B9893}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\DataTable\DataTableInfo.h">
+      <Filter>Source\Character\Public\DataTable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\DataTable\LevelInfo.h">
+      <Filter>Source\Character\Public\DataTable</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\Enums">
+      <UniqueIdentifier>{C54CBEA8-15D0-3C09-A81B-942E0535DFFC}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\Enums\ETeam.h">
+      <Filter>Source\Character\Public\Enums</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\StateMachines">
+      <UniqueIdentifier>{CB883486-0951-3295-BFBB-43018B88F809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Character\Public\StateMachines\Brain">
+      <UniqueIdentifier>{4B0CABED-3BC7-3264-AAF8-54BA450B9FC1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\Brain\EnemyTask.h">
+      <Filter>Source\Character\Public\StateMachines\Brain</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\StateMachines\Brain\Tasks">
+      <UniqueIdentifier>{B55808DF-1677-3196-BD93-AF7CEE3DA6AC}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\Brain\Tasks\EnemyAttackTask.h">
+      <Filter>Source\Character\Public\StateMachines\Brain\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\Brain\Tasks\EnemyMoveToTask.h">
+      <Filter>Source\Character\Public\StateMachines\Brain\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\Brain\Tasks\EnemySearchTask.h">
+      <Filter>Source\Character\Public\StateMachines\Brain\Tasks</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\StateMachines\ControllerState">
+      <UniqueIdentifier>{2E47C46F-154C-383C-BE91-AB47C8608DE7}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\ControllerState\CharacterState.h">
+      <Filter>Source\Character\Public\StateMachines\ControllerState</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\StateMachines\ControllerState\States">
+      <UniqueIdentifier>{CA147AD3-E377-3A22-B68A-B93AE22B965F}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\ControllerState\States\AttackingState.h">
+      <Filter>Source\Character\Public\StateMachines\ControllerState\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\ControllerState\States\IdleState.h">
+      <Filter>Source\Character\Public\StateMachines\ControllerState\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\ControllerState\States\MovingState.h">
+      <Filter>Source\Character\Public\StateMachines\ControllerState\States</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\StateMachines\WeaponStates">
+      <UniqueIdentifier>{03D6D892-1848-3ADC-B928-20824D88AEBF}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\WeaponStates\WeaponState.h">
+      <Filter>Source\Character\Public\StateMachines\WeaponStates</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\StateMachines\WeaponStates\States">
+      <UniqueIdentifier>{0C83ACC9-E030-32F5-8A58-0DF50B29DD78}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\WeaponStates\States\ActivatedWeapon.h">
+      <Filter>Source\Character\Public\StateMachines\WeaponStates\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\WeaponStates\States\DeactivatedWeapon.h">
+      <Filter>Source\Character\Public\StateMachines\WeaponStates\States</Filter>
+    </ClInclude>
+    <Filter Include="Source\Character\Public\Weapon">
+      <UniqueIdentifier>{CE317B5F-2F7F-35A4-B5B0-6CAA0B6D314A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Character\Public\Weapon\Arrow.h">
+      <Filter>Source\Character\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Weapon\Sword.h">
+      <Filter>Source\Character\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Weapon\Weapon.h">
+      <Filter>Source\Character\Public\Weapon</Filter>
+    </ClInclude>
     <Filter Include="Source\RPGTest3">
       <UniqueIdentifier>{F9D05284-4696-36E6-9E50-058EB511EB8F}</UniqueIdentifier>
     </Filter>

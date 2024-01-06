@@ -3,6 +3,7 @@
 	"Modules": 
 	{
 		"Character": "UnrealEditor-Character.dll",
-		"RPGTest3": "UnrealEditor-RPGTest3.dll"
+		"RPGTest3": "UnrealEditor-RPGTest3.dll",
+		"RoomSystem": "UnrealEditor-RoomSystem.dll"
 	}
 }

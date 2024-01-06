@@ -1,0 +1,112 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/GeneratedCppIncludes.h"
+#include "Character/Public/EnemyController.h"
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+void EmptyLinkFunctionForGeneratedCodeEnemyController() {}
+// Cross Module References
+	CHARACTER_API UClass* Z_Construct_UClass_ARPGBrainController_NoRegister();
+	CHARACTER_API UClass* Z_Construct_UClass_ARPGEnemy_NoRegister();
+	CHARACTER_API UClass* Z_Construct_UClass_UEnemyController();
+	CHARACTER_API UClass* Z_Construct_UClass_UEnemyController_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UWorldSubsystem();
+	UPackage* Z_Construct_UPackage__Script_Character();
+// End Cross Module References
+	void UEnemyController::StaticRegisterNativesUEnemyController()
+	{
+	}
+	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UEnemyController);
+	UClass* Z_Construct_UClass_UEnemyController_NoRegister()
+	{
+		return UEnemyController::StaticClass();
+	}
+	struct Z_Construct_UClass_UEnemyController_Statics
+	{
+		static UObject* (*const DependentSingletons[])();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Enemies_ValueProp;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Enemies_Key_KeyProp;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Enemies_MetaData[];
+#endif
+		static const UECodeGen_Private::FMapPropertyParams NewProp_Enemies;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+		static const UECodeGen_Private::FClassParams ClassParams;
+	};
+	UObject* (*const Z_Construct_UClass_UEnemyController_Statics::DependentSingletons[])() = {
+		(UObject* (*)())Z_Construct_UClass_UWorldSubsystem,
+		(UObject* (*)())Z_Construct_UPackage__Script_Character,
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UEnemyController_Statics::DependentSingletons) < 16);
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UEnemyController_Statics::Class_MetaDataParams[] = {
+		{ "IncludePath", "EnemyController.h" },
+		{ "ModuleRelativePath", "Public/EnemyController.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UEnemyController_Statics::NewProp_Enemies_ValueProp = { "Enemies", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UClass_ARPGEnemy_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UEnemyController_Statics::NewProp_Enemies_Key_KeyProp = { "Enemies_Key", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_ARPGBrainController_NoRegister, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UEnemyController_Statics::NewProp_Enemies_MetaData[] = {
+		{ "ModuleRelativePath", "Public/EnemyController.h" },
+	};
+#endif
+	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UEnemyController_Statics::NewProp_Enemies = { "Enemies", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UEnemyController, Enemies), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UEnemyController_Statics::NewProp_Enemies_MetaData), Z_Construct_UClass_UEnemyController_Statics::NewProp_Enemies_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UEnemyController_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UEnemyController_Statics::NewProp_Enemies_ValueProp,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UEnemyController_Statics::NewProp_Enemies_Key_KeyProp,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UEnemyController_Statics::NewProp_Enemies,
+	};
+	const FCppClassTypeInfoStatic Z_Construct_UClass_UEnemyController_Statics::StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<UEnemyController>::IsAbstract,
+	};
+	const UECodeGen_Private::FClassParams Z_Construct_UClass_UEnemyController_Statics::ClassParams = {
+		&UEnemyController::StaticClass,
+		nullptr,
+		&StaticCppClassTypeInfo,
+		DependentSingletons,
+		nullptr,
+		Z_Construct_UClass_UEnemyController_Statics::PropPointers,
+		nullptr,
+		UE_ARRAY_COUNT(DependentSingletons),
+		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_UEnemyController_Statics::PropPointers),
+		0,
+		0x001000A0u,
+		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UEnemyController_Statics::Class_MetaDataParams), Z_Construct_UClass_UEnemyController_Statics::Class_MetaDataParams)
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UEnemyController_Statics::PropPointers) < 2048);
+	UClass* Z_Construct_UClass_UEnemyController()
+	{
+		if (!Z_Registration_Info_UClass_UEnemyController.OuterSingleton)
+		{
+			UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_UEnemyController.OuterSingleton, Z_Construct_UClass_UEnemyController_Statics::ClassParams);
+		}
+		return Z_Registration_Info_UClass_UEnemyController.OuterSingleton;
+	}
+	template<> CHARACTER_API UClass* StaticClass<UEnemyController>()
+	{
+		return UEnemyController::StaticClass();
+	}
+	UEnemyController::UEnemyController() {}
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UEnemyController);
+	UEnemyController::~UEnemyController() {}
+	struct Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_EnemyController_h_Statics
+	{
+		static const FClassRegisterCompiledInInfo ClassInfo[];
+	};
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_EnemyController_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UEnemyController, UEnemyController::StaticClass, TEXT("UEnemyController"), &Z_Registration_Info_UClass_UEnemyController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEnemyController), 4240809307U) },
+	};
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_EnemyController_h_2441921248(TEXT("/Script/Character"),
+		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_EnemyController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_EnemyController_h_Statics::ClassInfo),
+		nullptr, 0,
+		nullptr, 0);
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

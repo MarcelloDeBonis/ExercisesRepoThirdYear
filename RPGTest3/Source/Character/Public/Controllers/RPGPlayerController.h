@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "StateMachines/ControllerState/RPGCharacterStateMachine.h"
 #include "RPGPlayerController.generated.h"
 
 UCLASS()
@@ -11,14 +12,21 @@ class CHARACTER_API ARPGPlayerController : public APlayerController
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this actor's properties
+
 	ARPGPlayerController();
-
-protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	void Init();
+private:
 
-public:
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	virtual void SetupInputComponent() override;
+
+	UPROPERTY()
+	URPGCharacterStateMachine* StateMachine = nullptr;
+
+	void OnX(float AxisValue);
+	void OnY(float AxisValue);
+	void OnAttack();
+	void OnHeal();
+	void OnInteract();
 };

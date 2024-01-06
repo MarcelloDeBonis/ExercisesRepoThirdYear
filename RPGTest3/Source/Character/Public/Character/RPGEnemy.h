@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "RPGCharacter.h"
 #include "Components/AttackComponents/AttackComponent.h"
-#include "Controllers/RPGBrainController.h"
 #include "RPGEnemy.generated.h"
 
 UCLASS()
@@ -14,17 +13,20 @@ class CHARACTER_API ARPGEnemy : public ARPGCharacter
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this pawn's properties
 	ARPGEnemy();
-
-	UPROPERTY()
-	UAttackComponent* AttackComponent = nullptr;
-
+	
+	void Init(float _MinAttackDistance, float _VisibilityRange);
 	void InitAttackComponent(UAttackComponent* Component);
-	void InitDamage(int Damage);
+	void InitDamage(int Damage, float _WeaponDuration);
+	void InitExp(int _ExpOnDied);
 	void InitHealth(int Health);
+	
+	bool InRangeForAttack();
+	bool IsPlayerInVisibilityRange();
+	virtual void OnDied() override;
 private:
 
-	UPROPERTY()
-	ARPGBrainController* Brain = nullptr;
+	float AttackDistance = 0.0f;
+	float VisibilityRange = 0.0f;
+	int ExpOnDied = 0;
 };

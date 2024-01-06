@@ -3,6 +3,8 @@
 
 #include "Components/HealthComponent.h"
 
+#include "Character/RPGCharacter.h"
+
 UHealthComponent::UHealthComponent()
 {
 	PrimaryComponentTick.bCanEverTick = true;
@@ -44,7 +46,7 @@ void UHealthComponent::HealTotally()
 
 void UHealthComponent::Death()
 {
-	GetOwner()->Destroy();
+	Cast<ARPGCharacter>(GetOwner())->OnDied();
 }
 
 void UHealthComponent::BeginPlay()

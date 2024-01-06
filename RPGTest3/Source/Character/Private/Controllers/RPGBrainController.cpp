@@ -3,24 +3,54 @@
 
 #include "Controllers/RPGBrainController.h"
 
+#include "StateMachines/Brain/Tasks/EnemySearchTask.h"
 
-// Sets default values
+
 ARPGBrainController::ARPGBrainController()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 }
 
-// Called when the game starts or when spawned
+ARPGBrainController::ARPGBrainController(ARPGEnemy* EnemyRef)
+{
+	PrimaryActorTick.bCanEverTick = true;
+	Enemy = EnemyRef;
+}
+
+void ARPGBrainController::NewTask(UEnemyTask* NewTask)
+{
+	CurrentTask = NewTask;
+	CurrentTask->OnStartTask(this);
+}
+
+URPGCharacterStateMachine* ARPGBrainController::GetStateMachine()
+{
+	return StateMachine;
+}
+
+ARPGEnemy* ARPGBrainController::GetEnemy()
+{
+	return Enemy;
+}
+
 void ARPGBrainController::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	StateMachine = NewObject<URPGCharacterStateMachine>(Enemy);
+	NewTask(NewObject<UEnemySearchTask>(this));
 }
 
-// Called every frame
 void ARPGBrainController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-}
+	
+	if(StateMachine->CurrentState!=nullptr)
+	{
+		StateMachine->CurrentState->OnUpdate(DeltaTime);
+	}
 
+	if(CurrentTask!=nullptr)
+	{
+		CurrentTask->OnUpdateTask();
+	}
+}

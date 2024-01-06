@@ -13,4 +13,8 @@ UCLASS()
 class CHARACTER_API UIdleState : public UCharacterState
 {
 	GENERATED_BODY()
+public:
+	virtual void OnEnter_Implementation(ARPGCharacter* CharacterRef, URPGCharacterStateMachine* StateMachineRef) override;
+	virtual void OnUpdate_Implementation(float DeltaTime) override;
+	virtual void OnExit_Implementation() override;
 };

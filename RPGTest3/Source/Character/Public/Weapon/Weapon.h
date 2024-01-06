@@ -31,6 +31,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void OnCollision(AActor* OtherCharacter);
 	
+	void InitTeam(ETeam _Team);
 private:
 
 	bool CanCollide = false;
@@ -38,12 +39,10 @@ private:
 	
 	void SetState(UWeaponState* NewState);
 	void InitMesh();
-	void InitTeam(ETeam _Team);
 	
 	UPROPERTY()
 	UWeaponState* CurrentState =  nullptr;
-
-	UPROPERTY()
+	
 	FTimerHandle ActivationTimerHandle;
 	
 protected:

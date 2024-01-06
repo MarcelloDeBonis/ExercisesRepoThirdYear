@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayerController() {}
 // Cross Module References
 	CHARACTER_API UClass* Z_Construct_UClass_ARPGPlayerController();
 	CHARACTER_API UClass* Z_Construct_UClass_ARPGPlayerController_NoRegister();
+	CHARACTER_API UClass* Z_Construct_UClass_URPGCharacterStateMachine_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 	UPackage* Z_Construct_UPackage__Script_Character();
 // End Cross Module References
@@ -28,6 +29,11 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayerController() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_StateMachine_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_StateMachine;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -43,6 +49,15 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayerController() {}
 		{ "ModuleRelativePath", "Public/Controllers/RPGPlayerController.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPlayerController_Statics::NewProp_StateMachine_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Controllers/RPGPlayerController.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPlayerController_Statics::NewProp_StateMachine = { "StateMachine", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARPGPlayerController, StateMachine), Z_Construct_UClass_URPGCharacterStateMachine_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayerController_Statics::NewProp_StateMachine_MetaData), Z_Construct_UClass_ARPGPlayerController_Statics::NewProp_StateMachine_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARPGPlayerController_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPlayerController_Statics::NewProp_StateMachine,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ARPGPlayerController_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ARPGPlayerController>::IsAbstract,
 	};
@@ -52,15 +67,16 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayerController() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ARPGPlayerController_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayerController_Statics::PropPointers),
 		0,
 		0x009002A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayerController_Statics::Class_MetaDataParams), Z_Construct_UClass_ARPGPlayerController_Statics::Class_MetaDataParams)
 	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayerController_Statics::PropPointers) < 2048);
 	UClass* Z_Construct_UClass_ARPGPlayerController()
 	{
 		if (!Z_Registration_Info_UClass_ARPGPlayerController.OuterSingleton)
@@ -80,9 +96,9 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayerController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGPlayerController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ARPGPlayerController, ARPGPlayerController::StaticClass, TEXT("ARPGPlayerController"), &Z_Registration_Info_UClass_ARPGPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGPlayerController), 2406380229U) },
+		{ Z_Construct_UClass_ARPGPlayerController, ARPGPlayerController::StaticClass, TEXT("ARPGPlayerController"), &Z_Registration_Info_UClass_ARPGPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGPlayerController), 1384371307U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGPlayerController_h_2635218053(TEXT("/Script/Character"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGPlayerController_h_942608074(TEXT("/Script/Character"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGPlayerController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

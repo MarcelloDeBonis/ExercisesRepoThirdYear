@@ -19,11 +19,12 @@ void AWeapon::DeactiveWeapon()
 {
 	CanCollide = false;
 	SetState(NewObject<UDeactivatedWeapon>());
+	Cast<ARPGCharacter>(GetOwner())->AttackComponent->OnEndAttack.Broadcast();
 }
 
 void AWeapon::InitTeam(ETeam _Team)
 {
-	Team=_Team;
+	Team = _Team;
 }
 
 void AWeapon::OnCollision(AActor* OtherCharacter)
@@ -32,6 +33,7 @@ void AWeapon::OnCollision(AActor* OtherCharacter)
 	{
 		ARPGCharacter* Character = Cast<ARPGCharacter>(OtherCharacter);
 		Character->HealthComponent->Damage(Damage);
+		DeactiveWeapon();
 	}
 }
 
@@ -63,6 +65,7 @@ void AWeapon::BeginPlay()
 {
 	Super::BeginPlay();
 	FollowerComponent->SetDistanceToMaintain(StartDistance);
+	DeactiveWeapon();
 }
 
 void AWeapon::InitMesh()

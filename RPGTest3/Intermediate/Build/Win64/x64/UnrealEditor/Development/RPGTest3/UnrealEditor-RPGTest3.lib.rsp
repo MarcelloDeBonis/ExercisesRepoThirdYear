@@ -7,6 +7,11 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\RPGTest3Editor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RPGTest3\DataTableInfo.gen.cpp.obj"
+"C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RPGTest3\RPGTest3.init.gen.cpp.obj"
+"C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RPGTest3\RPGTestGameMode.gen.cpp.obj"
 "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RPGTest3\RPGTest3.cpp.obj"
+"C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RPGTest3\DataTableInfo.cpp.obj"
+"C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RPGTest3\RPGTestGameMode.cpp.obj"
 "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RPGTest3\Default.rc2.res"
 /OUT:"C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RPGTest3\UnrealEditor-RPGTest3.lib"

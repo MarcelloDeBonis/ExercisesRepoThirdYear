@@ -2,6 +2,7 @@
 	"SourceFiles": [
 		"C:\\Users\\Marce\\OneDrive\\Desktop\\Work\\ExercisesRepoThirdYear\\RPGTest3\\Source\\Character\\Character.Build.cs",
 		"C:\\Users\\Marce\\OneDrive\\Desktop\\Work\\ExercisesRepoThirdYear\\RPGTest3\\Source\\RPGTest3\\RPGTest3.Build.cs",
+		"C:\\Users\\Marce\\OneDrive\\Desktop\\Work\\ExercisesRepoThirdYear\\RPGTest3\\Source\\RoomSystem\\RoomSystem.Build.cs",
 		"C:\\Users\\Marce\\OneDrive\\Desktop\\Work\\ExercisesRepoThirdYear\\RPGTest3\\Source\\RPGTest3.Target.cs",
 		"C:\\Users\\Marce\\OneDrive\\Desktop\\Work\\ExercisesRepoThirdYear\\RPGTest3\\Source\\RPGTest3Editor.Target.cs"
 	],

@@ -3,7 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Character/RPGEnemy.h"
+#include "StateMachines/ControllerState/RPGCharacterStateMachine.h"
 #include "RPGBrainController.generated.h"
+
+class UEnemyTask;
 
 UCLASS()
 class CHARACTER_API ARPGBrainController : public AController
@@ -11,14 +15,25 @@ class CHARACTER_API ARPGBrainController : public AController
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this actor's properties
+
+	ARPGBrainController(ARPGEnemy* EnemyRef);
+	void NewTask(UEnemyTask* Task);
+	URPGCharacterStateMachine* GetStateMachine();
+	ARPGEnemy* GetEnemy();
+private:
+	
 	ARPGBrainController();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	UPROPERTY()
+	ARPGEnemy* Enemy = nullptr;
 
-public:
-	// Called every frame
+	UPROPERTY()
+	URPGCharacterStateMachine* StateMachine = nullptr;
+
+	UPROPERTY()
+	UEnemyTask* CurrentTask = nullptr;
+	
+protected:
+	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 };

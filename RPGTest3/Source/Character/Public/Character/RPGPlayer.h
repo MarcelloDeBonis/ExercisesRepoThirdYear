@@ -3,11 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CharacterInfo.h"
 #include "RPGCharacter.h"
 #include "Components/ExpComponent.h"
 #include "Components/InventoryComponent.h"
-#include "Components/AttackComponents/MeleeAttackComponent.h"
-#include "DataTable/LevelInfo.h"
 #include "RPGPlayer.generated.h"
 
 UCLASS()
@@ -18,7 +17,7 @@ class CHARACTER_API ARPGPlayer : public ARPGCharacter
 public:
 	
 	ARPGPlayer();
-	void UpdateNewLevel(int Level, FLevelInfo Info);
+	void UpdateNewLevel(int Level, FCharacterInfo Info);
 	void UpdateNewLevel(int Level);
 	
 	UPROPERTY()
@@ -27,16 +26,18 @@ public:
 	UPROPERTY()
 	UInventoryComponent* InventoryComponent = nullptr;
 
-	UPROPERTY()
-	UMeleeAttackComponent* MeleeAttackComponent = nullptr;
-	
+	void Interact();
+	void OnDied() override;
 private:
 
+	float InteractionDistance = 100.f;
 	void InitExpComponent();
 	void InitInventoryComponent();
 	void InitMeleeAttackComponent();
+	void InitRangedAttackComponent();
 	
 protected:
 
+	virtual void BeginPlay() override;
 	virtual void InitComponents() override;
 };

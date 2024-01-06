@@ -16,6 +16,6 @@ public class RPGTest3Target : TargetRules
 
 	private void RegisterModulesCreatedByRider()
 	{
-		ExtraModuleNames.AddRange(new string[] { "Character" });
+		ExtraModuleNames.AddRange(new string[] { "Character", "RoomSystem" });
 	}
 }

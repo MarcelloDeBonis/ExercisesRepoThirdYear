@@ -2,6 +2,7 @@
 
 #include "Components/AttackComponents/MeleeAttackComponent.h"
 
+#include "Character/RPGCharacter.h"
 #include "Weapon/Sword.h"
 
 UMeleeAttackComponent::UMeleeAttackComponent()
@@ -14,11 +15,12 @@ void UMeleeAttackComponent::BeginPlay()
 	Super::BeginPlay();
 }
 
-void UMeleeAttackComponent::SpawnWeapon(int Damage)
+void UMeleeAttackComponent::SpawnWeapon(int Damage, float _WeaponDuration)
 {
-	Super::SpawnWeapon(Damage);
+	Super::SpawnWeapon(Damage, _WeaponDuration);
 	Weapon = GetWorld()->SpawnActor<ASword>(GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation());
-
+	Weapon->InitTeam(Cast<ARPGCharacter>(GetOwner())->GetTeam());
+	
 	if(Weapon)
 	{
 		Cast<ASword>(Weapon)->ASword::ASword();

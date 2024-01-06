@@ -21,7 +21,7 @@ public:
 	FHealPotionNumberUpdated HealPotionNumberUpdated;
 
 	void UseHealPotion();
-	void GainHealPotion();
+	void GainHealPotions(int Quantity);
 	
 protected:
 	

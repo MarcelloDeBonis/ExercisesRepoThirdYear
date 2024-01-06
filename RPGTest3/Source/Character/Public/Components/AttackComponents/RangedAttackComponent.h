@@ -21,6 +21,6 @@ protected:
 	float ArrowDistanceIncrease = 0.05f;
 	
 	virtual void BeginPlay() override;
-	virtual void SpawnWeapon(int Damage) override;
+	virtual void SpawnWeapon(int Damage, float _WeaponDuration) override;
 
 };

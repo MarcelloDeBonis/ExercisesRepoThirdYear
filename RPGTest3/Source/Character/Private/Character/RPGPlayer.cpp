@@ -3,12 +3,61 @@
 
 #include "Character/RPGPlayer.h"
 
-#include "DataTable/DataTableInfo.h"
+#include "RPGTestGameMode.h"
+#include "Components/AttackComponents/MeleeAttackComponent.h"
+#include "Components/AttackComponents/RangedAttackComponent.h"
+#include "Controllers/RPGPlayerController.h"
+#include "InteractableObjects/Interactable.h"
+#include "Kismet/GameplayStatics.h"
+#include "RPGTest3/Public/DataTableInfo.h"
 
 
 ARPGPlayer::ARPGPlayer()
 {
 	PrimaryActorTick.bCanEverTick = true;
+}
+
+void ARPGPlayer::BeginPlay()
+{
+	Super::BeginPlay();
+	Cast<ARPGPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0))->Init();
+}
+
+void ARPGPlayer::Interact()
+{
+	FVector Location = GetActorLocation();
+	TArray<FOverlapResult> OverlapResults;
+	FCollisionShape CollisionShape;
+	CollisionShape.SetSphere(InteractionDistance);
+
+	bool bHasOverlapped = GetWorld()->OverlapMultiByObjectType(
+		OverlapResults,
+		Location,
+		FQuat::Identity,
+		FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody),
+		CollisionShape
+	);
+
+	if (bHasOverlapped)
+	{
+		for (auto& Result : OverlapResults)
+		{
+			AActor* OverlappedActor = Result.GetActor();
+
+			if(OverlappedActor->GetClass()->ImplementsInterface(UInteractable::StaticClass()))
+			{
+				IInteractable* Interactable = (Cast<IInteractable>(OverlappedActor));
+				Interactable->OnInteract_Implementation(this);
+			}
+			
+		}
+	}
+}
+
+void ARPGPlayer::OnDied()
+{
+	Super::OnDied();
+	Cast<ARPGTestGameMode>(UGameplayStatics::GetGameMode(GetWorld()))->EndGame();
 }
 
 void ARPGPlayer::InitExpComponent()
@@ -23,7 +72,12 @@ void ARPGPlayer::InitInventoryComponent()
 
 void ARPGPlayer::InitMeleeAttackComponent()
 {
-	MeleeAttackComponent = CreateDefaultSubobject<UMeleeAttackComponent>("MeleeAttackComponent");
+	AttackComponent = CreateDefaultSubobject<UMeleeAttackComponent>("MeleeAttackComponent");
+}
+
+void ARPGPlayer::InitRangedAttackComponent()
+{
+	AttackComponent = CreateDefaultSubobject<URangedAttackComponent>("RangedAttackComponent");
 }
 
 void ARPGPlayer::InitComponents()
@@ -35,25 +89,25 @@ void ARPGPlayer::InitComponents()
 	InitMeleeAttackComponent();
 }
 
-
-
-void ARPGPlayer::UpdateNewLevel(int Level, FLevelInfo Info)
+void ARPGPlayer::UpdateNewLevel(int Level, FCharacterInfo Info)
 {
 	const int Life = Info.Life;
 	const int Damage = Info.Damage;
 	const int Exp = Info.Exp;
+	const float _WeaponDuration = Info.WeaponDuration;
+	
 	
 	HealthComponent->SetMaxLife(Life);
-	MeleeAttackComponent->SetDamage(Damage);
+	AttackComponent->SpawnWeapon(Damage, _WeaponDuration);
 	ExpComponent->OnUpdateLevel(Level, Exp);
 }
 
 void ARPGPlayer::UpdateNewLevel(int Level)
 {
 	const FString LevelName = "Level" + FString::FromInt(Level);
-	FLevelInfo LevelInfo = UDataTableInfo::GetStructByRowName<FLevelInfo>("/Content/DT/LevelInfoDT.uasset", LevelName);
+	FCharacterInfo LevelInfo = UDataTableInfo::GetStructByRowName<FCharacterInfo>("/Content/DT/LevelInfoDT.uasset", LevelName);
 
-	UpdateNewLevel(Level, FLevelInfo());
+	UpdateNewLevel(Level, FCharacterInfo());
 }
 
 

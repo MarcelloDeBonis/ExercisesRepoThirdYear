@@ -2,6 +2,7 @@
 
 #include "Components/AttackComponents/RangedAttackComponent.h"
 
+#include "Character/RPGCharacter.h"
 #include "Weapon/Arrow.h"
 
 URangedAttackComponent::URangedAttackComponent()
@@ -14,11 +15,12 @@ void URangedAttackComponent::BeginPlay()
 	Super::BeginPlay();
 }
 
-void URangedAttackComponent::SpawnWeapon(int Damage)
+void URangedAttackComponent::SpawnWeapon(int Damage, float _WeaponDuration)
 {
-	Super::SpawnWeapon(Damage);
+	Super::SpawnWeapon(Damage, _WeaponDuration);
 	Weapon = GetWorld()->SpawnActor<AArrow>(GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation());
-
+	Weapon->InitTeam(Cast<ARPGCharacter>(GetOwner())->GetTeam());
+	
 	if(Weapon)
 	{
 		Cast<AArrow>(Weapon)->AArrow::AArrow(ArrowDistanceIncrease);

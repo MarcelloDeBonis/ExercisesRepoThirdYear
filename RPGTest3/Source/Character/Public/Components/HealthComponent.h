@@ -22,6 +22,7 @@ public:
 	void Damage(int Damage);
 	void SetMaxLife(int NewMaxLife);
 	void Heal(int HealAmount);
+	void HealTotally();
 	void Death();
 	
 protected:
@@ -29,8 +30,6 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-
-	void HealTotally();
 	
 	int CurrentLife = 0;
 	int MaxLife = 0;

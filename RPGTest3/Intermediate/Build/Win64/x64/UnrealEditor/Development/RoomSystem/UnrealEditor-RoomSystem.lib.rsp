@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-RoomSystem.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\RPGTest3Editor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RoomSystem\Module.RoomSystem.cpp.obj"
+"C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RoomSystem\Default.rc2.res"
+/OUT:"C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\x64\UnrealEditor\Development\RoomSystem\UnrealEditor-RoomSystem.lib"

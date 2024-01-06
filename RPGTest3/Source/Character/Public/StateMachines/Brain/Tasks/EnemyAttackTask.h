@@ -13,4 +13,7 @@ UCLASS()
 class CHARACTER_API UEnemyAttackTask : public UEnemyTask
 {
 	GENERATED_BODY()
+public:
+	virtual void OnStartTask_Implementation(ARPGBrainController* _Brain) override;
+	virtual void OnUpdateTask_Implementation() override;
 };

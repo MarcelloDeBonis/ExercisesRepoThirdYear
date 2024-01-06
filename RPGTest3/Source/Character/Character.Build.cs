@@ -19,7 +19,7 @@ public class Character : ModuleRules
                 "CoreUObject",
                 "Engine",
                 "Slate",
-                "SlateCore"
+                "SlateCore", "RPGTest3", "RoomSystem",
             }
         );
     }

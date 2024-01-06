@@ -16,13 +16,8 @@ void UAttackComponent::UseWeapon()
 	}
 }
 
-void UAttackComponent::SetDamage(int Damage)
+void UAttackComponent::SpawnWeapon(int Damage, float _WeaponDuration)
 {
-	Weapon->SetDamage(Damage);
-}
-
-void UAttackComponent::SpawnWeapon(int Damage)
-{
-	
+	WeaponDuration = _WeaponDuration;
 }
 

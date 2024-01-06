@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/HealthComponent.h"
+#include "Components/AttackComponents/AttackComponent.h"
 #include "Enums/ETeam.h"
 #include "GameFramework/Actor.h"
 #include "RPGCharacter.generated.h"
@@ -16,8 +17,15 @@ class CHARACTER_API ARPGCharacter : public APawn
 public:
 	
 	ARPGCharacter();
+
+	UPROPERTY()
 	UHealthComponent* HealthComponent = nullptr;
-	
+
+	UPROPERTY()
+	UAttackComponent* AttackComponent = nullptr;
+
+	virtual void OnDied();
+	ETeam GetTeam() const { return Team; }
 protected:
 	
 	ETeam Team = ETeam::None;

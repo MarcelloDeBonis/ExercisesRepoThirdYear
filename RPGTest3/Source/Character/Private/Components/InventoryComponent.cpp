@@ -21,9 +21,9 @@ void UInventoryComponent::UseHealPotion()
 	}
 }
 
-void UInventoryComponent::GainHealPotion()
+void UInventoryComponent::GainHealPotions(int Quantity)
 {
-	HealPotions++;
+	HealPotions +=  Quantity;
 	HealPotionNumberUpdated.Broadcast(HealPotions);
 }
 

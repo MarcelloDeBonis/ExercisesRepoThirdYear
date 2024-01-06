@@ -3,13 +3,14 @@
 
 #include "Character/RPGCharacter.h"
 
-
-// Sets default values
 ARPGCharacter::ARPGCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
 }
 
+void ARPGCharacter::OnDied()
+{
+}
 
 void ARPGCharacter::InitHealthComponent()
 {

@@ -12,9 +12,36 @@ void EmptyLinkFunctionForGeneratedCodeAttackComponent() {}
 	CHARACTER_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
 	CHARACTER_API UClass* Z_Construct_UClass_UAttackComponent();
 	CHARACTER_API UClass* Z_Construct_UClass_UAttackComponent_NoRegister();
+	CHARACTER_API UFunction* Z_Construct_UDelegateFunction_Character_OnEndAttack__DelegateSignature();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_Character();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_Character_OnEndAttack__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_Character_OnEndAttack__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Components/AttackComponents/AttackComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_Character_OnEndAttack__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_Character, nullptr, "OnEndAttack__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_Character_OnEndAttack__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_Character_OnEndAttack__DelegateSignature_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UDelegateFunction_Character_OnEndAttack__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_Character_OnEndAttack__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+void FOnEndAttack_DelegateWrapper(const FMulticastScriptDelegate& OnEndAttack)
+{
+	OnEndAttack.ProcessMulticastDelegate<UObject>(NULL);
+}
 	void UAttackComponent::StaticRegisterNativesUAttackComponent()
 	{
 	}
