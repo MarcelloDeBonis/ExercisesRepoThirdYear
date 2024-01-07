@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EnemyController.h"
 #include "GameFramework/Actor.h"
 #include "InteractableObjects/Chest/ChestController.h"
 #include "InteractableObjects/Door/DoorController.h"
@@ -29,6 +30,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "RoomSystem")
 	ADoorController* DoorController = nullptr;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "RoomSystem")
+	AEnemyController* EnemyController = nullptr;
+	
 	void NewRoom(URoom* Room, ARPGPlayer* Player, FVector Location);
 	void SetLastRoom(URoom* Room);
 
@@ -42,6 +46,7 @@ private:
 	void SpawnPlayer(ARPGPlayer* Player, FVector Location);
 	void SpawnEnemies(TMap<FString, FVector> Enemies);
 	void SpawnFountain(bool Spawn);
+	void SpawnDoors(TArray<FDoorInfo> Doors);
 	void SpawnChest(bool Spawn);
 	
 };

@@ -16,6 +16,12 @@ class RPGTEST3_API ARPGTestGameMode : public AGameMode
 public :
 	
 	ARPGTestGameMode();
+
+	UFUNCTION(BlueprintCallable, Category = "Game")
 	void StartGame();
-	void EndGame();
+	void EndGame(bool Win);
+	
+private:
+	void WinGame();
+	void LoseGame();
 };

@@ -12,7 +12,7 @@ AChest::AChest()
 
 void AChest::Interact(ARPGPlayer* Player)
 {
-	CurrentState->OnCallInteractFunct(Player);
+	GainHealPotions(Player);
 }
 
 void AChest::Active()
@@ -35,9 +35,9 @@ void AChest::SetState(UInteractableState* NewState)
 	CurrentState->OnEnter(this);
 }
 
-void AChest::OnInteract_Implementation(ARPGPlayer* Player)
+void AChest::OnInteract(ARPGPlayer* Player)
 {
-	GainHealPotions(Player);
+	CurrentState->OnCallInteractFunct(Player);	
 }
 
 void AChest::GainHealPotions(ARPGPlayer* Player)

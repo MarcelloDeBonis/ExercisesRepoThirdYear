@@ -3,7 +3,7 @@
 
 #include "InteractableObjects/InteractableStates/StateList/InteractableStateOn.h"
 
-void UInteractableStateOn::OnEnter(IInteractable* _Interactable)
+void UInteractableStateOn::OnEnter(AInteractable* _Interactable)
 {
 	Super::OnEnter(_Interactable);
 	AbleVisibility();
@@ -17,7 +17,7 @@ void UInteractableStateOn::OnExitState()
 void UInteractableStateOn::OnCallInteractFunct(ARPGPlayer* Player)
 {
 	Super::OnCallInteractFunct(Player);
-	MyInteractable->OnInteract_Implementation(Player);
+	MyInteractable->OnInteract(Player);
 }
 
 void UInteractableStateOn::AbleVisibility()

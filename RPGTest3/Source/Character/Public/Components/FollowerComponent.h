@@ -24,10 +24,11 @@ private:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	void Follow() const;
+	void Rotate();
+	
+	UPROPERTY(EditAnywhere, Category="Follower")
+	AActor* ActorToFollow = nullptr;
 
 	UPROPERTY(EditAnywhere, Category="Follower")
-	AActor* ActorToFollow;
-
-	UPROPERTY(EditAnywhere, Category="Follower")
-	float DistanceToMaintain;
+	float DistanceToMaintain = 500.0f;
 };

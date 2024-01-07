@@ -20,10 +20,10 @@ public:
 	void UpdateNewLevel(int Level, FCharacterInfo Info);
 	void UpdateNewLevel(int Level);
 	
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character")
 	UExpComponent* ExpComponent = nullptr;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character")
 	UInventoryComponent* InventoryComponent = nullptr;
 
 	void Interact();
@@ -35,9 +35,9 @@ private:
 	void InitInventoryComponent();
 	void InitMeleeAttackComponent();
 	void InitRangedAttackComponent();
+	virtual void InitComponents() override;
 	
 protected:
 
 	virtual void BeginPlay() override;
-	virtual void InitComponents() override;
 };

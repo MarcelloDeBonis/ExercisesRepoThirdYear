@@ -24,9 +24,8 @@ private: \
 	static void StaticRegisterNativesADoor(); \
 	friend struct Z_Construct_UClass_ADoor_Statics; \
 public: \
-	DECLARE_CLASS(ADoor, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RoomSystem"), NO_API) \
-	DECLARE_SERIALIZER(ADoor) \
-	virtual UObject* _getUObject() const override { return const_cast<ADoor*>(this); }
+	DECLARE_CLASS(ADoor, AInteractable, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RoomSystem"), NO_API) \
+	DECLARE_SERIALIZER(ADoor)
 
 
 #define FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Door_Door_h_15_ENHANCED_CONSTRUCTORS \

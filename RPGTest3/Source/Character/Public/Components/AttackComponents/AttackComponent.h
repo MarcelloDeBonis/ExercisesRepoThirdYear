@@ -7,8 +7,6 @@
 #include "Weapon/Weapon.h"
 #include "AttackComponent.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndAttack);
-
 UCLASS(Abstract)
 class CHARACTER_API UAttackComponent : public UActorComponent
 {
@@ -19,11 +17,10 @@ public:
 	UAttackComponent();
 	void UseWeapon();
 	virtual void SpawnWeapon(int Damage,float _WeaponDuration);
-	FOnEndAttack OnEndAttack;
 protected:
 
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon")
 	AWeapon* Weapon = nullptr;
 
 	float WeaponDuration = 2;

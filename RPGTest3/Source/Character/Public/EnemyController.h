@@ -9,12 +9,13 @@
 #include "EnemyController.generated.h"
 
 UCLASS()
-class CHARACTER_API UEnemyController : public UWorldSubsystem
+class CHARACTER_API AEnemyController : public AActor
 {
 	GENERATED_BODY()
 
 public:
-	
+
+	AEnemyController();
 	void ResetEnemies();
 	void SpawnEnemies(TMap<FString, FVector> NewEnemies);
 	

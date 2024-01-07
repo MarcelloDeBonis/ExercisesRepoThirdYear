@@ -80,9 +80,9 @@ void EmptyLinkFunctionForGeneratedCodeRPGEnemy() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Character_RPGEnemy_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ARPGEnemy, ARPGEnemy::StaticClass, TEXT("ARPGEnemy"), &Z_Registration_Info_UClass_ARPGEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGEnemy), 3275068223U) },
+		{ Z_Construct_UClass_ARPGEnemy, ARPGEnemy::StaticClass, TEXT("ARPGEnemy"), &Z_Registration_Info_UClass_ARPGEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGEnemy), 3415185490U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Character_RPGEnemy_h_4178535733(TEXT("/Script/Character"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Character_RPGEnemy_h_337380330(TEXT("/Script/Character"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Character_RPGEnemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Character_RPGEnemy_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

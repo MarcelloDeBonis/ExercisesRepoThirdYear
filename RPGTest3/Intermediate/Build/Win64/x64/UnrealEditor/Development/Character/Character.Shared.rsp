@@ -262,6 +262,8 @@
 /I "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\RPGTest3\Public"
 /I "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\UnrealEditor\Inc\Character\UHT"
 /I "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\Character\Public"
+/I "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Intermediate\Build\Win64\UnrealEditor\Inc\RoomSystem\UHT"
+/I "C:\Users\Marce\OneDrive\Desktop\Work\ExercisesRepoThirdYear\RPGTest3\Source\RoomSystem\Public"
 /external:W0
 /external:I "ThirdParty\mimalloc\include"
 /external:I "ThirdParty\LibTiff\Source\Win64"

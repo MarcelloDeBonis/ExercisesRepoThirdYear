@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "RPGController.h"
 #include "StateMachines/ControllerState/RPGCharacterStateMachine.h"
 #include "RPGPlayerController.generated.h"
 
 UCLASS()
-class CHARACTER_API ARPGPlayerController : public APlayerController
+class CHARACTER_API ARPGPlayerController : public APlayerController, public IRPGController
 {
 	GENERATED_BODY()
 
@@ -16,6 +17,7 @@ public:
 	ARPGPlayerController();
 	virtual void BeginPlay() override;
 	void Init();
+	virtual void OnDeactiveAttack() override;
 private:
 
 	virtual void Tick(float DeltaTime) override;

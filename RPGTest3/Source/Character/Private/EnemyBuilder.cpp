@@ -77,7 +77,7 @@ ARPGEnemy* UEnemyBuilder::BuildRat(ARPGEnemy* Enemy)
 
 void UEnemyBuilder::BuildInfo(ARPGEnemy* Enemy, FString EnemyName)
 {
-	const FCharacterInfo Info = UDataTableInfo::GetStructByRowName<FCharacterInfo>("/Content/DT/EnemyInfoDT.uasset", EnemyName);
+	const FCharacterInfo Info = UDataTableInfo::GetStructByRowName<FCharacterInfo>("/Game/DT/EnemyInfoDT.EnemyInfoDT", EnemyName);
 	Enemy->InitDamage(Info.Damage, Info.WeaponDuration);
 	Enemy->InitHealth(Info.Life);
 	Enemy->InitExp(Info.Exp);

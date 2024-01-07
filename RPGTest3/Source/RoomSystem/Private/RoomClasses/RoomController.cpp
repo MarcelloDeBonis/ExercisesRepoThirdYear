@@ -3,6 +3,7 @@
 
 #include "RoomClasses/RoomController.h"
 #include "EnemyController.h"
+#include "RPGTestGameMode.h"
 #include "RoomClasses/Room.h"
 #include "RoomClasses/RoomInfo.h"
 
@@ -14,11 +15,19 @@ ARoomController::ARoomController()
 
 void ARoomController::NewRoom(URoom* Room, ARPGPlayer* Player , FVector Location)
 {
-	FRoomInfo RoomInfo = Room->GetInfo();
-	SpawnPlayer(Player, Location);
-	SpawnEnemies(RoomInfo.Enemies);
-	SpawnFountain(RoomInfo.Fountain);
-	SpawnChest(RoomInfo.Chest);
+	if(Room==LastRoom)
+	{
+		Cast<ARPGTestGameMode>(GetWorld()->GetAuthGameMode())->EndGame(true);
+	}
+	else
+	{
+		FRoomInfo RoomInfo = Room->GetInfo();
+		SpawnPlayer(Player, Location);
+		SpawnEnemies(RoomInfo.Enemies);
+		SpawnFountain(RoomInfo.Fountain);
+		SpawnChest(RoomInfo.Chest);
+		SpawnDoors(Room->GetDoors());
+	}
 }
 
 
@@ -29,8 +38,8 @@ void ARoomController::SpawnPlayer(ARPGPlayer* Player, FVector Location)
 
 void ARoomController::SpawnEnemies(TMap<FString, FVector> Enemies)
 {
-	GetWorld()->GetSubsystem<UEnemyController>()->ResetEnemies();
-	GetWorld()->GetSubsystem<UEnemyController>()->SpawnEnemies(Enemies);
+	EnemyController->ResetEnemies();
+	EnemyController->SpawnEnemies(Enemies);
 }
 
 void ARoomController::SpawnFountain(bool Spawn)
@@ -43,6 +52,11 @@ void ARoomController::SpawnFountain(bool Spawn)
 	{
 		FountainController->DisableFountain();
 	}
+}
+
+void ARoomController::SpawnDoors(TArray<FDoorInfo> Doors)
+{
+	DoorController->InitDoors(Doors);
 }
 
 void ARoomController::SpawnChest(bool Spawn)

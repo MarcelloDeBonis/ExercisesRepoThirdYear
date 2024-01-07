@@ -4,27 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "Character/RPGPlayer.h"
-#include "UObject/Interface.h"
 #include "Interactable.generated.h"
 
-UINTERFACE()
-class UInteractable : public UInterface
-{
-	GENERATED_BODY()
-};
-
-/**
- * 
- */
-class ROOMSYSTEM_API IInteractable
+UCLASS(Abstract)
+class ROOMSYSTEM_API AInteractable : public AActor
 {
 	GENERATED_BODY()
 
 public:
+
+	AInteractable();
 	virtual AActor* GetOwningActor();
-	
-protected:
-	
-	UFUNCTION(BlueprintNativeEvent)
-	void OnInteract(ARPGPlayer* Player);
+	virtual void OnInteract(ARPGPlayer* Player);
 };

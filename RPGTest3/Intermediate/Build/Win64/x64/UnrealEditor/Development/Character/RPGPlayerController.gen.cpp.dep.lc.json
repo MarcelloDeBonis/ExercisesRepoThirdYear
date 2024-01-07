@@ -7,6 +7,8 @@
         "Includes": [
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\character\\definitions.character.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\controllers\\rpgplayercontroller.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\controllers\\rpgcontroller.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\rpgcontroller.generated.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\statemachines\\controllerstate\\rpgcharacterstatemachine.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\statemachines\\controllerstate\\characterstate.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\character\\rpgcharacter.h",

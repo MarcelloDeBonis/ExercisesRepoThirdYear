@@ -10,10 +10,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeDoor() {}
 // Cross Module References
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
-	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ROOMSYSTEM_API UClass* Z_Construct_UClass_ADoor();
 	ROOMSYSTEM_API UClass* Z_Construct_UClass_ADoor_NoRegister();
-	ROOMSYSTEM_API UClass* Z_Construct_UClass_UInteractable_NoRegister();
+	ROOMSYSTEM_API UClass* Z_Construct_UClass_AInteractable();
 	ROOMSYSTEM_API UClass* Z_Construct_UClass_UInteractableState_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_RoomSystem();
 // End Cross Module References
@@ -40,12 +39,11 @@ void EmptyLinkFunctionForGeneratedCodeDoor() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentState;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_ADoor_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AActor,
+		(UObject* (*)())Z_Construct_UClass_AInteractable,
 		(UObject* (*)())Z_Construct_UPackage__Script_RoomSystem,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADoor_Statics::DependentSingletons) < 16);
@@ -72,10 +70,6 @@ void EmptyLinkFunctionForGeneratedCodeDoor() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADoor_Statics::NewProp_SpawnPlayerLocation,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADoor_Statics::NewProp_CurrentState,
 	};
-		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ADoor_Statics::InterfaceParams[] = {
-			{ Z_Construct_UClass_UInteractable_NoRegister, (int32)VTABLE_OFFSET(ADoor, IInteractable), false },  // 2679898628
-		};
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADoor_Statics::InterfaceParams) < 64);
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ADoor_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ADoor>::IsAbstract,
 	};
@@ -86,11 +80,11 @@ void EmptyLinkFunctionForGeneratedCodeDoor() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_ADoor_Statics::PropPointers,
-		InterfaceParams,
+		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_ADoor_Statics::PropPointers),
-		UE_ARRAY_COUNT(InterfaceParams),
+		0,
 		0x009000A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ADoor_Statics::Class_MetaDataParams), Z_Construct_UClass_ADoor_Statics::Class_MetaDataParams)
 	};
@@ -114,9 +108,9 @@ void EmptyLinkFunctionForGeneratedCodeDoor() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Door_Door_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ADoor, ADoor::StaticClass, TEXT("ADoor"), &Z_Registration_Info_UClass_ADoor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADoor), 864276451U) },
+		{ Z_Construct_UClass_ADoor, ADoor::StaticClass, TEXT("ADoor"), &Z_Registration_Info_UClass_ADoor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADoor), 3290956045U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Door_Door_h_4152806920(TEXT("/Script/RoomSystem"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Door_Door_h_3155846133(TEXT("/Script/RoomSystem"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Door_Door_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Door_Door_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

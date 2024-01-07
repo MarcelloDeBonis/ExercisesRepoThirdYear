@@ -24,9 +24,8 @@ private: \
 	static void StaticRegisterNativesAChest(); \
 	friend struct Z_Construct_UClass_AChest_Statics; \
 public: \
-	DECLARE_CLASS(AChest, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RoomSystem"), NO_API) \
-	DECLARE_SERIALIZER(AChest) \
-	virtual UObject* _getUObject() const override { return const_cast<AChest*>(this); }
+	DECLARE_CLASS(AChest, AInteractable, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RoomSystem"), NO_API) \
+	DECLARE_SERIALIZER(AChest)
 
 
 #define FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Chest_Chest_h_14_ENHANCED_CONSTRUCTORS \

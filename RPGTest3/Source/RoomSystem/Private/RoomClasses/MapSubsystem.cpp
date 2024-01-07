@@ -23,13 +23,13 @@ URoom* UMapSubsystem::GetRoomAt(int X, int Y)
 	return nullptr;
 }
 
-void UMapSubsystem::GenerateMap(int Width, int Height, int PathLenght)
+void UMapSubsystem::GenerateMap(int Width, int Height, int PathLength)
 {
 	for (int X=0; X<Width; X++)
 	{
 		for (int Y=0; Y<Height; Y++)
 		{
-			FRoomInfo Info = UDataTableInfo::GetRandomStructByRowName<FRoomInfo>("/Content/DT/RoomInfoDT.uasset");
+			FRoomInfo Info = UDataTableInfo::GetRandomStructByRowName<FRoomInfo>("/Game/DT/RoomInfoDT.RoomInfoDT");
 			URoom* Room = NewObject<URoom>();
 			Room->Init(Info, X, Y);
 			Map.Add(Room);
@@ -37,9 +37,63 @@ void UMapSubsystem::GenerateMap(int Width, int Height, int PathLenght)
 	}
 }
 
-void UMapSubsystem::GeneratePath(URoom* Start, URoom* End)
+URoom* UMapSubsystem::GeneratePath(URoom* Start, int PathLength)
 {
+	if (PathLength <= 0)
+	{
+		return nullptr;
+	}
+
+	TArray<URoom*> UnconnectedRooms = Map;
+	UnconnectedRooms.Remove(Start);
+
+	TArray<URoom*> Path;
+	Path.Add(Start);
+	
+	while (PathLength > 0 && UnconnectedRooms.Num() > 0)
+	{
+		TArray<URoom*> NeighboringRooms = GetNeighbors(Path.Last());
+
+		for (auto NeighboringRoom : NeighboringRooms)
+		{
+			if (!UnconnectedRooms.Contains(NeighboringRoom))
+			{
+				NeighboringRooms.Remove(NeighboringRoom);
+			}	
+		}
+		
+
+		if (NeighboringRooms.Num() == 0)
+		{
+			//Try to search in the path for now currently is formed
+			break;
+		}
+
+		URoom* NextRoom = NeighboringRooms[FMath::RandRange(0, NeighboringRooms.Num() - 1)];
+		
+		if (AttachRooms(Path.Last(), NextRoom))
+		{
+			UnconnectedRooms.Remove(NextRoom);
+			
+			PathLength--;
+			Path.Add(NextRoom);
+		}
+		else
+		{
+			break;
+		}
+	}
+
+	if (PathLength == 0)
+	{
+		return Path.Last();
+	}
+	else
+	{
+		return nullptr;
+	}
 }
+
 
 bool UMapSubsystem::AttachRooms(URoom* RoomA, URoom* RoomB)
 {
@@ -65,6 +119,42 @@ bool UMapSubsystem::AttachRooms(URoom* RoomA, URoom* RoomB)
 	}
 	
 	return true;
+}
+
+TArray<URoom*> UMapSubsystem::GetNeighbors(URoom* Room)
+{
+	TArray<URoom*> Neighbors;
+
+	for (EDirection Direction : {EDirection::Up, EDirection::Down, EDirection::Left, EDirection::Right})
+	{
+		URoom* Neighbor = GetNeighbor(Room, Direction);
+
+		if (Neighbor)
+		{
+			Neighbors.Add(Neighbor);
+		}
+	}
+
+	return Neighbors;
+}
+
+URoom* UMapSubsystem::GetNeighbor(URoom* Room, EDirection Direction)
+{
+	TTuple<int, int> Coordinantes = Room->GetCoordinates();
+
+	switch (Direction)
+	{
+	case EDirection::Up:
+		return GetRoomAt(Coordinantes.Key, Coordinantes.Value+1);
+	case EDirection::Down:
+		return GetRoomAt(Coordinantes.Key, Coordinantes.Value-1);
+	case EDirection::Left:
+		return GetRoomAt(Coordinantes.Key-1, Coordinantes.Value);
+	case EDirection::Right:
+		return GetRoomAt(Coordinantes.Key+1, Coordinantes.Value);
+	default:
+		return nullptr;
+	}
 }
 
 EDirection UMapSubsystem::DirectionToGoToB(URoom* RoomA, URoom* RoomB)

@@ -10,7 +10,7 @@
 #include "Door.generated.h"
 
 UCLASS()
-class ROOMSYSTEM_API ADoor : public AActor, public IInteractable
+class ROOMSYSTEM_API ADoor : public AInteractable
 {
 	GENERATED_BODY()
 
@@ -34,7 +34,7 @@ private:
 	UInteractableState* CurrentState = nullptr;
 	
 	void SetState(UInteractableState* NewState);
-	virtual void OnInteract_Implementation(ARPGPlayer* Player) override;
+	virtual void OnInteract(ARPGPlayer* Player) override;
 	void GoNextRoom();
 
 };

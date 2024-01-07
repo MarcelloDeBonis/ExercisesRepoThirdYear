@@ -11,10 +11,10 @@ ARPGBrainController::ARPGBrainController()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
-ARPGBrainController::ARPGBrainController(ARPGEnemy* EnemyRef)
+void ARPGBrainController::Init(ARPGEnemy* EnemyRef)
 {
-	PrimaryActorTick.bCanEverTick = true;
 	Enemy = EnemyRef;
+	Enemy->InitController(this);
 }
 
 void ARPGBrainController::NewTask(UEnemyTask* NewTask)
@@ -31,6 +31,11 @@ URPGCharacterStateMachine* ARPGBrainController::GetStateMachine()
 ARPGEnemy* ARPGBrainController::GetEnemy()
 {
 	return Enemy;
+}
+
+void ARPGBrainController::OnDeactiveAttack()
+{
+	StateMachine->OnAttacked();
 }
 
 void ARPGBrainController::BeginPlay()

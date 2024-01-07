@@ -9,6 +9,8 @@
 #include "StateMachines/WeaponStates/WeaponState.h"
 #include "Weapon.generated.h"
 
+class UAttackComponent;
+
 UCLASS(Abstract)
 class CHARACTER_API AWeapon : public AActor
 {
@@ -20,12 +22,12 @@ public:
 	UStaticMeshComponent* Mesh = nullptr;
 	
 	AWeapon();
-	void SetDamage(int _Damage);
+	void SetDamage(int _Damage, UAttackComponent* _AttackComponent);
 	virtual void ActiveWeapon(float TimeActivation);
 	void DeactiveWeapon();
 	bool AvaiableWeapon() const { return !CanCollide; }
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character")
 	UFollowerComponent* FollowerComponent = nullptr;
 	
 	UFUNCTION(BlueprintCallable)
@@ -34,11 +36,11 @@ public:
 	void InitTeam(ETeam _Team);
 private:
 
+	UPROPERTY()
+	UAttackComponent* AttackComponent = nullptr;
 	bool CanCollide = false;
 	ETeam Team = ETeam::None;
-	
 	void SetState(UWeaponState* NewState);
-	void InitMesh();
 	
 	UPROPERTY()
 	UWeaponState* CurrentState =  nullptr;
@@ -47,7 +49,7 @@ private:
 	
 protected:
 	
-	float StartDistance = 100.0f;
+	float StartDistance = 200.0f;
 	int Damage = 0;
 
 	virtual void BeginPlay() override;

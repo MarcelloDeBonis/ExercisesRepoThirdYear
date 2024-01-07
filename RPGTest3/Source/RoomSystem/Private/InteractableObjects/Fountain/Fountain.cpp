@@ -10,7 +10,7 @@ AFountain::AFountain()
 
 void AFountain::Interact(ARPGPlayer* Player)
 {
-	CurrentState->OnCallInteractFunct(Player);
+	HealTotally(Player);
 }
 
 void AFountain::Active()
@@ -33,9 +33,9 @@ void AFountain::SetState(UInteractableState* NewState)
 	CurrentState->OnEnter(this);
 }
 
-void AFountain::OnInteract_Implementation(ARPGPlayer* Player)
+void AFountain::OnInteract(ARPGPlayer* Player)
 {
-	HealTotally(Player);
+	CurrentState->OnCallInteractFunct(Player);
 }
 
 void AFountain::HealTotally(ARPGPlayer* Player)

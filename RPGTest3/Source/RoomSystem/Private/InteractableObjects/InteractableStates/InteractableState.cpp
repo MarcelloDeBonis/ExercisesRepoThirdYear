@@ -11,7 +11,7 @@ void UInteractableState::OnCallInteractFunct(ARPGPlayer* Player)
 {
 }
 
-void UInteractableState::OnEnter(IInteractable* _Interactable)
+void UInteractableState::OnEnter(AInteractable* _Interactable)
 {
 	MyInteractable = _Interactable;
 }

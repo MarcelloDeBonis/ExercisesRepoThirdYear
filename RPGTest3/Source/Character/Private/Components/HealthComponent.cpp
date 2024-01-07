@@ -13,8 +13,12 @@ UHealthComponent::UHealthComponent()
 void UHealthComponent::Damage(int Damage)
 {
 	CurrentLife -= Damage;
-	OnUpdateLife.Broadcast(CurrentLife, MaxLife);
 
+	if(CurrentLife < 0)
+	{
+		CurrentLife = 0;
+	}
+	
 	if(Died())
 	{
 		Death();
@@ -25,7 +29,6 @@ void UHealthComponent::SetMaxLife(int NewMaxLife)
 {
 	MaxLife = NewMaxLife;
 	HealTotally();
-	OnUpdateLife.Broadcast(CurrentLife, MaxLife);
 }
 
 void UHealthComponent::Heal(int HealAmount)
@@ -35,18 +38,31 @@ void UHealthComponent::Heal(int HealAmount)
 	{
 		CurrentLife = MaxLife;
 	}
-	OnUpdateLife.Broadcast(CurrentLife, MaxLife);	
 }
 
 void UHealthComponent::HealTotally()
 {
 	CurrentLife = MaxLife;
-	OnUpdateLife.Broadcast(CurrentLife, MaxLife);
 }
 
 void UHealthComponent::Death()
 {
 	Cast<ARPGCharacter>(GetOwner())->OnDied();
+}
+
+float UHealthComponent::GetUiLife()
+{
+	if(CurrentLife <= 0)
+	{
+		return 0;
+	}
+
+	if(MaxLife <= 0)
+	{
+		return 0;
+	}
+
+	return (float)CurrentLife / (float)MaxLife;
 }
 
 void UHealthComponent::BeginPlay()

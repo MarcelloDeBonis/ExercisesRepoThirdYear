@@ -4,7 +4,12 @@
 #include "EnemyController.h"
 #include "EnemyBuilder.h"
 
-void UEnemyController::ResetEnemies()
+AEnemyController::AEnemyController()
+{
+	PrimaryActorTick.bCanEverTick = true;
+}
+
+void AEnemyController::ResetEnemies()
 {
 	for (auto Enemy : Enemies)
 	{
@@ -18,7 +23,7 @@ void UEnemyController::ResetEnemies()
 	Enemies.Empty();
 }
 
-void UEnemyController::SpawnEnemies(TMap<FString, FVector> NewEnemies)
+void AEnemyController::SpawnEnemies(TMap<FString, FVector> NewEnemies)
 {
 	for (auto Enemy : NewEnemies)
 	{
@@ -26,9 +31,10 @@ void UEnemyController::SpawnEnemies(TMap<FString, FVector> NewEnemies)
 	}
 }
 
-void UEnemyController::SpawnEnemy(TTuple<FString, FVector> Enemy)
+void AEnemyController::SpawnEnemy(TTuple<FString, FVector> Enemy)
 {
 	ARPGBrainController* NewEnemy = UEnemyBuilder::GetEnemy(GetWorld(), Enemy.Key, Enemy.Value);
+	NewEnemy->Init(NewEnemy->GetEnemy());
 	Enemies.Add(NewEnemy, NewEnemy->GetEnemy());
 }
 

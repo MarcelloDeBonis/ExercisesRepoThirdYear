@@ -6,17 +6,13 @@
 #include "InteractableObjects/InteractableStates/InteractableState.h"
 #include "InteractableStateOn.generated.h"
 
-class IInteractable;
-/**
- * 
- */
 UCLASS()
 class ROOMSYSTEM_API UInteractableStateOn : public UInteractableState
 {
 	GENERATED_BODY()
 	
 public:
-	virtual void OnEnter(IInteractable* _Interactable) override;
+	virtual void OnEnter(AInteractable* _Interactable) override;
 	virtual void OnExitState() override;
 	virtual void OnCallInteractFunct(ARPGPlayer* Player) override;
 

@@ -24,9 +24,8 @@ private: \
 	static void StaticRegisterNativesAFountain(); \
 	friend struct Z_Construct_UClass_AFountain_Statics; \
 public: \
-	DECLARE_CLASS(AFountain, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RoomSystem"), NO_API) \
-	DECLARE_SERIALIZER(AFountain) \
-	virtual UObject* _getUObject() const override { return const_cast<AFountain*>(this); }
+	DECLARE_CLASS(AFountain, AInteractable, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/RoomSystem"), NO_API) \
+	DECLARE_SERIALIZER(AFountain)
 
 
 #define FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Fountain_Fountain_h_15_ENHANCED_CONSTRUCTORS \

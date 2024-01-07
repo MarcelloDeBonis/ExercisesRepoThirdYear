@@ -17,7 +17,7 @@ class ROOMSYSTEM_API UInteractableState : public UObject
 	GENERATED_BODY()
 public:
 	
-	virtual void OnEnter(IInteractable* _Interactable);
+	virtual void OnEnter(AInteractable* _Interactable);
 	
 	virtual void OnExitState();
 
@@ -25,5 +25,5 @@ public:
 
 protected:
 	
-	IInteractable* MyInteractable;
+	AInteractable* MyInteractable;
 };

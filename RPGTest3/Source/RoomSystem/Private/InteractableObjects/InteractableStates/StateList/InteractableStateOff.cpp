@@ -3,7 +3,7 @@
 
 #include "InteractableObjects/InteractableStates/StateList/InteractableStateOff.h"
 
-void UInteractableStateOff::OnEnter(IInteractable* _Interactable)
+void UInteractableStateOff::OnEnter(AInteractable* _Interactable)
 {
 	Super::OnEnter(_Interactable);
 	DisableVisibility();

@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/HealthComponent.h"
 #include "Components/AttackComponents/AttackComponent.h"
+#include "Controllers/RPGController.h"
 #include "Enums/ETeam.h"
 #include "GameFramework/Actor.h"
 #include "RPGCharacter.generated.h"
@@ -18,14 +19,17 @@ public:
 	
 	ARPGCharacter();
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character")
 	UHealthComponent* HealthComponent = nullptr;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character")
 	UAttackComponent* AttackComponent = nullptr;
 
+	void InitController(IRPGController* _Controller);
 	virtual void OnDied();
 	ETeam GetTeam() const { return Team; }
+
+	IRPGController* Controller = nullptr;
 protected:
 	
 	ETeam Team = ETeam::None;

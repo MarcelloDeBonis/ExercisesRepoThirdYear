@@ -38,9 +38,6 @@ void EmptyLinkFunctionForGeneratedCodeInteractableStateOn() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractableStateOn_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UInteractableStateOn_Statics::Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "InteractableObjects/InteractableStates/StateList/InteractableStateOn.h" },
 		{ "ModuleRelativePath", "Public/InteractableObjects/InteractableStates/StateList/InteractableStateOn.h" },
 	};
@@ -83,9 +80,9 @@ void EmptyLinkFunctionForGeneratedCodeInteractableStateOn() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_InteractableStates_StateList_InteractableStateOn_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UInteractableStateOn, UInteractableStateOn::StaticClass, TEXT("UInteractableStateOn"), &Z_Registration_Info_UClass_UInteractableStateOn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractableStateOn), 3477467548U) },
+		{ Z_Construct_UClass_UInteractableStateOn, UInteractableStateOn::StaticClass, TEXT("UInteractableStateOn"), &Z_Registration_Info_UClass_UInteractableStateOn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractableStateOn), 3826086169U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_InteractableStates_StateList_InteractableStateOn_h_231945623(TEXT("/Script/RoomSystem"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_InteractableStates_StateList_InteractableStateOn_h_975996456(TEXT("/Script/RoomSystem"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_InteractableStates_StateList_InteractableStateOn_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_InteractableStates_StateList_InteractableStateOn_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

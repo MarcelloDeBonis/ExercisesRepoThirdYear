@@ -6,7 +6,6 @@
 #include "Components/ActorComponent.h"
 #include "ExpComponent.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnExpUpdated, int, MaxExp, int , CurrentExp);
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class CHARACTER_API UExpComponent : public UActorComponent
@@ -19,9 +18,10 @@ public:
 	void OnUpdateLevel(int NewLevel, int ExpToObtain);
 	void GainExp(int NewExp);
 
-	UPROPERTY(BlueprintAssignable, Category = "Delegates")
-	FOnExpUpdated OnExpUpdated;
-	
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "UI")
+	float GetUiExp();
+
+	void FirstLevel();
 protected:
 	
 	virtual void BeginPlay() override;

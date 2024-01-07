@@ -6,4 +6,5 @@
 ASword::ASword()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	FollowerComponent = CreateDefaultSubobject<UFollowerComponent>(TEXT("FollowerComponent"));
 }

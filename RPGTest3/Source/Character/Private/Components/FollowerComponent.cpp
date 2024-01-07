@@ -5,8 +5,6 @@
 UFollowerComponent::UFollowerComponent()
 {
 	PrimaryComponentTick.bCanEverTick = true;
-	ActorToFollow = nullptr;
-	DistanceToMaintain = 500.0f;
 }
 
 void UFollowerComponent::BeginPlay()
@@ -18,6 +16,7 @@ void UFollowerComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	Follow();
+	Rotate();
 }
 
 void UFollowerComponent::SetActorToFollow(AActor* NewActorToFollow)
@@ -34,7 +33,16 @@ void UFollowerComponent::Follow() const
 {
 	if(ActorToFollow)
 	{
-		FVector NewLocation = ActorToFollow->GetActorLocation() - (ActorToFollow->GetActorForwardVector() * DistanceToMaintain);
+		FVector NewLocation = ActorToFollow->GetActorLocation() - ((ActorToFollow->GetActorForwardVector() * -1) * DistanceToMaintain);
 		GetOwner()->SetActorLocation(NewLocation);
+	}
+}
+
+void UFollowerComponent::Rotate()
+{
+	if(ActorToFollow)
+	{
+		FRotator NewRotation = ActorToFollow->GetActorRotation();
+		GetOwner()->SetActorRotation(NewRotation);
 	}
 }

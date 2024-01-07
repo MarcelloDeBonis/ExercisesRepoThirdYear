@@ -21,25 +21,23 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_EnemyController_h_14_ACCESSORS
 #define FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_EnemyController_h_14_INCLASS_NO_PURE_DECLS \
 private: \
-	static void StaticRegisterNativesUEnemyController(); \
-	friend struct Z_Construct_UClass_UEnemyController_Statics; \
+	static void StaticRegisterNativesAEnemyController(); \
+	friend struct Z_Construct_UClass_AEnemyController_Statics; \
 public: \
-	DECLARE_CLASS(UEnemyController, UWorldSubsystem, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Character"), NO_API) \
-	DECLARE_SERIALIZER(UEnemyController)
+	DECLARE_CLASS(AEnemyController, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Character"), NO_API) \
+	DECLARE_SERIALIZER(AEnemyController)
 
 
 #define FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_EnemyController_h_14_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UEnemyController(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API UEnemyController(UEnemyController&&); \
-	NO_API UEnemyController(const UEnemyController&); \
+	NO_API AEnemyController(AEnemyController&&); \
+	NO_API AEnemyController(const AEnemyController&); \
 public: \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UEnemyController); \
-	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UEnemyController); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UEnemyController) \
-	NO_API virtual ~UEnemyController();
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AEnemyController); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEnemyController); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AEnemyController) \
+	NO_API virtual ~AEnemyController();
 
 
 #define FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_EnemyController_h_11_PROLOG
@@ -57,7 +55,7 @@ private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> CHARACTER_API UClass* StaticClass<class UEnemyController>();
+template<> CHARACTER_API UClass* StaticClass<class AEnemyController>();
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_EnemyController_h

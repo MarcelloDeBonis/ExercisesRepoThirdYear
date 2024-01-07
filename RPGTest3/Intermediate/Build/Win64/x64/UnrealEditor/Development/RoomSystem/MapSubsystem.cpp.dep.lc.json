@@ -1,0 +1,29 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\roomsystem\\private\\roomclasses\\mapsubsystem.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\x64\\rpgtest3editor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\roomsystem\\definitions.roomsystem.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\roomsystem\\public\\roomclasses\\mapsubsystem.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\roomsystem\\public\\roomclasses\\room.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\roomsystem\\public\\roomclasses\\roominfo.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\roomsystem\\uht\\roominfo.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\roomsystem\\public\\interactableobjects\\door\\doorinfo.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\roomsystem\\public\\direction.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\roomsystem\\uht\\direction.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\roomsystem\\uht\\doorinfo.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\roomsystem\\uht\\room.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\roomsystem\\uht\\mapsubsystem.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\rpgtest3\\public\\datatableinfo.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\rpgtest3\\uht\\datatableinfo.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\roomsystem\\public\\interactableobjects\\door\\doorutils.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\roomsystem\\uht\\doorutils.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\kismet\\datatablefunctionlibrary.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\datatablefunctionlibrary.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

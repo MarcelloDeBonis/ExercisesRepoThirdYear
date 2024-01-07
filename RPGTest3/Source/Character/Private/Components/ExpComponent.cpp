@@ -15,14 +15,11 @@ void UExpComponent::OnUpdateLevel(int NewLevel, int ExpToObtain)
 	CurrentLevel = NewLevel;
 	CurrentExp = 0;
 	MaxExp = ExpToObtain;
-	OnExpUpdated.Broadcast(CurrentExp, MaxExp);
 }
 
 void UExpComponent::GainExp(int NewExp)
 {
 	CurrentExp += NewExp;
-	
-	OnExpUpdated.Broadcast(CurrentExp, MaxExp);
 	
 	if(LevelUp())
 	{
@@ -31,9 +28,29 @@ void UExpComponent::GainExp(int NewExp)
 	
 }
 
+float UExpComponent::GetUiExp()
+{
+	if(CurrentExp <= 0)
+	{
+		return 0;
+	}
+
+	if(MaxExp <= 0)
+	{
+		return 0;
+	}
+
+	return (float)CurrentExp / (float)MaxExp;
+}
+
 void UExpComponent::BeginPlay()
 {
 	Super::BeginPlay();
+}
+
+void UExpComponent::FirstLevel()
+{
+	Cast<ARPGPlayer>(GetOwner())->UpdateNewLevel(1);
 }
 
 bool UExpComponent::LevelUp()

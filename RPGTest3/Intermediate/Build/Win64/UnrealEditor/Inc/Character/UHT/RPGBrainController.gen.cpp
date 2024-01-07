@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGBrainController() {}
 	CHARACTER_API UClass* Z_Construct_UClass_ARPGEnemy_NoRegister();
 	CHARACTER_API UClass* Z_Construct_UClass_UEnemyTask_NoRegister();
 	CHARACTER_API UClass* Z_Construct_UClass_URPGCharacterStateMachine_NoRegister();
+	CHARACTER_API UClass* Z_Construct_UClass_URPGController_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AController();
 	UPackage* Z_Construct_UPackage__Script_Character();
 // End Cross Module References
@@ -44,6 +45,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGBrainController() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentTask;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -82,6 +84,10 @@ void EmptyLinkFunctionForGeneratedCodeRPGBrainController() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGBrainController_Statics::NewProp_StateMachine,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGBrainController_Statics::NewProp_CurrentTask,
 	};
+		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ARPGBrainController_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_URPGController_NoRegister, (int32)VTABLE_OFFSET(ARPGBrainController, IRPGController), false },  // 2347666811
+		};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGBrainController_Statics::InterfaceParams) < 64);
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ARPGBrainController_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ARPGBrainController>::IsAbstract,
 	};
@@ -92,11 +98,11 @@ void EmptyLinkFunctionForGeneratedCodeRPGBrainController() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_ARPGBrainController_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_ARPGBrainController_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009002A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGBrainController_Statics::Class_MetaDataParams), Z_Construct_UClass_ARPGBrainController_Statics::Class_MetaDataParams)
 	};
@@ -120,9 +126,9 @@ void EmptyLinkFunctionForGeneratedCodeRPGBrainController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGBrainController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ARPGBrainController, ARPGBrainController::StaticClass, TEXT("ARPGBrainController"), &Z_Registration_Info_UClass_ARPGBrainController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGBrainController), 506790565U) },
+		{ Z_Construct_UClass_ARPGBrainController, ARPGBrainController::StaticClass, TEXT("ARPGBrainController"), &Z_Registration_Info_UClass_ARPGBrainController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGBrainController), 1772926536U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGBrainController_h_2228955852(TEXT("/Script/Character"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGBrainController_h_1434178271(TEXT("/Script/Character"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGBrainController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGBrainController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

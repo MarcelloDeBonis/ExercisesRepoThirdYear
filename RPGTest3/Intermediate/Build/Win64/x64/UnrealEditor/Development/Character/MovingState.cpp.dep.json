@@ -21,13 +21,17 @@
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\weaponstate.generated.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\weapon.generated.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\attackcomponent.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\controllers\\rpgcontroller.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\rpgcontroller.generated.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\rpgcharacter.generated.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\characterstate.generated.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\movingstate.generated.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\statemachines\\controllerstate\\rpgcharacterstatemachine.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\rpgcharacterstatemachine.generated.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\statemachines\\controllerstate\\states\\attackingstate.h",
-            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\attackingstate.generated.h"
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\attackingstate.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\statemachines\\controllerstate\\states\\idlestate.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\idlestate.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

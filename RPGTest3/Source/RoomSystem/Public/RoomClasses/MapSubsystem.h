@@ -18,14 +18,16 @@ class ROOMSYSTEM_API UMapSubsystem : public UWorldSubsystem
 public:
 
 	URoom* GetRoomAt(int X, int Y);
-	void GenerateMap(int Width, int Height, int PathLenght);
+	URoom* GeneratePath(URoom* Start, int PathLength);
+	void GenerateMap(int Width, int Height, int PathLength);
 	
 private:
 
 	UPROPERTY()
 	TArray<URoom*> Map;
 
-	void GeneratePath(URoom* Start, URoom* End);
+	URoom* GetNeighbor(URoom* Room, EDirection Direction);
+	TArray<URoom*> GetNeighbors(URoom* Room);
 	bool AttachRooms(URoom* RoomA, URoom* RoomB);
 	EDirection DirectionToGoToB(URoom* RoomA, URoom* RoomB);
 };

@@ -48,3 +48,9 @@ void ADoorController::InitMap()
 	CorrespondingDoors.Add(EDirection::Left, LeftDoor);
 }
 
+void ADoorController::BeginPlay()
+{
+	Super::BeginPlay();
+	InitMap();
+}
+

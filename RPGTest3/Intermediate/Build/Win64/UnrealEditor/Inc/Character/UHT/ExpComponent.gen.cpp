@@ -11,62 +11,58 @@ void EmptyLinkFunctionForGeneratedCodeExpComponent() {}
 // Cross Module References
 	CHARACTER_API UClass* Z_Construct_UClass_UExpComponent();
 	CHARACTER_API UClass* Z_Construct_UClass_UExpComponent_NoRegister();
-	CHARACTER_API UFunction* Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_Character();
 // End Cross Module References
-	struct Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics
+	DEFINE_FUNCTION(UExpComponent::execGetUiExp)
 	{
-		struct _Script_Character_eventOnExpUpdated_Parms
-		{
-			int32 MaxExp;
-			int32 CurrentExp;
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetUiExp();
+		P_NATIVE_END;
+	}
+	void UExpComponent::StaticRegisterNativesUExpComponent()
+	{
+		UClass* Class = UExpComponent::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GetUiExp", &UExpComponent::execGetUiExp },
 		};
-		static const UECodeGen_Private::FIntPropertyParams NewProp_MaxExp;
-		static const UECodeGen_Private::FIntPropertyParams NewProp_CurrentExp;
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UExpComponent_GetUiExp_Statics
+	{
+		struct ExpComponent_eventGetUiExp_Parms
+		{
+			float ReturnValue;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::NewProp_MaxExp = { "MaxExp", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_Character_eventOnExpUpdated_Parms, MaxExp), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::NewProp_CurrentExp = { "CurrentExp", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_Character_eventOnExpUpdated_Parms, CurrentExp), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::NewProp_MaxExp,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::NewProp_CurrentExp,
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ExpComponent_eventGetUiExp_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::Function_MetaDataParams[] = {
+		{ "Category", "UI" },
 		{ "ModuleRelativePath", "Public/Components/ExpComponent.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_Character, nullptr, "OnExpUpdated__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::_Script_Character_eventOnExpUpdated_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::_Script_Character_eventOnExpUpdated_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UExpComponent, nullptr, "GetUiExp", nullptr, nullptr, Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::PropPointers), sizeof(Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::ExpComponent_eventGetUiExp_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::Function_MetaDataParams), Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::ExpComponent_eventGetUiExp_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UExpComponent_GetUiExp()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UExpComponent_GetUiExp_Statics::FuncParams);
 		}
 		return ReturnFunction;
-	}
-void FOnExpUpdated_DelegateWrapper(const FMulticastScriptDelegate& OnExpUpdated, int32 MaxExp, int32 CurrentExp)
-{
-	struct _Script_Character_eventOnExpUpdated_Parms
-	{
-		int32 MaxExp;
-		int32 CurrentExp;
-	};
-	_Script_Character_eventOnExpUpdated_Parms Parms;
-	Parms.MaxExp=MaxExp;
-	Parms.CurrentExp=CurrentExp;
-	OnExpUpdated.ProcessMulticastDelegate<UObject>(&Parms);
-}
-	void UExpComponent::StaticRegisterNativesUExpComponent()
-	{
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UExpComponent);
 	UClass* Z_Construct_UClass_UExpComponent_NoRegister()
@@ -76,14 +72,10 @@ void FOnExpUpdated_DelegateWrapper(const FMulticastScriptDelegate& OnExpUpdated,
 	struct Z_Construct_UClass_UExpComponent_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_OnExpUpdated_MetaData[];
-#endif
-		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnExpUpdated;
-		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -92,6 +84,10 @@ void FOnExpUpdated_DelegateWrapper(const FMulticastScriptDelegate& OnExpUpdated,
 		(UObject* (*)())Z_Construct_UPackage__Script_Character,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UExpComponent_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_UExpComponent_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UExpComponent_GetUiExp, "GetUiExp" }, // 3608728861
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UExpComponent_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UExpComponent_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
@@ -100,16 +96,6 @@ void FOnExpUpdated_DelegateWrapper(const FMulticastScriptDelegate& OnExpUpdated,
 		{ "ModuleRelativePath", "Public/Components/ExpComponent.h" },
 	};
 #endif
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UExpComponent_Statics::NewProp_OnExpUpdated_MetaData[] = {
-		{ "Category", "Delegates" },
-		{ "ModuleRelativePath", "Public/Components/ExpComponent.h" },
-	};
-#endif
-	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UExpComponent_Statics::NewProp_OnExpUpdated = { "OnExpUpdated", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UExpComponent, OnExpUpdated), Z_Construct_UDelegateFunction_Character_OnExpUpdated__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UExpComponent_Statics::NewProp_OnExpUpdated_MetaData), Z_Construct_UClass_UExpComponent_Statics::NewProp_OnExpUpdated_MetaData) }; // 927658311
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UExpComponent_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UExpComponent_Statics::NewProp_OnExpUpdated,
-	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UExpComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UExpComponent>::IsAbstract,
 	};
@@ -118,17 +104,16 @@ void FOnExpUpdated_DelegateWrapper(const FMulticastScriptDelegate& OnExpUpdated,
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
+		FuncInfo,
 		nullptr,
-		Z_Construct_UClass_UExpComponent_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
-		UE_ARRAY_COUNT(Z_Construct_UClass_UExpComponent_Statics::PropPointers),
 		0,
 		0x00B000A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UExpComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UExpComponent_Statics::Class_MetaDataParams)
 	};
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UExpComponent_Statics::PropPointers) < 2048);
 	UClass* Z_Construct_UClass_UExpComponent()
 	{
 		if (!Z_Registration_Info_UClass_UExpComponent.OuterSingleton)
@@ -148,9 +133,9 @@ void FOnExpUpdated_DelegateWrapper(const FMulticastScriptDelegate& OnExpUpdated,
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Components_ExpComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UExpComponent, UExpComponent::StaticClass, TEXT("UExpComponent"), &Z_Registration_Info_UClass_UExpComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UExpComponent), 3856054566U) },
+		{ Z_Construct_UClass_UExpComponent, UExpComponent::StaticClass, TEXT("UExpComponent"), &Z_Registration_Info_UClass_UExpComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UExpComponent), 2647668944U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Components_ExpComponent_h_678504163(TEXT("/Script/Character"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Components_ExpComponent_h_3426587238(TEXT("/Script/Character"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Components_ExpComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Components_ExpComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

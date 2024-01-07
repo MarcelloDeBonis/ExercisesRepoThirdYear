@@ -2,8 +2,10 @@
 
 #include "Components/AttackComponents/RangedAttackComponent.h"
 
+#include "DataTableInfo.h"
 #include "Character/RPGCharacter.h"
 #include "Weapon/Arrow.h"
+#include "Weapon/WeaponInfo.h"
 
 URangedAttackComponent::URangedAttackComponent()
 {
@@ -18,16 +20,20 @@ void URangedAttackComponent::BeginPlay()
 void URangedAttackComponent::SpawnWeapon(int Damage, float _WeaponDuration)
 {
 	Super::SpawnWeapon(Damage, _WeaponDuration);
-	Weapon = GetWorld()->SpawnActor<AArrow>(GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation());
+
+	const FWeaponInfo WeaponInfo = UDataTableInfo::GetStructByRowName<FWeaponInfo>("/Game/DT/WeaponDT.WeaponDT", "Arrow");
+	TSubclassOf<AWeapon> WeaponClass = WeaponInfo.WeaponClass;
+	
+	Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponClass, GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation(), FActorSpawnParameters());
 	Weapon->InitTeam(Cast<ARPGCharacter>(GetOwner())->GetTeam());
 	
 	if(Weapon)
 	{
-		Cast<AArrow>(Weapon)->AArrow::AArrow(ArrowDistanceIncrease);
-		Weapon->SetDamage(Damage);
+		Weapon->SetDamage(Damage, this);
 	}
 	
 	Weapon->FollowerComponent->SetActorToFollow(GetOwner());
+	Cast<AArrow>(Weapon)->Init(ArrowDistanceIncrease);
 	Weapon->DeactiveWeapon();
 }
 

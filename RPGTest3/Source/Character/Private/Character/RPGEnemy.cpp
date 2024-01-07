@@ -8,6 +8,8 @@
 ARPGEnemy::ARPGEnemy()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	InitHealthComponent();
+	AttackComponent = CreateDefaultSubobject<UAttackComponent>(TEXT("AttackComponent"));
 }
 
 void ARPGEnemy::Init(float _MinAttackDistance, float _VisibilityRange)
@@ -34,6 +36,12 @@ void ARPGEnemy::InitDamage(int Damage, float _WeaponDuration)
 void ARPGEnemy::InitHealth(int Health)
 {
 	HealthComponent->SetMaxLife(Health);
+}
+
+void ARPGEnemy::InitComponents()
+{
+	Super::InitComponents();
+	
 }
 
 bool ARPGEnemy::IsPlayerInVisibilityRange()

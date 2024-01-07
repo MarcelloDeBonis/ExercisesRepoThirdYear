@@ -398,6 +398,7 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\Controllers\RPGController.cpp" />
     <ClCompile Include="..\..\Source\Character\Private\Controllers\RPGPlayerController.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -490,6 +491,7 @@
     <ClInclude Include="..\..\Source\Character\Public\Components\AttackComponents\MeleeAttackComponent.h" />
     <ClInclude Include="..\..\Source\Character\Public\Components\AttackComponents\RangedAttackComponent.h" />
     <ClInclude Include="..\..\Source\Character\Public\Controllers\RPGBrainController.h" />
+    <ClInclude Include="..\..\Source\Character\Public\Controllers\RPGController.h" />
     <ClInclude Include="..\..\Source\Character\Public\Controllers\RPGPlayerController.h" />
     <ClInclude Include="..\..\Source\Character\Public\EnemyBuilder.h" />
     <ClInclude Include="..\..\Source\Character\Public\EnemyController.h" />
@@ -606,6 +608,7 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClInclude Include="..\..\Source\Character\Public\Weapon\WeaponInfo.h" />
     <ClInclude Include="..\..\Source\RoomSystem\Public\Direction.h" />
     <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Chest\Chest.h" />
     <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Chest\ChestController.h" />

@@ -19,7 +19,10 @@ void AWeapon::DeactiveWeapon()
 {
 	CanCollide = false;
 	SetState(NewObject<UDeactivatedWeapon>());
-	Cast<ARPGCharacter>(GetOwner())->AttackComponent->OnEndAttack.Broadcast();
+	if(AttackComponent!=nullptr)
+	{
+		Cast<ARPGCharacter>(AttackComponent->GetOwner())->Controller->OnDeactiveAttack();
+	}
 }
 
 void AWeapon::InitTeam(ETeam _Team)
@@ -29,24 +32,26 @@ void AWeapon::InitTeam(ETeam _Team)
 
 void AWeapon::OnCollision(AActor* OtherCharacter)
 {
-	if(CanCollide)
+	if(CanCollide && OtherCharacter->IsA<ARPGCharacter>())
 	{
-		ARPGCharacter* Character = Cast<ARPGCharacter>(OtherCharacter);
-		Character->HealthComponent->Damage(Damage);
-		DeactiveWeapon();
+		if(Cast<ARPGCharacter>(OtherCharacter)->GetTeam()!=Team)
+		{
+			ARPGCharacter* Character = Cast<ARPGCharacter>(OtherCharacter);
+			Character->HealthComponent->Damage(Damage);
+			DeactiveWeapon();
+		}
 	}
 }
 
 AWeapon::AWeapon()
 {
 	PrimaryActorTick.bCanEverTick = true;
-	InitMesh();
-	FollowerComponent = CreateDefaultSubobject<UFollowerComponent>(TEXT("FollowerComponent"));
 }
 
-void AWeapon::SetDamage(int _Damage)
+void AWeapon::SetDamage(int _Damage, UAttackComponent* _AttackComponent)
 {
-	Damage=_Damage;
+	Damage = _Damage;
+	AttackComponent = _AttackComponent;
 }
 
 void AWeapon::SetState(UWeaponState* NewState)
@@ -64,26 +69,9 @@ void AWeapon::SetState(UWeaponState* NewState)
 void AWeapon::BeginPlay()
 {
 	Super::BeginPlay();
+	
 	FollowerComponent->SetDistanceToMaintain(StartDistance);
 	DeactiveWeapon();
-}
-
-void AWeapon::InitMesh()
-{
-	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WeaponMesh"));
-	RootComponent = Mesh;
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> CubeMesh(TEXT("/Engine/BasicShapes/Cube.Cube"));
-	if (CubeMesh.Succeeded())
-	{
-		Mesh->SetStaticMesh(CubeMesh.Object);
-		Mesh->SetWorldScale3D(FVector(1.f, 1.f, 4.f));
-	}
-
-	static ConstructorHelpers::FObjectFinder<UMaterial> Material(TEXT("/Engine.Material'/Game/Materials/Weapon.Weapon'"));
-	if (Material.Succeeded())
-	{
-		Mesh->SetMaterial(0, Material.Object);
-	}
 }
 
 

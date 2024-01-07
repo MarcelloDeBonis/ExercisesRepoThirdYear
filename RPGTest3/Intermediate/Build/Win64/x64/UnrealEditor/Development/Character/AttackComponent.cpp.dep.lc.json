@@ -7,6 +7,14 @@
         "Includes": [
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\character\\definitions.character.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\components\\attackcomponents\\attackcomponent.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\weapon\\weapon.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\components\\followercomponent.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\followercomponent.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\enums\\eteam.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\eteam.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\source\\character\\public\\statemachines\\weaponstates\\weaponstate.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\weaponstate.generated.h",
+            "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\weapon.generated.h",
             "c:\\users\\marce\\onedrive\\desktop\\work\\exercisesrepothirdyear\\rpgtest3\\intermediate\\build\\win64\\unrealeditor\\inc\\character\\uht\\attackcomponent.generated.h"
         ],
         "ImportedModules": [],

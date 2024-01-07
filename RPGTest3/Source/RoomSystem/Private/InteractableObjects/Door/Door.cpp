@@ -14,7 +14,7 @@ ADoor::ADoor()
 
 void ADoor::Interact(ARPGPlayer* Player)
 {
-	CurrentState->OnCallInteractFunct(Player);
+	GoNextRoom();
 }
 
 void ADoor::Active(FDoorInfo _DoorInfo)
@@ -44,9 +44,9 @@ void ADoor::SetState(UInteractableState* NewState)
 	CurrentState->OnEnter(this);
 }
 
-void ADoor::OnInteract_Implementation(ARPGPlayer* Player)
+void ADoor::OnInteract(ARPGPlayer* Player)
 {
-	GoNextRoom();
+	CurrentState->OnCallInteractFunct(Player);
 }
 
 void ADoor::GoNextRoom()

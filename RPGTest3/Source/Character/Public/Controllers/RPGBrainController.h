@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "RPGController.h"
 #include "Character/RPGEnemy.h"
 #include "StateMachines/ControllerState/RPGCharacterStateMachine.h"
 #include "RPGBrainController.generated.h"
@@ -10,20 +11,21 @@
 class UEnemyTask;
 
 UCLASS()
-class CHARACTER_API ARPGBrainController : public AController
+class CHARACTER_API ARPGBrainController : public AController, public IRPGController
 {
 	GENERATED_BODY()
 
 public:
-
-	ARPGBrainController(ARPGEnemy* EnemyRef);
+	
+	ARPGBrainController();
 	void NewTask(UEnemyTask* Task);
 	URPGCharacterStateMachine* GetStateMachine();
 	ARPGEnemy* GetEnemy();
+	virtual void OnDeactiveAttack() override;
+	void Init(ARPGEnemy* EnemyRef);
+	
 private:
 	
-	ARPGBrainController();
-
 	UPROPERTY()
 	ARPGEnemy* Enemy = nullptr;
 

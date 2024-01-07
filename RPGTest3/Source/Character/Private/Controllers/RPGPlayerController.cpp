@@ -21,6 +21,12 @@ void ARPGPlayerController::Init()
 {
 	StateMachine = NewObject<URPGCharacterStateMachine>();
 	StateMachine->Init(Cast<ARPGPlayer>(GetPawn()));
+	Cast<ARPGPlayer>(GetPawn())->InitController(this);
+}
+
+void ARPGPlayerController::OnDeactiveAttack()
+{
+	StateMachine->OnAttacked();
 }
 
 void ARPGPlayerController::Tick(float DeltaTime)

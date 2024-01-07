@@ -12,6 +12,9 @@ struct FRoomInfo : public FTableRowBase
 public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "RoomSystem")
+	UTexture2D* MySpriteTexture;;
+	
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "RoomSystem")
 	TMap<FString, FVector> Enemies;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "RoomSystem")

@@ -9,10 +9,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeChest() {}
 // Cross Module References
-	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ROOMSYSTEM_API UClass* Z_Construct_UClass_AChest();
 	ROOMSYSTEM_API UClass* Z_Construct_UClass_AChest_NoRegister();
-	ROOMSYSTEM_API UClass* Z_Construct_UClass_UInteractable_NoRegister();
+	ROOMSYSTEM_API UClass* Z_Construct_UClass_AInteractable();
 	ROOMSYSTEM_API UClass* Z_Construct_UClass_UInteractableState_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_RoomSystem();
 // End Cross Module References
@@ -35,12 +34,11 @@ void EmptyLinkFunctionForGeneratedCodeChest() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentState;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_AChest_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AActor,
+		(UObject* (*)())Z_Construct_UClass_AInteractable,
 		(UObject* (*)())Z_Construct_UPackage__Script_RoomSystem,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AChest_Statics::DependentSingletons) < 16);
@@ -59,10 +57,6 @@ void EmptyLinkFunctionForGeneratedCodeChest() {}
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AChest_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AChest_Statics::NewProp_CurrentState,
 	};
-		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AChest_Statics::InterfaceParams[] = {
-			{ Z_Construct_UClass_UInteractable_NoRegister, (int32)VTABLE_OFFSET(AChest, IInteractable), false },  // 2679898628
-		};
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AChest_Statics::InterfaceParams) < 64);
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AChest_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AChest>::IsAbstract,
 	};
@@ -73,11 +67,11 @@ void EmptyLinkFunctionForGeneratedCodeChest() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_AChest_Statics::PropPointers,
-		InterfaceParams,
+		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_AChest_Statics::PropPointers),
-		UE_ARRAY_COUNT(InterfaceParams),
+		0,
 		0x009000A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AChest_Statics::Class_MetaDataParams), Z_Construct_UClass_AChest_Statics::Class_MetaDataParams)
 	};
@@ -101,9 +95,9 @@ void EmptyLinkFunctionForGeneratedCodeChest() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Chest_Chest_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AChest, AChest::StaticClass, TEXT("AChest"), &Z_Registration_Info_UClass_AChest, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AChest), 1327035017U) },
+		{ Z_Construct_UClass_AChest, AChest::StaticClass, TEXT("AChest"), &Z_Registration_Info_UClass_AChest, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AChest), 1239405228U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Chest_Chest_h_3029722312(TEXT("/Script/RoomSystem"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Chest_Chest_h_3744483818(TEXT("/Script/RoomSystem"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Chest_Chest_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_InteractableObjects_Chest_Chest_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

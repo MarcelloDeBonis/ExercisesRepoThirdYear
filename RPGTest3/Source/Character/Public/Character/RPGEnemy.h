@@ -20,6 +20,8 @@ public:
 	void InitDamage(int Damage, float _WeaponDuration);
 	void InitExp(int _ExpOnDied);
 	void InitHealth(int Health);
+
+	virtual void InitComponents() override;
 	
 	bool InRangeForAttack();
 	bool IsPlayerInVisibilityRange();

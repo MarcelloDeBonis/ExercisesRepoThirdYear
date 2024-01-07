@@ -8,23 +8,19 @@
 void UAttackingState::OnEnter_Implementation(ARPGCharacter* CharacterRef, URPGCharacterStateMachine* StateMachineRef)
 {
 	Super::OnEnter_Implementation(CharacterRef, StateMachineRef);
-	Character->AttackComponent->OnEndAttack.AddDynamic(this, &UAttackingState::OnEndAttack);
 	Character->AttackComponent->UseWeapon();
 }
 
 void UAttackingState::OnUpdate_Implementation(float DeltaTime)
 {
 	Super::OnUpdate_Implementation(DeltaTime);
+	if(!StateMachine->IsAttacking())
+	{
+		StateMachine->SetState(NewObject<UIdleState>());
+	}
 }
 
 void UAttackingState::OnExit_Implementation()
 {
 	Super::OnExit_Implementation();
-	StateMachine->OnAttacked();
-}
-
-void UAttackingState::OnEndAttack()
-{
-	Character->AttackComponent->OnEndAttack.RemoveDynamic(this, &UAttackingState::OnEndAttack);
-	StateMachine->SetState(NewObject<UIdleState>());
 }

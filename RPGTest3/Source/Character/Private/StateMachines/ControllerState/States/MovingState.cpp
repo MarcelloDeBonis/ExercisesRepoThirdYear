@@ -59,6 +59,10 @@ void UMovingState::Rotate()
 	FVector Direction (0.0f, 0.0f, 0.0f);
 	Direction.X = StateMachine->GetXMovement();
 	Direction.Y = StateMachine->GetYMovement();
-	const FRotator Rotation = Direction.Rotation();
-	Character->SetActorRotation(Rotation);
+
+	if(Direction.X!=0 || Direction.Y!=0)
+	{
+		const FRotator Rotation = Direction.Rotation();
+		Character->SetActorRotation(Rotation);
+	}
 }

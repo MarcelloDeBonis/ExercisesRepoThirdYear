@@ -2,9 +2,8 @@
 
 #include "Weapon/Arrow.h"
 
-AArrow::AArrow(float _ArrowDistanceIncrease)
+void AArrow::Init(float _ArrowDistanceIncrease)
 {
-	PrimaryActorTick.bCanEverTick = true;
 	ArrowDistanceIncrease = _ArrowDistanceIncrease;
 }
 
@@ -20,6 +19,7 @@ void AArrow::ActiveWeapon(const float TimeActivation)
 AArrow::AArrow()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	FollowerComponent = CreateDefaultSubobject<UFollowerComponent>(TEXT("FollowerComponent"));
 }
 
 void AArrow::ResetPosition()

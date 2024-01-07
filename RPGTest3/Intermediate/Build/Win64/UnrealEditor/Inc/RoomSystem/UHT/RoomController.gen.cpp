@@ -9,6 +9,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeRoomController() {}
 // Cross Module References
+	CHARACTER_API UClass* Z_Construct_UClass_AEnemyController_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ROOMSYSTEM_API UClass* Z_Construct_UClass_AChestController_NoRegister();
 	ROOMSYSTEM_API UClass* Z_Construct_UClass_ADoorController_NoRegister();
@@ -44,6 +45,10 @@ void EmptyLinkFunctionForGeneratedCodeRoomController() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DoorController_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_DoorController;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_EnemyController_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemyController;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_LastRoom_MetaData[];
 #endif
@@ -85,6 +90,13 @@ void EmptyLinkFunctionForGeneratedCodeRoomController() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARoomController_Statics::NewProp_DoorController = { "DoorController", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomController, DoorController), Z_Construct_UClass_ADoorController_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARoomController_Statics::NewProp_DoorController_MetaData), Z_Construct_UClass_ARoomController_Statics::NewProp_DoorController_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARoomController_Statics::NewProp_EnemyController_MetaData[] = {
+		{ "Category", "RoomSystem" },
+		{ "ModuleRelativePath", "Public/RoomClasses/RoomController.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARoomController_Statics::NewProp_EnemyController = { "EnemyController", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomController, EnemyController), Z_Construct_UClass_AEnemyController_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARoomController_Statics::NewProp_EnemyController_MetaData), Z_Construct_UClass_ARoomController_Statics::NewProp_EnemyController_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARoomController_Statics::NewProp_LastRoom_MetaData[] = {
 		{ "ModuleRelativePath", "Public/RoomClasses/RoomController.h" },
 	};
@@ -94,6 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeRoomController() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARoomController_Statics::NewProp_FountainController,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARoomController_Statics::NewProp_ChestController,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARoomController_Statics::NewProp_DoorController,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARoomController_Statics::NewProp_EnemyController,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARoomController_Statics::NewProp_LastRoom,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ARoomController_Statics::StaticCppClassTypeInfo = {
@@ -134,9 +147,9 @@ void EmptyLinkFunctionForGeneratedCodeRoomController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_RoomClasses_RoomController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ARoomController, ARoomController::StaticClass, TEXT("ARoomController"), &Z_Registration_Info_UClass_ARoomController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARoomController), 1088546562U) },
+		{ Z_Construct_UClass_ARoomController, ARoomController::StaticClass, TEXT("ARoomController"), &Z_Registration_Info_UClass_ARoomController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARoomController), 2435482369U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_RoomClasses_RoomController_h_2175243353(TEXT("/Script/RoomSystem"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_RoomClasses_RoomController_h_2667141816(TEXT("/Script/RoomSystem"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_RoomClasses_RoomController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_RoomSystem_Public_RoomClasses_RoomController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

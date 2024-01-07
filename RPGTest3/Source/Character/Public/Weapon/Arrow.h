@@ -15,12 +15,12 @@ class CHARACTER_API AArrow : public AWeapon
 	GENERATED_BODY()
 public:
 	
-	AArrow(float _ArrowDistanceIncrease);
+	AArrow();
 	virtual void ActiveWeapon(float TimeActivation) override;
-
+	void Init(float _ArrowDistanceIncrease);
+	
 private:
 		
-	AArrow();
 	void ResetPosition();
 	void Move();
 	

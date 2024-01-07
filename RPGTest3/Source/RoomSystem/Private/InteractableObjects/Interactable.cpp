@@ -3,7 +3,16 @@
 
 #include "InteractableObjects/Interactable.h"
 
-AActor* IInteractable::GetOwningActor()
+AInteractable::AInteractable()
+{
+	PrimaryActorTick.bCanEverTick = true;
+}
+
+AActor* AInteractable::GetOwningActor()
 {
 	return Cast<AActor>(this);
+}
+
+void AInteractable::OnInteract(ARPGPlayer* Player)
+{
 }

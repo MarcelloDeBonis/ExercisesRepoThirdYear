@@ -17,7 +17,7 @@ class ROOMSYSTEM_API UInteractableStateOff : public UInteractableState
 
 public:
 	
-	virtual void OnEnter(IInteractable* _Interactable) override;
+	virtual void OnEnter(AInteractable* _Interactable) override;
 	virtual void OnExitState() override;
 	virtual void OnCallInteractFunct(ARPGPlayer* Player) override;
 

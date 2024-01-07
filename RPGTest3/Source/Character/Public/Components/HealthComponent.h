@@ -6,7 +6,6 @@
 #include "Components/ActorComponent.h"
 #include "HealthComponent.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnUpdateLife, int, CurrentLife, int, MaxLife);
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class CHARACTER_API UHealthComponent : public UActorComponent
 {
@@ -16,15 +15,14 @@ public:
 	
 	UHealthComponent();
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Delegate")
-	FOnUpdateLife OnUpdateLife;
-
 	void Damage(int Damage);
 	void SetMaxLife(int NewMaxLife);
 	void Heal(int HealAmount);
 	void HealTotally();
 	void Death();
-	
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "UI")
+	float GetUiLife();
 protected:
 	
 	virtual void BeginPlay() override;

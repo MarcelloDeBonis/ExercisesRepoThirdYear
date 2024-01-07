@@ -37,4 +37,5 @@ private:
 	UPROPERTY()
 	TMap<EDirection, ADoor*> CorrespondingDoors;	
 	void InitMap();
+	virtual void BeginPlay() override;
 };

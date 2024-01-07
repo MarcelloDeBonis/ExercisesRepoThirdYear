@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayerController() {}
 	CHARACTER_API UClass* Z_Construct_UClass_ARPGPlayerController();
 	CHARACTER_API UClass* Z_Construct_UClass_ARPGPlayerController_NoRegister();
 	CHARACTER_API UClass* Z_Construct_UClass_URPGCharacterStateMachine_NoRegister();
+	CHARACTER_API UClass* Z_Construct_UClass_URPGController_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 	UPackage* Z_Construct_UPackage__Script_Character();
 // End Cross Module References
@@ -34,6 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayerController() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_StateMachine;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -58,6 +60,10 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayerController() {}
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARPGPlayerController_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPlayerController_Statics::NewProp_StateMachine,
 	};
+		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ARPGPlayerController_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_URPGController_NoRegister, (int32)VTABLE_OFFSET(ARPGPlayerController, IRPGController), false },  // 2347666811
+		};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayerController_Statics::InterfaceParams) < 64);
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ARPGPlayerController_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ARPGPlayerController>::IsAbstract,
 	};
@@ -68,11 +74,11 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayerController() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_ARPGPlayerController_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayerController_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009002A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPlayerController_Statics::Class_MetaDataParams), Z_Construct_UClass_ARPGPlayerController_Statics::Class_MetaDataParams)
 	};
@@ -96,9 +102,9 @@ void EmptyLinkFunctionForGeneratedCodeRPGPlayerController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGPlayerController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ARPGPlayerController, ARPGPlayerController::StaticClass, TEXT("ARPGPlayerController"), &Z_Registration_Info_UClass_ARPGPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGPlayerController), 1384371307U) },
+		{ Z_Construct_UClass_ARPGPlayerController, ARPGPlayerController::StaticClass, TEXT("ARPGPlayerController"), &Z_Registration_Info_UClass_ARPGPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGPlayerController), 2282975719U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGPlayerController_h_942608074(TEXT("/Script/Character"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGPlayerController_h_1123573241(TEXT("/Script/Character"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGPlayerController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

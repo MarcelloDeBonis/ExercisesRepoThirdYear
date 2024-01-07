@@ -9,7 +9,7 @@
 #include "Chest.generated.h"
 
 UCLASS()
-class ROOMSYSTEM_API AChest : public AActor, public IInteractable
+class ROOMSYSTEM_API AChest : public AInteractable
 {
 	GENERATED_BODY()
 
@@ -29,6 +29,6 @@ private:
 	UInteractableState* CurrentState = nullptr;
 	
 	void SetState(UInteractableState* NewState);
-	virtual void OnInteract_Implementation(ARPGPlayer* Player) override;
+	virtual void OnInteract(ARPGPlayer* Player) override;
 	void GainHealPotions(ARPGPlayer* Player);
 };
