@@ -54,3 +54,24 @@ void ADoorController::BeginPlay()
 	InitMap();
 }
 
+EDirection ADoorController::GetOppositeDirection(EDirection Direction)
+{
+	switch (Direction)
+	{
+	case EDirection::Up:
+		return EDirection::Down;
+	case EDirection::Right:
+		return EDirection::Left;
+	case EDirection::Down:
+		return EDirection::Up;
+	case EDirection::Left:
+		return EDirection::Right;
+	default:
+		return EDirection::Up;
+	}
+}
+
+ADoor* ADoorController::GetDoor(EDirection Direction)
+{
+	return CorrespondingDoors[Direction];
+}

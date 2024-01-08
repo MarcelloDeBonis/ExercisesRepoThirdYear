@@ -22,16 +22,17 @@ public:
 	static ARPGBrainController* GetEnemy(UWorld* WorldContext, FString EnemyName, FVector Position);
 	
 private:
-	static ARPGEnemy* GetEnemyActor(UWorld* WorldContext, FString EnemyName);
+	static ARPGEnemy* BuildBPEnemy(UWorld* WorldContext, FString EnemyName, FVector Position);
+	static ARPGEnemy* GetEnemyActor(UWorld* WorldContext, FString EnemyName, FVector Position);
 	static ARPGEnemy* BuildSkeleton(ARPGEnemy* Enemy);
 	static ARPGEnemy* BuildGhost(ARPGEnemy* Enemy);
 	static ARPGEnemy* BuildSlime(ARPGEnemy* Enemy);
 	static ARPGEnemy* BuildRat(ARPGEnemy* Enemy);
 	
-	static void BuildInfo(ARPGEnemy* Enemy, FString EnemyName);
-	static void BuildRangeEnemy(ARPGEnemy* Enemy);
-	static void BuildMeleeEnemy(ARPGEnemy* Enemy);
-	static void BuildMeleeAttackComponent(ARPGEnemy* Enemy);
-	static void BuildRangeAttackComponent(ARPGEnemy* Enemy);
+	static ARPGEnemy* BuildInfo(ARPGEnemy* Enemy, FString EnemyName);
+	static ARPGEnemy* BuildRangeEnemy(ARPGEnemy* Enemy);
+	static ARPGEnemy* BuildMeleeEnemy(ARPGEnemy* Enemy);
+	static ARPGEnemy* BuildMeleeAttackComponent(ARPGEnemy* Enemy);
+	static ARPGEnemy* BuildRangeAttackComponent(ARPGEnemy* Enemy);
 	
 };

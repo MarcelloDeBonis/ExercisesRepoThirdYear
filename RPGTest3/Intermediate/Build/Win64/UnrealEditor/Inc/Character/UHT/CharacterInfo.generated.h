@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CHARACTER_CharacterInfo_generated_h
 
-#define FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_CharacterInfo_h_9_GENERATED_BODY \
+#define FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_CharacterInfo_h_10_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCharacterInfo_Statics; \
 	CHARACTER_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;

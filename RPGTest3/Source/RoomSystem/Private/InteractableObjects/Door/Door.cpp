@@ -54,6 +54,6 @@ void ADoor::GoNextRoom()
 	if(DoorInfo.NextRoom)
 	{
 		ARPGPlayer* Player = GetWorld()->GetFirstPlayerController()->GetPawn<ARPGPlayer>();
-		ARoomController::GetInstance()->NewRoom(DoorInfo.NextRoom, Player, SpawnPlayerLocation);
+		ARoomController::GetInstance()->NewRoom(DoorInfo.NextRoom, Player, DoorInfo.Direction);
 	}
 }

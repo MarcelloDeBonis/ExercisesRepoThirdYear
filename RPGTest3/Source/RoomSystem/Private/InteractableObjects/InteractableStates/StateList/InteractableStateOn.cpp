@@ -17,7 +17,7 @@ void UInteractableStateOn::OnExitState()
 void UInteractableStateOn::OnCallInteractFunct(ARPGPlayer* Player)
 {
 	Super::OnCallInteractFunct(Player);
-	MyInteractable->OnInteract(Player);
+	MyInteractable->Interact(Player);
 }
 
 void UInteractableStateOn::AbleVisibility()

@@ -26,8 +26,14 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character")
 	UInventoryComponent* InventoryComponent = nullptr;
 
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Character")
 	void Interact();
+	
 	void OnDied() override;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character")
+	bool InteractButtonPressed = false;
+
 private:
 
 	float InteractionDistance = 100.f;

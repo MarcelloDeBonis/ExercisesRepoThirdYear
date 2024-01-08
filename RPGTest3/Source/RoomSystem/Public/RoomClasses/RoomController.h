@@ -32,7 +32,8 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "RoomSystem")
 	AEnemyController* EnemyController = nullptr;
-	
+
+	void NewRoom(URoom* Room, ARPGPlayer* Player , EDirection Direction);
 	void NewRoom(URoom* Room, ARPGPlayer* Player, FVector Location);
 	void SetLastRoom(URoom* Room);
 

@@ -36,5 +36,3 @@ void URangedAttackComponent::SpawnWeapon(int Damage, float _WeaponDuration)
 	Cast<AArrow>(Weapon)->Init(ArrowDistanceIncrease);
 	Weapon->DeactiveWeapon();
 }
-
-

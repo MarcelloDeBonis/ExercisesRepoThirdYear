@@ -39,6 +39,12 @@
     <ClCompile Include="..\..\Source\Character\Private\Character.cpp">
       <Filter>Source\Character\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\EnemyBuilder.cpp">
+      <Filter>Source\Character\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\EnemyController.cpp">
+      <Filter>Source\Character\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\Character\Private\Character">
       <UniqueIdentifier>{D620227E-CDCE-33AA-A0C5-A8EE063CBC6F}</UniqueIdentifier>
     </Filter>
@@ -84,14 +90,11 @@
     <ClCompile Include="..\..\Source\Character\Private\Controllers\RPGBrainController.cpp">
       <Filter>Source\Character\Private\Controllers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Character\Private\Controllers\RPGPlayerController.cpp">
+    <ClCompile Include="..\..\Source\Character\Private\Controllers\RPGController.cpp">
       <Filter>Source\Character\Private\Controllers</Filter>
     </ClCompile>
-    <Filter Include="Source\Character\Private\DataTable">
-      <UniqueIdentifier>{0C86A2F0-1FD4-3594-9D8A-5EE275281921}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\Character\Private\DataTable\DataTableInfo.cpp">
-      <Filter>Source\Character\Private\DataTable</Filter>
+    <ClCompile Include="..\..\Source\Character\Private\Controllers\RPGPlayerController.cpp">
+      <Filter>Source\Character\Private\Controllers</Filter>
     </ClCompile>
     <Filter Include="Source\Character\Private\StateMachines">
       <UniqueIdentifier>{4F79AA93-DE3E-3E8D-BD44-D04F49C779A1}</UniqueIdentifier>
@@ -111,6 +114,9 @@
     <ClCompile Include="..\..\Source\Character\Private\StateMachines\Brain\Tasks\EnemyMoveToTask.cpp">
       <Filter>Source\Character\Private\StateMachines\Brain\Tasks</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\Brain\Tasks\EnemyRechargeTask.cpp">
+      <Filter>Source\Character\Private\StateMachines\Brain\Tasks</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Character\Private\StateMachines\Brain\Tasks\EnemySearchTask.cpp">
       <Filter>Source\Character\Private\StateMachines\Brain\Tasks</Filter>
     </ClCompile>
@@ -118,6 +124,9 @@
       <UniqueIdentifier>{0F224B00-DFFD-3F65-99B1-38CC64B7615C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Character\Private\StateMachines\ControllerState\CharacterState.cpp">
+      <Filter>Source\Character\Private\StateMachines\ControllerState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Character\Private\StateMachines\ControllerState\RPGCharacterStateMachine.cpp">
       <Filter>Source\Character\Private\StateMachines\ControllerState</Filter>
     </ClCompile>
     <Filter Include="Source\Character\Private\StateMachines\ControllerState\States">
@@ -165,6 +174,15 @@
     <ClInclude Include="..\..\Source\Character\Public\Character.h">
       <Filter>Source\Character\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\CharacterInfo.h">
+      <Filter>Source\Character\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\EnemyBuilder.h">
+      <Filter>Source\Character\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\EnemyController.h">
+      <Filter>Source\Character\Public</Filter>
+    </ClInclude>
     <Filter Include="Source\Character\Public\Character">
       <UniqueIdentifier>{52480B34-46A4-33C0-9AE7-13AC91912F47}</UniqueIdentifier>
     </Filter>
@@ -210,17 +228,11 @@
     <ClInclude Include="..\..\Source\Character\Public\Controllers\RPGBrainController.h">
       <Filter>Source\Character\Public\Controllers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Character\Public\Controllers\RPGPlayerController.h">
+    <ClInclude Include="..\..\Source\Character\Public\Controllers\RPGController.h">
       <Filter>Source\Character\Public\Controllers</Filter>
     </ClInclude>
-    <Filter Include="Source\Character\Public\DataTable">
-      <UniqueIdentifier>{EF515F9B-3BB6-3A99-B316-5A0CE06B9893}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Character\Public\DataTable\DataTableInfo.h">
-      <Filter>Source\Character\Public\DataTable</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Character\Public\DataTable\LevelInfo.h">
-      <Filter>Source\Character\Public\DataTable</Filter>
+    <ClInclude Include="..\..\Source\Character\Public\Controllers\RPGPlayerController.h">
+      <Filter>Source\Character\Public\Controllers</Filter>
     </ClInclude>
     <Filter Include="Source\Character\Public\Enums">
       <UniqueIdentifier>{C54CBEA8-15D0-3C09-A81B-942E0535DFFC}</UniqueIdentifier>
@@ -246,6 +258,9 @@
     <ClInclude Include="..\..\Source\Character\Public\StateMachines\Brain\Tasks\EnemyMoveToTask.h">
       <Filter>Source\Character\Public\StateMachines\Brain\Tasks</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\Brain\Tasks\EnemyRechargeTask.h">
+      <Filter>Source\Character\Public\StateMachines\Brain\Tasks</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Character\Public\StateMachines\Brain\Tasks\EnemySearchTask.h">
       <Filter>Source\Character\Public\StateMachines\Brain\Tasks</Filter>
     </ClInclude>
@@ -253,6 +268,9 @@
       <UniqueIdentifier>{2E47C46F-154C-383C-BE91-AB47C8608DE7}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Character\Public\StateMachines\ControllerState\CharacterState.h">
+      <Filter>Source\Character\Public\StateMachines\ControllerState</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\StateMachines\ControllerState\RPGCharacterStateMachine.h">
       <Filter>Source\Character\Public\StateMachines\ControllerState</Filter>
     </ClInclude>
     <Filter Include="Source\Character\Public\StateMachines\ControllerState\States">
@@ -294,6 +312,9 @@
     <ClInclude Include="..\..\Source\Character\Public\Weapon\Weapon.h">
       <Filter>Source\Character\Public\Weapon</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Character\Public\Weapon\WeaponInfo.h">
+      <Filter>Source\Character\Public\Weapon</Filter>
+    </ClInclude>
     <Filter Include="Source\RPGTest3">
       <UniqueIdentifier>{F9D05284-4696-36E6-9E50-058EB511EB8F}</UniqueIdentifier>
     </Filter>
@@ -305,6 +326,183 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\RPGTest3\RPGTest3.h">
       <Filter>Source\RPGTest3</Filter>
+    </ClInclude>
+    <Filter Include="Source\RPGTest3\Private">
+      <UniqueIdentifier>{46930445-7DDD-3170-8393-44BD07227C6A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RPGTest3\Private\DataTableInfo.cpp">
+      <Filter>Source\RPGTest3\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RPGTest3\Private\RPGTestGameMode.cpp">
+      <Filter>Source\RPGTest3\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\RPGTest3\Public">
+      <UniqueIdentifier>{03B54F39-A13D-3CDE-A042-035EDF853B87}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\RPGTest3\Public\DataTableInfo.h">
+      <Filter>Source\RPGTest3\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RPGTest3\Public\RPGTestGameMode.h">
+      <Filter>Source\RPGTest3\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\RoomSystem">
+      <UniqueIdentifier>{9E0B999F-5CA4-3425-87D9-DFCF897C4A8A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RoomSystem\RoomSystem.Build.cs">
+      <Filter>Source\RoomSystem</Filter>
+    </None>
+    <Filter Include="Source\RoomSystem\Private">
+      <UniqueIdentifier>{406704FC-7B1D-30F9-BB61-D22EFE7930A1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\RoomSystem.cpp">
+      <Filter>Source\RoomSystem\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\RoomSystem\Private\InteractableObjects">
+      <UniqueIdentifier>{B038B04E-F2F5-3898-9409-A98218DEC5E1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\Interactable.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects</Filter>
+    </ClCompile>
+    <Filter Include="Source\RoomSystem\Private\InteractableObjects\Chest">
+      <UniqueIdentifier>{0CDBAAC1-44C5-3BE0-9343-FE86FFA11141}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\Chest\Chest.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects\Chest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\Chest\ChestController.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects\Chest</Filter>
+    </ClCompile>
+    <Filter Include="Source\RoomSystem\Private\InteractableObjects\Door">
+      <UniqueIdentifier>{38460F0B-2552-35EB-B30D-8C62C3BB3F78}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\Door\Door.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects\Door</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\Door\DoorController.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects\Door</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\Door\DoorUtils.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects\Door</Filter>
+    </ClCompile>
+    <Filter Include="Source\RoomSystem\Private\InteractableObjects\Fountain">
+      <UniqueIdentifier>{03753A8C-AC0C-3D36-B4D6-36E4C66452FC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\Fountain\Fountain.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects\Fountain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\Fountain\FountainController.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects\Fountain</Filter>
+    </ClCompile>
+    <Filter Include="Source\RoomSystem\Private\InteractableObjects\InteractableStates">
+      <UniqueIdentifier>{2FE87712-C9E0-3110-946C-BB36E8EE4313}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\InteractableStates\InteractableState.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects\InteractableStates</Filter>
+    </ClCompile>
+    <Filter Include="Source\RoomSystem\Private\InteractableObjects\InteractableStates\StateList">
+      <UniqueIdentifier>{6618B02A-D505-352F-A443-DFA8BBDEAE9B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\InteractableStates\StateList\InteractableStateOff.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects\InteractableStates\StateList</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\InteractableObjects\InteractableStates\StateList\InteractableStateOn.cpp">
+      <Filter>Source\RoomSystem\Private\InteractableObjects\InteractableStates\StateList</Filter>
+    </ClCompile>
+    <Filter Include="Source\RoomSystem\Private\RoomClasses">
+      <UniqueIdentifier>{C1C0373F-B273-35BB-914D-0B0C1BEDFCEC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\RoomClasses\MapSubsystem.cpp">
+      <Filter>Source\RoomSystem\Private\RoomClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\RoomClasses\Room.cpp">
+      <Filter>Source\RoomSystem\Private\RoomClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\RoomClasses\RoomBuilder.cpp">
+      <Filter>Source\RoomSystem\Private\RoomClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RoomSystem\Private\RoomClasses\RoomController.cpp">
+      <Filter>Source\RoomSystem\Private\RoomClasses</Filter>
+    </ClCompile>
+    <Filter Include="Source\RoomSystem\Public">
+      <UniqueIdentifier>{3DCA3A23-3067-31A3-8078-84046DE8604D}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\Direction.h">
+      <Filter>Source\RoomSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\RoomSystem.h">
+      <Filter>Source\RoomSystem\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\RoomSystem\Public\InteractableObjects">
+      <UniqueIdentifier>{02E212EA-8FBE-3360-A8B6-E74BE11DA8CD}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Interactable.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects</Filter>
+    </ClInclude>
+    <Filter Include="Source\RoomSystem\Public\InteractableObjects\Chest">
+      <UniqueIdentifier>{60A65047-9080-3C6C-94AD-D564393C32BB}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Chest\Chest.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\Chest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Chest\ChestController.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\Chest</Filter>
+    </ClInclude>
+    <Filter Include="Source\RoomSystem\Public\InteractableObjects\Door">
+      <UniqueIdentifier>{99B77F7F-A7B5-3747-B61C-7FA9477CE5ED}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Door\Door.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\Door</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Door\DoorController.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\Door</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Door\DoorInfo.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\Door</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Door\DoorUtils.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\Door</Filter>
+    </ClInclude>
+    <Filter Include="Source\RoomSystem\Public\InteractableObjects\Fountain">
+      <UniqueIdentifier>{0C61CC6D-27DE-31D7-83E1-2AB288C5ACFD}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Fountain\Fountain.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\Fountain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\Fountain\FountainController.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\Fountain</Filter>
+    </ClInclude>
+    <Filter Include="Source\RoomSystem\Public\InteractableObjects\InteractableStates">
+      <UniqueIdentifier>{AE02C02D-BC40-33C6-A21E-4DFB917CFF11}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\InteractableStates\InteractableState.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\InteractableStates</Filter>
+    </ClInclude>
+    <Filter Include="Source\RoomSystem\Public\InteractableObjects\InteractableStates\StateList">
+      <UniqueIdentifier>{753130D0-43FD-33B9-BD7B-C433A77B6F47}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\InteractableStates\StateList\InteractableStateOff.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\InteractableStates\StateList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\InteractableObjects\InteractableStates\StateList\InteractableStateOn.h">
+      <Filter>Source\RoomSystem\Public\InteractableObjects\InteractableStates\StateList</Filter>
+    </ClInclude>
+    <Filter Include="Source\RoomSystem\Public\RoomClasses">
+      <UniqueIdentifier>{C6A0A328-1936-3DD1-90A7-462A8D6CF4F4}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\RoomClasses\MapSubsystem.h">
+      <Filter>Source\RoomSystem\Public\RoomClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\RoomClasses\Room.h">
+      <Filter>Source\RoomSystem\Public\RoomClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\RoomClasses\RoomBuilder.h">
+      <Filter>Source\RoomSystem\Public\RoomClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\RoomClasses\RoomController.h">
+      <Filter>Source\RoomSystem\Public\RoomClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RoomSystem\Public\RoomClasses\RoomInfo.h">
+      <Filter>Source\RoomSystem\Public\RoomClasses</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

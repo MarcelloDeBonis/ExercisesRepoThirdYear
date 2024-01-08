@@ -18,7 +18,7 @@ public:
 	
 	ADoor();
 	
-	void Interact(ARPGPlayer* Player);
+	virtual void Interact(ARPGPlayer* Player) override;
 	void Active(FDoorInfo _DoorInfo);
 	void Deactive();
 

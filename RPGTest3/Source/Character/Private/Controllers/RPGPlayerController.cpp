@@ -44,7 +44,7 @@ void ARPGPlayerController::SetupInputComponent()
 	Super::SetupInputComponent();
 	InputComponent->BindAxis(TEXT("MoveX"), this, &ARPGPlayerController::OnX);
 	InputComponent->BindAxis(TEXT("MoveY"), this, &ARPGPlayerController::OnY);
-	InputComponent->BindAction("Interact", IE_Pressed, this, &ARPGPlayerController::OnHeal);
+	InputComponent->BindAction("Interact", IE_Pressed, this, &ARPGPlayerController::OnInteractOn);
 	InputComponent->BindAction("Heal", IE_Pressed, this, &ARPGPlayerController::OnHeal);
 	InputComponent->BindAction("Attack", IE_Pressed, this, &ARPGPlayerController::OnAttack);
 }
@@ -69,7 +69,7 @@ void ARPGPlayerController::OnHeal()
 	Cast<ARPGPlayer>(GetPawn())->InventoryComponent->UseHealPotion();
 }
 
-void ARPGPlayerController::OnInteract()
+void ARPGPlayerController::OnInteractOn()
 {
 	Cast<ARPGPlayer>(GetPawn())->Interact();
 }

@@ -7,7 +7,6 @@
 #include "Components/AttackComponents/MeleeAttackComponent.h"
 #include "Components/AttackComponents/RangedAttackComponent.h"
 #include "Controllers/RPGPlayerController.h"
-#include "InteractableObjects/Interactable.h"
 #include "Kismet/GameplayStatics.h"
 #include "RPGTest3/Public/DataTableInfo.h"
 
@@ -28,38 +27,8 @@ void ARPGPlayer::BeginPlay()
 	ExpComponent->FirstLevel();
 }
 
-void ARPGPlayer::Interact()
+void ARPGPlayer::Interact_Implementation()
 {
-	FVector Location = GetActorLocation();
-	TArray<FOverlapResult> OverlapResults;
-	FCollisionShape CollisionShape;
-	CollisionShape.SetSphere(InteractionDistance);
-
-	bool bHasOverlapped = GetWorld()->OverlapMultiByObjectType(
-		OverlapResults,
-		Location,
-		FQuat::Identity,
-		FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody),
-		CollisionShape
-	);
-
-	if (bHasOverlapped)
-	{
-		for (auto& Result : OverlapResults)
-		{
-			AActor* OverlappedActor = Result.GetActor();
-			
-			if (OverlappedActor && Cast<AInteractable>(OverlappedActor))
-			{
-				AInteractable* InteractableActor = Cast<AInteractable>(OverlappedActor);
-				if (InteractableActor)
-				{
-					InteractableActor->OnInteract(this);
-				}
-			}
-			
-		}
-	}
 }
 
 void ARPGPlayer::OnDied()

@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "RPGCharacter.h"
-#include "Components/AttackComponents/AttackComponent.h"
 #include "RPGEnemy.generated.h"
 
 UCLASS()
@@ -16,11 +15,13 @@ public:
 	ARPGEnemy();
 	
 	void Init(float _MinAttackDistance, float _VisibilityRange);
-	void InitAttackComponent(UAttackComponent* Component);
+	
 	void InitDamage(int Damage, float _WeaponDuration);
 	void InitExp(int _ExpOnDied);
 	void InitHealth(int Health);
-
+	void InitRangedAttackComponent();
+	void InitMeleeAttackComponent();
+	
 	virtual void InitComponents() override;
 	
 	bool InRangeForAttack();

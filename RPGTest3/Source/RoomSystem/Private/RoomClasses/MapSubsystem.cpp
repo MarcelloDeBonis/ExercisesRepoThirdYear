@@ -97,23 +97,18 @@ URoom* UMapSubsystem::GeneratePath(URoom* Start, int PathLength)
 
 bool UMapSubsystem::AttachRooms(URoom* RoomA, URoom* RoomB)
 {
-	EDirection Direction = DirectionToGoToB(RoomA, RoomB);
+	EDirection DirectionToB = DirectionToGoToB(RoomA, RoomB);
+	EDirection DirectionToA = UDoorUtils::GetOppositeDirection(DirectionToB);
 
-	if(Direction == EDirection::None)
-	{
-		return false;
-	}
-
-	FDoorInfo DoorA = FDoorInfo(Direction, RoomB);
-
-	if(!RoomA->AddDoor(DoorA))
-	{
-		return false;
-	}
-
-	FDoorInfo DoorB = FDoorInfo(UDoorUtils::GetOppositeDirection(Direction), RoomB);
+	FDoorInfo DoorA = FDoorInfo(DirectionToB, RoomB);
+	FDoorInfo DoorB = FDoorInfo(DirectionToA, RoomB);
 	
-	if(!RoomB->AddDoor(DoorB))
+	if(DirectionToB == EDirection::None)
+	{
+		return false;
+	}
+
+	if(!RoomA->AddDoor(DoorA) || !RoomB->AddDoor(DoorB))
 	{
 		return false;
 	}

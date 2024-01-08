@@ -15,6 +15,8 @@ void ARPGBrainController::Init(ARPGEnemy* EnemyRef)
 {
 	Enemy = EnemyRef;
 	Enemy->InitController(this);
+	StateMachine = NewObject<URPGCharacterStateMachine>(Enemy);
+	NewTask(NewObject<UEnemySearchTask>(this));
 }
 
 void ARPGBrainController::NewTask(UEnemyTask* NewTask)
@@ -41,8 +43,6 @@ void ARPGBrainController::OnDeactiveAttack()
 void ARPGBrainController::BeginPlay()
 {
 	Super::BeginPlay();
-	StateMachine = NewObject<URPGCharacterStateMachine>(Enemy);
-	NewTask(NewObject<UEnemySearchTask>(this));
 }
 
 void ARPGBrainController::Tick(float DeltaTime)

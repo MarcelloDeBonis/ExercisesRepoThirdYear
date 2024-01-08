@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "InteractableObjects/Interactable.h"
-#include "InteractableObjects/InteractableStates/StateList/InteractableStateOff.h"
 #include "InteractableObjects/InteractableStates/StateList/InteractableStateOn.h"
 #include "Fountain.generated.h"
 
@@ -17,7 +16,7 @@ class ROOMSYSTEM_API AFountain : public AInteractable
 public:
 	AFountain();
 	
-	void Interact(ARPGPlayer* Player);
+	virtual void Interact(ARPGPlayer* Player) override;
 	void Active();
 	void Deactive();
 	

@@ -11,16 +11,20 @@ AEnemyController::AEnemyController()
 
 void AEnemyController::ResetEnemies()
 {
-	for (auto Enemy : Enemies)
+	auto DestroyCustomActors = [this](auto& Array)
 	{
-		if(Enemy.Value != nullptr)
+		for (auto* Actor : Array)
 		{
-			Enemy.Value->Destroy();
-			Enemy.Key->Destroy();
+			if (Actor && !Actor->IsPendingKill())
+			{
+				Actor->Destroy();
+			}
 		}
-	}
+		Array.Empty();
+	};
 
-	Enemies.Empty();
+	DestroyCustomActors(Controllers);
+	DestroyCustomActors(Enemies);
 }
 
 void AEnemyController::SpawnEnemies(TMap<FString, FVector> NewEnemies)
@@ -33,8 +37,8 @@ void AEnemyController::SpawnEnemies(TMap<FString, FVector> NewEnemies)
 
 void AEnemyController::SpawnEnemy(TTuple<FString, FVector> Enemy)
 {
-	ARPGBrainController* NewEnemy = UEnemyBuilder::GetEnemy(GetWorld(), Enemy.Key, Enemy.Value);
-	NewEnemy->Init(NewEnemy->GetEnemy());
-	Enemies.Add(NewEnemy, NewEnemy->GetEnemy());
+	ARPGBrainController* Controller = UEnemyBuilder::GetEnemy(GetWorld(), Enemy.Key, Enemy.Value);
+	Controllers.Add(Controller);
+	Enemies.Add(Controller->GetEnemy());
 }
 

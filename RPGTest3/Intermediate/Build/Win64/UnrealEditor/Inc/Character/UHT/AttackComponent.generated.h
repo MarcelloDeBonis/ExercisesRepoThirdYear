@@ -24,7 +24,7 @@ private: \
 	static void StaticRegisterNativesUAttackComponent(); \
 	friend struct Z_Construct_UClass_UAttackComponent_Statics; \
 public: \
-	DECLARE_CLASS(UAttackComponent, UActorComponent, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/Character"), NO_API) \
+	DECLARE_CLASS(UAttackComponent, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Character"), NO_API) \
 	DECLARE_SERIALIZER(UAttackComponent)
 
 
@@ -36,7 +36,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UAttackComponent); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UAttackComponent); \
-	DEFINE_ABSTRACT_DEFAULT_CONSTRUCTOR_CALL(UAttackComponent) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UAttackComponent) \
 	NO_API virtual ~UAttackComponent();
 
 

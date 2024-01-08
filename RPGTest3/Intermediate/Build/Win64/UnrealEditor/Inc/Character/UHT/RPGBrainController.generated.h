@@ -24,7 +24,7 @@ private: \
 	static void StaticRegisterNativesARPGBrainController(); \
 	friend struct Z_Construct_UClass_ARPGBrainController_Statics; \
 public: \
-	DECLARE_CLASS(ARPGBrainController, AController, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Character"), NO_API) \
+	DECLARE_CLASS(ARPGBrainController, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Character"), NO_API) \
 	DECLARE_SERIALIZER(ARPGBrainController) \
 	virtual UObject* _getUObject() const override { return const_cast<ARPGBrainController*>(this); }
 

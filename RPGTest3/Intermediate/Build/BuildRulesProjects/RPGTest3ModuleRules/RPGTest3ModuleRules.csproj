@@ -19,5 +19,6 @@
   <Compile Include="..\..\..\..\Source\RPGTest3.Target.cs"><Link>Source\RPGTest3.Target.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\RPGTest3Editor.Target.cs"><Link>Source\RPGTest3Editor.Target.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\RPGTest3\RPGTest3.Build.cs"><Link>Source\RPGTest3\RPGTest3.Build.cs</Link></Compile>
+  <Compile Include="..\..\..\..\Source\RoomSystem\RoomSystem.Build.cs"><Link>Source\RoomSystem\RoomSystem.Build.cs</Link></Compile>
   </ItemGroup>
 </Project>

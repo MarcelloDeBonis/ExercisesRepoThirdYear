@@ -18,10 +18,14 @@ public:
 	AEnemyController();
 	void ResetEnemies();
 	void SpawnEnemies(TMap<FString, FVector> NewEnemies);
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Enemies")
+	TArray<ARPGEnemy*> Enemies;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Enemies")
+	TArray<ARPGBrainController*> Controllers;
 	
 private:
 	void SpawnEnemy(TTuple<FString, FVector> Enemy);
 
-	UPROPERTY()
-	TMap<ARPGBrainController*, ARPGEnemy*> Enemies;
 };

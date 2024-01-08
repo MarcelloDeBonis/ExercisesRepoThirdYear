@@ -11,13 +11,14 @@
 class UEnemyTask;
 
 UCLASS()
-class CHARACTER_API ARPGBrainController : public AController, public IRPGController
+class CHARACTER_API ARPGBrainController : public AActor, public IRPGController
 {
 	GENERATED_BODY()
 
 public:
 	
 	ARPGBrainController();
+	
 	void NewTask(UEnemyTask* Task);
 	URPGCharacterStateMachine* GetStateMachine();
 	ARPGEnemy* GetEnemy();

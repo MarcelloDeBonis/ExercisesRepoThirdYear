@@ -7,7 +7,7 @@
 #include "Weapon/Weapon.h"
 #include "AttackComponent.generated.h"
 
-UCLASS(Abstract)
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class CHARACTER_API UAttackComponent : public UActorComponent
 {
 	GENERATED_BODY()

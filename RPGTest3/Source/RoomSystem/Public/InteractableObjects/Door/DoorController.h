@@ -28,7 +28,9 @@ public:
 	ADoor* LeftDoor;
 	
 	void InitDoors(TArray<FDoorInfo> Doors);
-
+	EDirection GetOppositeDirection(EDirection Direction);
+	ADoor* GetDoor(EDirection Direction);
+	
 private:
 	
 	void AbleDoor(ADoor* Door, FDoorInfo DoorInfo);

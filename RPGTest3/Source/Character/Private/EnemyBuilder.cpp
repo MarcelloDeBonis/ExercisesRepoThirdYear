@@ -2,103 +2,121 @@
 
 
 #include "EnemyBuilder.h"
-
 #include "CharacterInfo.h"
 #include "DataTableInfo.h"
-#include "Components/AttackComponents/MeleeAttackComponent.h"
-#include "Components/AttackComponents/RangedAttackComponent.h"
+#include "Character/RPGEnemy.h"
 
 ARPGBrainController* UEnemyBuilder::GetEnemy(UWorld* WorldContext, FString EnemyName,  FVector Position)
 {
-	ARPGEnemy* Enemy = GetEnemyActor(WorldContext, EnemyName);
+	ARPGEnemy* Enemy = GetEnemyActor(WorldContext, EnemyName, Position);
 	Enemy->SetActorLocation(Position);
-	ARPGBrainController* Brain = NewObject<ARPGBrainController>(Enemy);
-
-	return Brain;
+	ARPGBrainController* Controller = WorldContext->SpawnActor<ARPGBrainController>();
+	Controller->Init(Enemy);
+	return Controller;
 }
 
-ARPGEnemy* UEnemyBuilder::GetEnemyActor(UWorld* WorldContext, FString EnemyName)
+ARPGEnemy* UEnemyBuilder::BuildBPEnemy(UWorld* WorldContext, FString EnemyName, FVector Position)
 {
-	ARPGEnemy* Enemy = WorldContext->SpawnActor<ARPGEnemy>(ARPGEnemy::StaticClass());;
-		
-	if(EnemyName == "Skeleton")
+	FCharacterInfo Info = UDataTableInfo::GetStructByRowName<FCharacterInfo>("/Game/DT/EnemyInfoDT.EnemyInfoDT", EnemyName);
+	TSubclassOf<ARPGEnemy> EnemyClass = Info.BlueprintClass;
+	ARPGEnemy* Enemy = WorldContext->SpawnActor<ARPGEnemy>(EnemyClass, Position, FRotator::ZeroRotator);
+	return Enemy;
+}
+
+ARPGEnemy* UEnemyBuilder::GetEnemyActor(UWorld* WorldContext, FString EnemyName, FVector Position)
+{
+	ARPGEnemy* Enemy = BuildBPEnemy(WorldContext, EnemyName, Position);
+	
+	if (!Enemy)
 	{
-		BuildSkeleton(Enemy);
+		return nullptr;
 	}
-	else if(EnemyName == "Ghost")
+
+	Enemy->SetActorLocation(Position);
+	
+	if(EnemyName.Equals("Skeleton"))
 	{
-		BuildGhost(Enemy);
+		Enemy = BuildSkeleton(Enemy);
 	}
-	else if (EnemyName == "Slime")
+	else if(EnemyName.Equals("Ghost"))
 	{
-		BuildSlime(Enemy);
+		Enemy = BuildGhost(Enemy);
 	}
-	else if (EnemyName == "Rat")
+	else if (EnemyName.Equals("Slime"))
 	{
-		BuildRat(Enemy);
+		Enemy = BuildSlime(Enemy);
+	}
+	else if (EnemyName.Equals("Rat"))
+	{
+		Enemy = BuildRat(Enemy);
 	}
 	else
 	{
 		return nullptr;
 	}
 
-	BuildInfo(Enemy, EnemyName);
+	Enemy = BuildInfo(Enemy, EnemyName);
 	
-	return Enemy;
+	return Enemy ? Enemy : nullptr;
 }
+
 
 ARPGEnemy* UEnemyBuilder::BuildSkeleton(ARPGEnemy* Enemy)
 {
-	BuildRangeEnemy(Enemy);
-	BuildRangeAttackComponent(Enemy);
+	Enemy = BuildRangeEnemy(Enemy);
+	Enemy = BuildRangeAttackComponent(Enemy);
 	return Enemy;
 }
 
 ARPGEnemy* UEnemyBuilder::BuildGhost(ARPGEnemy* Enemy)
 {
-	BuildRangeEnemy(Enemy);
-	BuildRangeAttackComponent(Enemy);
+	Enemy = BuildRangeEnemy(Enemy);
+	Enemy = BuildRangeAttackComponent(Enemy);
 	return Enemy;
 }
-
 ARPGEnemy* UEnemyBuilder::BuildSlime(ARPGEnemy* Enemy)
 {
-	BuildMeleeEnemy(Enemy);
-	BuildMeleeAttackComponent(Enemy);
+	Enemy = BuildMeleeEnemy(Enemy);
+	Enemy = BuildMeleeAttackComponent(Enemy);
 	return Enemy;
 }
 
 ARPGEnemy* UEnemyBuilder::BuildRat(ARPGEnemy* Enemy)
 {
-	BuildMeleeEnemy(Enemy);
-	BuildMeleeAttackComponent(Enemy);
+	Enemy = BuildMeleeEnemy(Enemy);
+	Enemy = BuildMeleeAttackComponent(Enemy);
 	return Enemy;
 }
 
-void UEnemyBuilder::BuildInfo(ARPGEnemy* Enemy, FString EnemyName)
+ARPGEnemy* UEnemyBuilder::BuildInfo(ARPGEnemy* Enemy, FString EnemyName)
 {
-	const FCharacterInfo Info = UDataTableInfo::GetStructByRowName<FCharacterInfo>("/Game/DT/EnemyInfoDT.EnemyInfoDT", EnemyName);
+	FCharacterInfo Info = UDataTableInfo::GetStructByRowName<FCharacterInfo>("/Game/DT/EnemyInfoDT.EnemyInfoDT", EnemyName);
 	Enemy->InitDamage(Info.Damage, Info.WeaponDuration);
 	Enemy->InitHealth(Info.Life);
 	Enemy->InitExp(Info.Exp);
+	return Enemy;
 }
 
-void UEnemyBuilder::BuildRangeEnemy(ARPGEnemy* Enemy)
+ARPGEnemy* UEnemyBuilder::BuildRangeEnemy(ARPGEnemy* Enemy)
 {
 	Enemy->Init(100, 100);
+	return Enemy;
 }
 
-void UEnemyBuilder::BuildMeleeEnemy(ARPGEnemy* Enemy)
+ARPGEnemy* UEnemyBuilder::BuildMeleeEnemy(ARPGEnemy* Enemy)
 {
-	Enemy->InitAttackComponent(NewObject<UMeleeAttackComponent>());
+	Enemy->InitMeleeAttackComponent();
+	return Enemy;
 }
 
-void UEnemyBuilder::BuildMeleeAttackComponent(ARPGEnemy* Enemy)
+ARPGEnemy* UEnemyBuilder::BuildMeleeAttackComponent(ARPGEnemy* Enemy)
 {
 	Enemy->Init(100, 100);
+	return Enemy;
 }
 
-void UEnemyBuilder::BuildRangeAttackComponent(ARPGEnemy* Enemy)
+ARPGEnemy* UEnemyBuilder::BuildRangeAttackComponent(ARPGEnemy* Enemy)
 {
-	Enemy->InitAttackComponent(NewObject<URangedAttackComponent>());
+	Enemy->InitRangedAttackComponent();
+	return Enemy;
 }

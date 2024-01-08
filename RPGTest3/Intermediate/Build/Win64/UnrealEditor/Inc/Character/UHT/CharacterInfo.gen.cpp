@@ -9,7 +9,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCharacterInfo() {}
 // Cross Module References
+	CHARACTER_API UClass* Z_Construct_UClass_ARPGEnemy_NoRegister();
 	CHARACTER_API UScriptStruct* Z_Construct_UScriptStruct_FCharacterInfo();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTableRowBase();
 	UPackage* Z_Construct_UPackage__Script_Character();
 // End Cross Module References
@@ -35,6 +37,10 @@ template<> CHARACTER_API UScriptStruct* StaticStruct<FCharacterInfo>()
 		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_BlueprintClass_MetaData[];
+#endif
+		static const UECodeGen_Private::FClassPropertyParams NewProp_BlueprintClass;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Life_MetaData[];
 #endif
@@ -64,6 +70,14 @@ template<> CHARACTER_API UScriptStruct* StaticStruct<FCharacterInfo>()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCharacterInfo>();
 	}
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_BlueprintClass_MetaData[] = {
+		{ "Category", "CharacterInfo" },
+		{ "DisplayName", "BlueprintClass" },
+		{ "ModuleRelativePath", "Public/CharacterInfo.h" },
+	};
+#endif
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_BlueprintClass = { "BlueprintClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FCharacterInfo, BlueprintClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ARPGEnemy_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_BlueprintClass_MetaData), Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_BlueprintClass_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_Life_MetaData[] = {
 		{ "Category", "CharacterInfo" },
@@ -97,6 +111,7 @@ template<> CHARACTER_API UScriptStruct* StaticStruct<FCharacterInfo>()
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_Exp = { "Exp", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FCharacterInfo, Exp), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_Exp_MetaData), Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_Exp_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FCharacterInfo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_BlueprintClass,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_Life,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_Damage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewProp_WeaponDuration,
@@ -129,9 +144,9 @@ template<> CHARACTER_API UScriptStruct* StaticStruct<FCharacterInfo>()
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_CharacterInfo_h_Statics::ScriptStructInfo[] = {
-		{ FCharacterInfo::StaticStruct, Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewStructOps, TEXT("CharacterInfo"), &Z_Registration_Info_UScriptStruct_CharacterInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FCharacterInfo), 1509920620U) },
+		{ FCharacterInfo::StaticStruct, Z_Construct_UScriptStruct_FCharacterInfo_Statics::NewStructOps, TEXT("CharacterInfo"), &Z_Registration_Info_UScriptStruct_CharacterInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FCharacterInfo), 2997134960U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_CharacterInfo_h_1051760845(TEXT("/Script/Character"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_CharacterInfo_h_3984644927(TEXT("/Script/Character"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_CharacterInfo_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_CharacterInfo_h_Statics::ScriptStructInfo),
 		nullptr, 0);

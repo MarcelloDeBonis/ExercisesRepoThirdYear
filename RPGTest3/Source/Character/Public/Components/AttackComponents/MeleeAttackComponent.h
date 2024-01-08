@@ -6,7 +6,6 @@
 #include "AttackComponent.h"
 #include "MeleeAttackComponent.generated.h"
 
-
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class CHARACTER_API UMeleeAttackComponent : public UAttackComponent
 {
@@ -15,9 +14,9 @@ class CHARACTER_API UMeleeAttackComponent : public UAttackComponent
 public:
 	
 	UMeleeAttackComponent();
-
+	virtual void SpawnWeapon(int Damage, float _WeaponDuration) override;
+	
 protected:
 	
 	virtual void BeginPlay() override;
-	virtual void SpawnWeapon(int Damage, float _WeaponDuration) override;
 };

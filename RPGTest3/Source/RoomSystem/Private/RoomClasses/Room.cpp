@@ -3,6 +3,8 @@
 
 #include "RoomClasses/Room.h"
 
+#include "RoomClasses/RoomInfo.h"
+
 URoom::URoom()
 {
 	
@@ -39,6 +41,7 @@ bool URoom::AddDoor(FDoorInfo Door)
 			return false;
 		}
 	}
+	
 	Doors.Add(Door);
 	return true;
 }

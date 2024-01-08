@@ -4,6 +4,8 @@
 #include "Character/RPGEnemy.h"
 
 #include "Character/RPGPlayer.h"
+#include "Components/AttackComponents/MeleeAttackComponent.h"
+#include "Components/AttackComponents/RangedAttackComponent.h"
 
 ARPGEnemy::ARPGEnemy()
 {
@@ -23,9 +25,16 @@ void ARPGEnemy::InitExp(int _ExpOnDied)
 	ExpOnDied = _ExpOnDied;
 }
 
-void ARPGEnemy::InitAttackComponent(UAttackComponent* Component)
+void ARPGEnemy::InitMeleeAttackComponent()
 {
-	AttackComponent = Component;
+	UAttackComponent* NewSpecificComponent = NewObject<UAttackComponent>(this, UMeleeAttackComponent::StaticClass());
+	AttackComponent = NewSpecificComponent;
+}
+
+void ARPGEnemy::InitRangedAttackComponent()
+{
+	UAttackComponent* NewSpecificComponent = NewObject<UAttackComponent>(this, URangedAttackComponent::StaticClass());
+	AttackComponent = NewSpecificComponent;
 }
 
 void ARPGEnemy::InitDamage(int Damage, float _WeaponDuration)

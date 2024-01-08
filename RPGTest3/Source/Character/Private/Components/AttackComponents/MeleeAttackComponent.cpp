@@ -24,7 +24,7 @@ void UMeleeAttackComponent::SpawnWeapon(int Damage, float _WeaponDuration)
 	const FWeaponInfo WeaponInfo = UDataTableInfo::GetStructByRowName<FWeaponInfo>("/Game/DT/WeaponDT.WeaponDT", "Sword");
 	TSubclassOf<AWeapon> WeaponClass = WeaponInfo.WeaponClass;
 	
-	Weapon = Cast<AWeapon>(GetWorld()->SpawnActor<AWeapon>(WeaponClass, GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation(), FActorSpawnParameters()));
+	Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponClass, GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation(), FActorSpawnParameters());
 	Weapon->InitTeam(Cast<ARPGCharacter>(GetOwner())->GetTeam());
 	
 	if(Weapon)
@@ -35,5 +35,3 @@ void UMeleeAttackComponent::SpawnWeapon(int Damage, float _WeaponDuration)
 	Weapon->FollowerComponent->SetActorToFollow(GetOwner());
 	Weapon->DeactiveWeapon();
 }
-
-

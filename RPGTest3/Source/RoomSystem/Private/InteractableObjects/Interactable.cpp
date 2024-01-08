@@ -16,3 +16,7 @@ AActor* AInteractable::GetOwningActor()
 void AInteractable::OnInteract(ARPGPlayer* Player)
 {
 }
+
+void AInteractable::Interact(ARPGPlayer* Player)
+{
+}

@@ -30,5 +30,5 @@ private:
 	void OnY(float AxisValue);
 	void OnAttack();
 	void OnHeal();
-	void OnInteract();
+	void OnInteractOn();
 };

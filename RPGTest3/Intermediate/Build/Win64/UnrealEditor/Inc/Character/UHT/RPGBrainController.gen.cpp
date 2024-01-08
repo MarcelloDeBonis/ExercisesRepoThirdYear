@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGBrainController() {}
 	CHARACTER_API UClass* Z_Construct_UClass_UEnemyTask_NoRegister();
 	CHARACTER_API UClass* Z_Construct_UClass_URPGCharacterStateMachine_NoRegister();
 	CHARACTER_API UClass* Z_Construct_UClass_URPGController_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_AController();
+	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Character();
 // End Cross Module References
 	void ARPGBrainController::StaticRegisterNativesARPGBrainController()
@@ -50,13 +50,12 @@ void EmptyLinkFunctionForGeneratedCodeRPGBrainController() {}
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_ARPGBrainController_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AController,
+		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_Character,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGBrainController_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGBrainController_Statics::Class_MetaDataParams[] = {
-		{ "HideCategories", "Collision Rendering Transformation" },
 		{ "IncludePath", "Controllers/RPGBrainController.h" },
 		{ "ModuleRelativePath", "Public/Controllers/RPGBrainController.h" },
 	};
@@ -103,7 +102,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGBrainController() {}
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_ARPGBrainController_Statics::PropPointers),
 		UE_ARRAY_COUNT(InterfaceParams),
-		0x009002A4u,
+		0x009000A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGBrainController_Statics::Class_MetaDataParams), Z_Construct_UClass_ARPGBrainController_Statics::Class_MetaDataParams)
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARPGBrainController_Statics::PropPointers) < 2048);
@@ -126,9 +125,9 @@ void EmptyLinkFunctionForGeneratedCodeRPGBrainController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGBrainController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ARPGBrainController, ARPGBrainController::StaticClass, TEXT("ARPGBrainController"), &Z_Registration_Info_UClass_ARPGBrainController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGBrainController), 1772926536U) },
+		{ Z_Construct_UClass_ARPGBrainController, ARPGBrainController::StaticClass, TEXT("ARPGBrainController"), &Z_Registration_Info_UClass_ARPGBrainController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARPGBrainController), 1517000288U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGBrainController_h_1434178271(TEXT("/Script/Character"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGBrainController_h_895465703(TEXT("/Script/Character"),
 		Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGBrainController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Marce_OneDrive_Desktop_Work_ExercisesRepoThirdYear_RPGTest3_Source_Character_Public_Controllers_RPGBrainController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -13,6 +13,14 @@ ARoomController::ARoomController()
 {
 }
 
+void ARoomController::NewRoom(URoom* Room, ARPGPlayer* Player, EDirection Direction)
+{
+	EDirection OppositeDirection = DoorController->GetOppositeDirection(Direction);
+	ADoor* Door = DoorController->GetDoor(OppositeDirection);
+	FVector Location = Door->SpawnPlayerLocation;
+	NewRoom(Room, Player, Location);
+}
+
 void ARoomController::NewRoom(URoom* Room, ARPGPlayer* Player , FVector Location)
 {
 	if(Room==LastRoom)
@@ -23,7 +31,11 @@ void ARoomController::NewRoom(URoom* Room, ARPGPlayer* Player , FVector Location
 	{
 		FRoomInfo RoomInfo = Room->GetInfo();
 		SpawnPlayer(Player, Location);
-		SpawnEnemies(RoomInfo.Enemies);
+		EnemyController->ResetEnemies();
+		if(RoomInfo.Enemies.Num()>0)
+		{
+			SpawnEnemies(RoomInfo.Enemies);
+		}
 		SpawnFountain(RoomInfo.Fountain);
 		SpawnChest(RoomInfo.Chest);
 		SpawnDoors(Room->GetDoors());
@@ -38,7 +50,6 @@ void ARoomController::SpawnPlayer(ARPGPlayer* Player, FVector Location)
 
 void ARoomController::SpawnEnemies(TMap<FString, FVector> Enemies)
 {
-	EnemyController->ResetEnemies();
 	EnemyController->SpawnEnemies(Enemies);
 }
 

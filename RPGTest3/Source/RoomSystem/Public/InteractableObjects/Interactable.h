@@ -15,5 +15,9 @@ public:
 
 	AInteractable();
 	virtual AActor* GetOwningActor();
+
+	UFUNCTION(BlueprintCallable, Category = "Interactable")
 	virtual void OnInteract(ARPGPlayer* Player);
+
+	virtual void Interact(ARPGPlayer* Player);
 };

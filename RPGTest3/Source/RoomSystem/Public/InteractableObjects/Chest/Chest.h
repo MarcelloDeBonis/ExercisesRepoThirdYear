@@ -17,7 +17,7 @@ public:
 	
 	AChest();
 
-	void Interact(ARPGPlayer* Player);
+	virtual void Interact(ARPGPlayer* Player) override;
 	void Active();
 	void Deactive();
 

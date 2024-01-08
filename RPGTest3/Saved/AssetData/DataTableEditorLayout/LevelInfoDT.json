@@ -3,6 +3,7 @@
 	{
 		"Exp": 125,
 		"Life": 62,
-		"Damage": 82
+		"Damage": 82,
+		"BlueprintClass": 119
 	}
 }

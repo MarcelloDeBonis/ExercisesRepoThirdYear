@@ -21,7 +21,10 @@ void AWeapon::DeactiveWeapon()
 	SetState(NewObject<UDeactivatedWeapon>());
 	if(AttackComponent!=nullptr)
 	{
-		Cast<ARPGCharacter>(AttackComponent->GetOwner())->Controller->OnDeactiveAttack();
+		if(Cast<ARPGCharacter>(AttackComponent->GetOwner())->Controller!=nullptr)
+		{
+			Cast<ARPGCharacter>(AttackComponent->GetOwner())->Controller->OnDeactiveAttack();
+		}
 	}
 }
 

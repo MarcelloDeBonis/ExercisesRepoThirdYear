@@ -3,6 +3,8 @@
 
 #include "InteractableObjects/Fountain/Fountain.h"
 
+#include "InteractableObjects/InteractableStates/StateList/InteractableStateOff.h"
+
 AFountain::AFountain()
 {
 	PrimaryActorTick.bCanEverTick = true;

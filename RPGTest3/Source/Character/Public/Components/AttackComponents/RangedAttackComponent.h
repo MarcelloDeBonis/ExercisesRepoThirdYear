@@ -15,12 +15,12 @@ class CHARACTER_API URangedAttackComponent : public UAttackComponent
 public:
 	
 	URangedAttackComponent();
-
+	virtual void SpawnWeapon(int Damage, float _WeaponDuration) override;
+	
 protected:
 
 	float ArrowDistanceIncrease = 0.05f;
 	
 	virtual void BeginPlay() override;
-	virtual void SpawnWeapon(int Damage, float _WeaponDuration) override;
 
 };
